@@ -1,0 +1,42 @@
+[
+ {
+  "service": "payment-service",
+  "version": "v2.14.0",
+  "commit": "a1b2c3d",
+  "author": "m.rao",
+  "ts": "2026-11-23T09:42:00",
+  "changes": "Reduced DB_POOL_SIZE from 50 to 5 (cost optimisation); enabled new retry policy"
+ },
+ {
+  "service": "payment-service",
+  "version": "v2.13.2",
+  "commit": "9f8e7d6",
+  "author": "s.cardoso",
+  "ts": "2026-11-20T10:00:00",
+  "changes": "Fix rounding in refund totals"
+ },
+ {
+  "service": "api-gateway",
+  "version": "v5.8.1",
+  "commit": "c4d5e6f",
+  "author": "d.naik",
+  "ts": "2026-11-21T10:00:00",
+  "changes": "Bump rate-limit defaults"
+ },
+ {
+  "service": "auth-service",
+  "version": "v3.2.0",
+  "commit": "b7a6c5d",
+  "author": "s.khobrekar",
+  "ts": "2026-11-19T10:00:00",
+  "changes": "Upgrade JWT library"
+ },
+ {
+  "service": "database",
+  "version": "migration-0192",
+  "commit": "e1f2a3b",
+  "author": "d.naik",
+  "ts": "2026-11-14T10:00:00",
+  "changes": "Add index on payments(created_at)"
+ }
+]

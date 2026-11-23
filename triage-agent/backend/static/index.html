@@ -1,0 +1,430 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Incident Triage</title>
+  <style>
+    :root {
+      --bg: #ECEFF3;
+      --panel: #fff;
+      --ink: #16212C;
+      --mute: #5B6877;
+      --line: #D5DBE3;
+      --blue: #1F5FBF;
+      --amber: #A66A00;
+      --red: #B83A3A;
+      --green: #2B7A57;
+      --code: #F3F5F8
+    }
+
+    @media(prefers-color-scheme:dark) {
+      :root {
+        --bg: #0F151C;
+        --panel: #17202A;
+        --ink: #E6EBF1;
+        --mute: #93A1B1;
+        --line: #2A3644;
+        --blue: #6AA0F0;
+        --amber: #E0A84B;
+        --red: #E57373;
+        --green: #5CC08F;
+        --code: #0F151C
+      }
+    }
+
+    * {
+      box-sizing: border-box
+    }
+
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--ink);
+      font: 14px/1.5 system-ui, sans-serif
+    }
+
+    code,
+    pre,
+    .mono {
+      font: 12px/1.5 ui-monospace, Menlo, Consolas, monospace
+    }
+
+    header {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      align-items: center;
+      justify-content: space-between;
+      padding: 12px 20px;
+      background: var(--panel);
+      border-bottom: 1px solid var(--line)
+    }
+
+    h1 {
+      font-size: 16px;
+      margin: 0
+    }
+
+    h2 {
+      font-size: 13px;
+      margin: 0 0 10px;
+      color: var(--mute);
+      font-weight: 600
+    }
+
+    button {
+      font: inherit;
+      cursor: pointer;
+      border: 1px solid var(--line);
+      background: var(--panel);
+      color: var(--ink);
+      padding: 6px 12px;
+      border-radius: 6px
+    }
+
+    button:hover {
+      border-color: var(--blue)
+    }
+
+    button:focus-visible {
+      outline: 2px solid var(--blue);
+      outline-offset: 2px
+    }
+
+    .go {
+      background: var(--blue);
+      border-color: var(--blue);
+      color: #fff
+    }
+
+    .no {
+      color: var(--red)
+    }
+
+    main {
+      display: grid;
+      grid-template-columns: 280px 1fr 400px;
+      gap: 16px;
+      padding: 16px 20px;
+      align-items: start
+    }
+
+    @media(max-width:1000px) {
+      main {
+        grid-template-columns: 1fr
+      }
+    }
+
+    section {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 14px
+    }
+
+    .q {
+      display: block;
+      width: 100%;
+      text-align: left;
+      margin-bottom: 8px;
+      padding: 10px
+    }
+
+    .q.sel {
+      border-color: var(--blue);
+      box-shadow: inset 3px 0 0 var(--blue)
+    }
+
+    .q small {
+      display: block;
+      color: var(--mute)
+    }
+
+    .b {
+      display: inline-block;
+      padding: 1px 8px;
+      border-radius: 10px;
+      font-size: 12px;
+      border: 1px solid currentColor
+    }
+
+    .OPEN {
+      color: var(--mute)
+    }
+
+    .INVESTIGATING {
+      color: var(--blue);
+      animation: p 1.2s infinite
+    }
+
+    .AWAITING_APPROVAL {
+      color: var(--amber)
+    }
+
+    .RESOLVED {
+      color: var(--green)
+    }
+
+    @keyframes p {
+      50% {
+        opacity: .45
+      }
+    }
+
+    @media(prefers-reduced-motion:reduce) {
+      .INVESTIGATING {
+        animation: none
+      }
+    }
+
+    .meter {
+      display: flex;
+      gap: 3px;
+      margin: 6px 0 14px;
+      align-items: center
+    }
+
+    .meter i {
+      width: 22px;
+      height: 8px;
+      border-radius: 2px;
+      background: var(--line)
+    }
+
+    .meter i.on {
+      background: var(--blue)
+    }
+
+    .meter span {
+      margin-left: 8px;
+      color: var(--mute);
+      font-size: 12px
+    }
+
+    ol {
+      list-style: none;
+      margin: 0;
+      padding: 0 0 0 14px;
+      border-left: 2px solid var(--line)
+    }
+
+    li {
+      position: relative;
+      margin: 0 0 16px;
+      padding-left: 14px
+    }
+
+    li:before {
+      content: "";
+      position: absolute;
+      left: -22px;
+      top: 5px;
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: var(--blue)
+    }
+
+    li.fin:before {
+      background: var(--amber)
+    }
+
+    li p {
+      margin: 2px 0
+    }
+
+    .th {
+      color: var(--mute)
+    }
+
+    .ob {
+      font-weight: 500
+    }
+
+    li code {
+      background: var(--code);
+      padding: 1px 6px;
+      border-radius: 4px
+    }
+
+    details {
+      margin-top: 4px;
+      color: var(--mute)
+    }
+
+    pre {
+      background: var(--code);
+      padding: 8px;
+      border-radius: 6px;
+      overflow: auto;
+      margin: 6px 0;
+      white-space: pre-wrap;
+      word-break: break-word
+    }
+
+    .h {
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 12px;
+      margin-bottom: 12px
+    }
+
+    .h h3 {
+      margin: 0 0 6px;
+      font-size: 14px
+    }
+
+    .bar {
+      height: 6px;
+      background: var(--line);
+      border-radius: 3px;
+      margin: 6px 0
+    }
+
+    .bar i {
+      display: block;
+      height: 100%;
+      background: var(--blue);
+      border-radius: 3px
+    }
+
+    .ev {
+      border-left: 3px solid var(--line);
+      padding-left: 8px
+    }
+
+    .ev.metric {
+      border-color: var(--blue)
+    }
+
+    .ev.log {
+      border-color: var(--red)
+    }
+
+    .ev.deploy {
+      border-color: var(--amber)
+    }
+
+    .warn {
+      border: 1px solid var(--amber);
+      color: var(--amber);
+      border-radius: 8px;
+      padding: 12px;
+      margin-bottom: 12px
+    }
+
+    .act {
+      border: 1px solid var(--amber);
+      border-radius: 8px;
+      padding: 12px;
+      margin-bottom: 12px
+    }
+
+    .act .row {
+      display: flex;
+      gap: 8px;
+      margin-top: 10px
+    }
+
+    .au {
+      color: var(--mute);
+      font-size: 12px;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      border: 0
+    }
+
+    .au li {
+      margin: 0 0 4px;
+      padding: 0
+    }
+
+    .au li:before {
+      display: none
+    }
+
+    .empty {
+      color: var(--mute)
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>Incident triage</h1>
+    <div id="fire" style="display:flex;flex-wrap:wrap;gap:8px;align-items:center"><span class="empty">Simulate
+        alert:</span></div>
+  </header>
+  <main>
+    <section>
+      <h2>Incident queue</h2>
+      <div id="queue"></div>
+    </section>
+    <section>
+      <h2>Investigation</h2>
+      <div id="detail">
+        <p class="empty">No incident selected. Fire a simulated alert from the top bar to start an investigation.</p>
+      </div>
+    </section>
+    <section>
+      <h2>Root-cause report</h2>
+      <div id="report">
+        <p class="empty">The ranked report appears when the agent finishes.</p>
+      </div>
+    </section>
+  </main>
+  <script>
+    const PRESETS = [{ l: 'Payment 5xx spike', service: 'payment-service', symptom: '5xx error rate above 5% for 5 minutes' },
+    { l: 'Gateway 5xx', service: 'api-gateway', symptom: 'Gateway 5xx rate at 11%, checkout failing' },
+    { l: 'Database memory', service: 'database', symptom: 'Memory above 90% and climbing' },
+    { l: 'Auth latency blip', service: 'auth-service', symptom: 'p99 latency alert on token endpoint' }];
+    const $ = s => document.querySelector(s), esc = s => String(s ?? '').replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
+    const api = async (p, o) => { const r = await fetch('/api' + p, o), j = await r.json(); if (!r.ok) throw new Error(j.detail || r.statusText); return j };
+    const post = b => ({ method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(b) });
+    const badge = s => `<span class="b ${s}">${s.replace('_', ' ').toLowerCase()}</span>`;
+    let sel = null, seen = {};
+    $('#fire').insertAdjacentHTML('beforeend', PRESETS.map((p, i) => `<button data-fire="${i}">${esc(p.l)}</button>`).join(''));
+    document.addEventListener('click', async e => {
+      const f = e.target.closest('[data-fire]'), q = e.target.closest('[data-id]'), a = e.target.closest('[data-act]');
+      try {
+        if (f) { const p = PRESETS[f.dataset.fire]; sel = (await api('/alerts', post({ service: p.service, symptom: p.symptom }))).id; tick() }
+        else if (q) { sel = +q.dataset.id; seen = {}; tick() }
+        else if (a) { await api(`/incidents/${sel}/approve`, post({ decision: a.dataset.act, actor: 'on-call' })); tick() }
+      } catch (err) { alert(err.message) }
+    });
+    function render(id, el, html) { if (seen[id] !== html) { seen[id] = html; $(el).innerHTML = html } }
+    function detail(d) {
+      const m = Array.from({ length: 8 }, (_, i) => `<i class="${i < d.steps.length ? 'on' : ''}"></i>`).join('');
+      const st = d.steps.map(s => `<li class="${s.tool === 'propose_remediation' ? 'fin' : ''}"><b>${esc(s.tool)}</b> <code>${esc(Object.entries(s.args).filter(([k, v]) => v !== '' && v !== null).map(([k, v]) => k + '=' + v).join(', '))}</code>
+ <p class="th">${esc(s.thought)}</p><p class="ob">${esc(s.observation)}</p><details><summary>raw result</summary><pre>${esc(JSON.stringify(s.result, null, 1))}</pre></details></li>`).join('');
+      return `<p><b>${esc(d.service)}</b> ${badge(d.status)}<br><span class="th">${esc(d.symptom)}</span></p>
+ <div class="meter">${m}<span>${d.steps.length} of 8 steps used</span></div>
+ ${st ? `<ol>${st}</ol>` : '<p class="empty">Agent is starting.</p>'}`
+    }
+    function report(d) {
+      const r = d.report, rem = d.remediation; let h = '';
+      if (!r) return '<p class="empty">The agent is still investigating. The ranked report appears when it finishes.</p>';
+      if (r.verdict === 'INSUFFICIENT_EVIDENCE') h += `<div class="warn"><b>Insufficient evidence</b><br>${esc(r.summary)}</div>`;
+      h += r.hypotheses.map(x => `<div class="h"><h3>#${x.rank} ${esc(x.title)}</h3><div class="mono">${x.confidence}% confidence</div><div class="bar"><i style="width:${x.confidence}%"></i></div>
+ <p>${esc(x.explanation)}</p>${x.evidence.map(v => `<pre class="ev ${v.kind}">${esc(v.text)}</pre>`).join('')}</div>`).join('');
+      if (d.status === 'AWAITING_APPROVAL') h += rem ? `<div class="act"><b>Approval needed</b><p>Proposed: <code>${esc(rem.action)}</code> on <code>${esc(rem.target)}</code>. Nothing runs until you approve.</p>
+  <div class="row"><button class="go" data-act="approve">Approve and run</button><button class="no" data-act="reject">Reject</button></div></div>`
+        : `<div class="act"><p>No remediation proposed. A human needs to triage this one.</p><div class="row"><button data-act="reject">Close incident</button></div></div>`;
+      else if (rem) h += `<p>Remediation <code>${esc(rem.action)}</code> on <code>${esc(rem.target)}</code>: <b>${esc(rem.status.toLowerCase())}</b></p>`;
+      return h + `<h2>Audit log</h2><ul class="au mono">${d.audit.map(a => `<li>${esc(a.ts)} ${esc(a.actor)}: ${esc(a.event)} ${esc(a.detail)}</li>`).join('')}</ul>`
+    }
+    async function tick() {
+      try {
+        const list = await api('/incidents'); if (sel == null && list.length) sel = list[0].id;
+        render('q', '#queue', list.length ? list.map(i => `<button class="q ${i.id === sel ? 'sel' : ''}" data-id="${i.id}"><b>#${i.id} ${esc(i.service)}</b> ${badge(i.status)}<small>${esc(i.symptom)}</small></button>`).join('') : '<p class="empty">No incidents yet.</p>');
+        if (sel != null) { const d = await api('/incidents/' + sel); render('d', '#detail', detail(d)); render('r', '#report', report(d)) }
+      } catch (e) { }
+    }
+    setInterval(tick, 1500); tick();
+  </script>
+</body>
+
+</html>
