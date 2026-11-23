@@ -9,8 +9,38 @@ import text_io
 
 _D = os.path.join(os.path.dirname(os.path.abspath(__file__)), "data")
 def _load(n):
-    with open(os.path.join(_D, n)) as f: return json.load(f)
-LOGS, DEPLOYS, _M = _load("logs.json"), _load("deploys.json"), _load("metrics.json")
+    p = os.path.join(_D, n)
+    if not os.path.exists(p): return [] if n == "logs.json" else {}
+    with open(p, encoding="utf-8") as f: return json.load(f)
+
+def load_logs():
+    json_path = os.path.join(_D, "logs.json")
+    txt_path = os.path.join(_D, "logs.txt")
+    log_path = os.path.join(_D, "logs.log")
+    txt_src = txt_path if os.path.exists(txt_path) else (log_path if os.path.exists(log_path) else None)
+    if txt_src and (not os.path.exists(json_path) or os.path.getmtime(txt_src) > os.path.getmtime(json_path)):
+        try:
+            return text_io.ingest_log_sources(txt_src, output_json=json_path)
+        except Exception:
+            pass
+    if os.path.exists(json_path):
+        with open(json_path, "r", encoding="utf-8") as f: return json.load(f)
+    elif txt_src:
+        return text_io.parse_log_file(txt_src)
+    return []
+
+def reload_data():
+    global LOGS, DEPLOYS, _M, SERIES, NOW, SERVICES
+    LOGS = load_logs()
+    DEPLOYS = _load("deploys.json")
+    _M = _load("metrics.json")
+    SERIES = _M.get("series", {})
+    NOW = _M.get("now", "")
+    SERVICES = list(SERIES)
+    return len(LOGS)
+
+LOGS = load_logs()
+DEPLOYS, _M = _load("deploys.json"), _load("metrics.json")
 SERIES, NOW = _M["series"], _M["now"]
 SERVICES = list(SERIES)
 MAX_STEPS = 8                                     # hard cap, includes the final propose_remediation call

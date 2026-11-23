@@ -1,1325 +1,3855 @@
 [
  {
   "ts": "2026-11-23T09:00:30",
-  "service": "api-gateway",
   "level": "INFO",
-  "message": "POST /v1/charges 200 188ms",
-  "trace_id": "tr-39690919"
+  "service": "api-gateway",
+  "message": "GET /v1/orders 200 41ms (trace_id=tr-03f9c73e)",
+  "trace_id": "tr-03f9c73e",
+  "fields": {
+   "trace_id": "tr-03f9c73e"
+  },
+  "raw": "2026-11-23T09:00:30 INFO api-gateway GET /v1/orders 200 41ms (trace_id=tr-03f9c73e)"
  },
  {
   "ts": "2026-11-23T09:00:30",
-  "service": "auth-service",
   "level": "INFO",
-  "message": "token issued sub=u_372",
-  "trace_id": "tr-a2c81c32"
+  "service": "auth-service",
+  "message": "session validated (trace_id=tr-9b1737bc)",
+  "trace_id": "tr-9b1737bc",
+  "fields": {
+   "trace_id": "tr-9b1737bc"
+  },
+  "raw": "2026-11-23T09:00:30 INFO auth-service session validated (trace_id=tr-9b1737bc)"
  },
  {
   "ts": "2026-11-23T09:00:30",
-  "service": "payment-service",
   "level": "INFO",
-  "message": "charge captured amount=944",
-  "trace_id": "tr-c05d7b62"
+  "service": "payment-service",
+  "message": "refund queued (trace_id=tr-9132f7ad)",
+  "trace_id": "tr-9132f7ad",
+  "fields": {
+   "trace_id": "tr-9132f7ad"
+  },
+  "raw": "2026-11-23T09:00:30 INFO payment-service refund queued (trace_id=tr-9132f7ad)"
  },
  {
   "ts": "2026-11-23T09:00:30",
+  "level": "INFO",
   "service": "database",
-  "level": "INFO",
-  "message": "checkpoint complete",
-  "trace_id": "tr-fb7f36ee"
+  "message": "checkpoint complete (trace_id=tr-727ea8e2)",
+  "trace_id": "tr-727ea8e2",
+  "fields": {
+   "trace_id": "tr-727ea8e2"
+  },
+  "raw": "2026-11-23T09:00:30 INFO database checkpoint complete (trace_id=tr-727ea8e2)"
  },
  {
-  "ts": "2026-11-23T09:03:01",
+  "ts": "2026-11-23T09:00:30",
+  "level": "INFO",
+  "service": "order-service",
+  "message": "order created id=963 (trace_id=tr-2e1cfdd8)",
+  "trace_id": "tr-2e1cfdd8",
+  "fields": {
+   "id": "963",
+   "trace_id": "tr-2e1cfdd8"
+  },
+  "raw": "2026-11-23T09:00:30 INFO order-service order created id=963 (trace_id=tr-2e1cfdd8)"
+ },
+ {
+  "ts": "2026-11-23T09:00:30",
+  "level": "INFO",
+  "service": "notification-service",
+  "message": "notification sent recipient=u_119 (trace_id=tr-18b2594d)",
+  "trace_id": "tr-18b2594d",
+  "fields": {
+   "recipient": "u_119",
+   "trace_id": "tr-18b2594d"
+  },
+  "raw": "2026-11-23T09:00:30 INFO notification-service notification sent recipient=u_119 (trace_id=tr-18b2594d)"
+ },
+ {
+  "ts": "2026-11-23T09:02:32",
+  "level": "INFO",
+  "service": "payment-service",
+  "message": "refund queued (trace_id=tr-18dc0ddb)",
+  "trace_id": "tr-18dc0ddb",
+  "fields": {
+   "trace_id": "tr-18dc0ddb"
+  },
+  "raw": "2026-11-23T09:02:32 INFO payment-service refund queued (trace_id=tr-18dc0ddb)"
+ },
+ {
+  "ts": "2026-11-23T09:03:04",
+  "level": "INFO",
   "service": "api-gateway",
-  "level": "INFO",
-  "message": "POST /v1/charges 200 188ms",
-  "trace_id": "tr-223be9e7"
+  "message": "GET /v1/orders 200 41ms (trace_id=tr-ab5b95f4)",
+  "trace_id": "tr-ab5b95f4",
+  "fields": {
+   "trace_id": "tr-ab5b95f4"
+  },
+  "raw": "2026-11-23T09:03:04 INFO api-gateway GET /v1/orders 200 41ms (trace_id=tr-ab5b95f4)"
  },
  {
-  "ts": "2026-11-23T09:03:23",
+  "ts": "2026-11-23T09:03:18",
+  "level": "INFO",
+  "service": "order-service",
+  "message": "order created id=828 (trace_id=tr-2cf5ec78)",
+  "trace_id": "tr-2cf5ec78",
+  "fields": {
+   "id": "828",
+   "trace_id": "tr-2cf5ec78"
+  },
+  "raw": "2026-11-23T09:03:18 INFO order-service order created id=828 (trace_id=tr-2cf5ec78)"
+ },
+ {
+  "ts": "2026-11-23T09:03:48",
+  "level": "INFO",
   "service": "auth-service",
-  "level": "INFO",
-  "message": "session validated",
-  "trace_id": "tr-c9d7dc2a"
+  "message": "token issued sub=u_951 (trace_id=tr-26afd434)",
+  "trace_id": "tr-26afd434",
+  "fields": {
+   "sub": "u_951",
+   "trace_id": "tr-26afd434"
+  },
+  "raw": "2026-11-23T09:03:48 INFO auth-service token issued sub=u_951 (trace_id=tr-26afd434)"
  },
  {
-  "ts": "2026-11-23T09:03:34",
-  "service": "payment-service",
+  "ts": "2026-11-23T09:04:18",
   "level": "INFO",
-  "message": "refund queued",
-  "trace_id": "tr-19918b8a"
+  "service": "notification-service",
+  "message": "notification sent recipient=u_367 (trace_id=tr-04872863)",
+  "trace_id": "tr-04872863",
+  "fields": {
+   "recipient": "u_367",
+   "trace_id": "tr-04872863"
+  },
+  "raw": "2026-11-23T09:04:18 INFO notification-service notification sent recipient=u_367 (trace_id=tr-04872863)"
  },
  {
-  "ts": "2026-11-23T09:04:12",
+  "ts": "2026-11-23T09:04:23",
+  "level": "INFO",
   "service": "database",
-  "level": "INFO",
-  "message": "checkpoint complete",
-  "trace_id": "tr-207b3de0"
+  "message": "autovacuum run (trace_id=tr-05907fd1)",
+  "trace_id": "tr-05907fd1",
+  "fields": {
+   "trace_id": "tr-05907fd1"
+  },
+  "raw": "2026-11-23T09:04:23 INFO database autovacuum run (trace_id=tr-05907fd1)"
  },
  {
-  "ts": "2026-11-23T09:05:02",
+  "ts": "2026-11-23T09:04:52",
+  "level": "INFO",
   "service": "api-gateway",
-  "level": "INFO",
-  "message": "GET /healthz 200 2ms",
-  "trace_id": "tr-79932a50"
+  "message": "GET /v1/orders 200 41ms (trace_id=tr-de9ac5ee)",
+  "trace_id": "tr-de9ac5ee",
+  "fields": {
+   "trace_id": "tr-de9ac5ee"
+  },
+  "raw": "2026-11-23T09:04:52 INFO api-gateway GET /v1/orders 200 41ms (trace_id=tr-de9ac5ee)"
  },
  {
-  "ts": "2026-11-23T09:05:24",
+  "ts": "2026-11-23T09:05:17",
+  "level": "INFO",
+  "service": "order-service",
+  "message": "order created id=948 (trace_id=tr-1661392b)",
+  "trace_id": "tr-1661392b",
+  "fields": {
+   "id": "948",
+   "trace_id": "tr-1661392b"
+  },
+  "raw": "2026-11-23T09:05:17 INFO order-service order created id=948 (trace_id=tr-1661392b)"
+ },
+ {
+  "ts": "2026-11-23T09:06:24",
+  "level": "INFO",
   "service": "payment-service",
-  "level": "INFO",
-  "message": "charge captured amount=401",
-  "trace_id": "tr-51b315ec"
+  "message": "charge captured amount=360 (trace_id=tr-d7ffc8cd)",
+  "trace_id": "tr-d7ffc8cd",
+  "fields": {
+   "amount": "360",
+   "trace_id": "tr-d7ffc8cd"
+  },
+  "raw": "2026-11-23T09:06:24 INFO payment-service charge captured amount=360 (trace_id=tr-d7ffc8cd)"
  },
  {
-  "ts": "2026-11-23T09:06:56",
+  "ts": "2026-11-23T09:06:40",
+  "level": "INFO",
   "service": "api-gateway",
-  "level": "INFO",
-  "message": "GET /v1/orders 200 41ms",
-  "trace_id": "tr-3e5bcce6"
+  "message": "POST /v1/charges 200 188ms (trace_id=tr-46839f5b)",
+  "trace_id": "tr-46839f5b",
+  "fields": {
+   "trace_id": "tr-46839f5b"
+  },
+  "raw": "2026-11-23T09:06:40 INFO api-gateway POST /v1/charges 200 188ms (trace_id=tr-46839f5b)"
  },
  {
-  "ts": "2026-11-23T09:07:02",
-  "service": "database",
+  "ts": "2026-11-23T09:06:49",
   "level": "INFO",
-  "message": "checkpoint complete",
-  "trace_id": "tr-94e27f77"
- },
- {
-  "ts": "2026-11-23T09:07:10",
   "service": "auth-service",
-  "level": "INFO",
-  "message": "session validated",
-  "trace_id": "tr-a45a5209"
+  "message": "session validated (trace_id=tr-6db63aed)",
+  "trace_id": "tr-6db63aed",
+  "fields": {
+   "trace_id": "tr-6db63aed"
+  },
+  "raw": "2026-11-23T09:06:49 INFO auth-service session validated (trace_id=tr-6db63aed)"
  },
  {
-  "ts": "2026-11-23T09:07:45",
-  "service": "payment-service",
+  "ts": "2026-11-23T09:07:27",
   "level": "INFO",
-  "message": "refund queued",
-  "trace_id": "tr-59d4a28c"
+  "service": "database",
+  "message": "autovacuum run (trace_id=tr-5293a807)",
+  "trace_id": "tr-5293a807",
+  "fields": {
+   "trace_id": "tr-5293a807"
+  },
+  "raw": "2026-11-23T09:07:27 INFO database autovacuum run (trace_id=tr-5293a807)"
+ },
+ {
+  "ts": "2026-11-23T09:07:54",
+  "level": "INFO",
+  "service": "notification-service",
+  "message": "push dispatch queued (trace_id=tr-3d05a4cb)",
+  "trace_id": "tr-3d05a4cb",
+  "fields": {
+   "trace_id": "tr-3d05a4cb"
+  },
+  "raw": "2026-11-23T09:07:54 INFO notification-service push dispatch queued (trace_id=tr-3d05a4cb)"
+ },
+ {
+  "ts": "2026-11-23T09:07:59",
+  "level": "INFO",
+  "service": "payment-service",
+  "message": "charge captured amount=285 (trace_id=tr-60d1d905)",
+  "trace_id": "tr-60d1d905",
+  "fields": {
+   "amount": "285",
+   "trace_id": "tr-60d1d905"
+  },
+  "raw": "2026-11-23T09:07:59 INFO payment-service charge captured amount=285 (trace_id=tr-60d1d905)"
  },
  {
   "ts": "2026-11-23T09:08:00",
-  "service": "auth-service",
   "level": "WARN",
-  "message": "token refresh retry attempt=1 user=u_531",
-  "trace_id": "tr-d8930882"
- },
- {
-  "ts": "2026-11-23T09:09:21",
-  "service": "database",
-  "level": "INFO",
-  "message": "checkpoint complete",
-  "trace_id": "tr-d7d5ccbe"
- },
- {
-  "ts": "2026-11-23T09:09:53",
-  "service": "payment-service",
-  "level": "INFO",
-  "message": "refund queued",
-  "trace_id": "tr-b73c30c8"
- },
- {
-  "ts": "2026-11-23T09:10:12",
-  "service": "api-gateway",
-  "level": "INFO",
-  "message": "POST /v1/charges 200 188ms",
-  "trace_id": "tr-104c968a"
- },
- {
-  "ts": "2026-11-23T09:10:59",
   "service": "auth-service",
-  "level": "INFO",
-  "message": "token issued sub=u_187",
-  "trace_id": "tr-e14aa460"
+  "message": "token refresh retry attempt=1 user=u_147 (trace_id=tr-cf2c39e4)",
+  "trace_id": "tr-cf2c39e4",
+  "fields": {
+   "attempt": "1",
+   "user": "u_147",
+   "trace_id": "tr-cf2c39e4"
+  },
+  "raw": "2026-11-23T09:08:00 WARN auth-service token refresh retry attempt=1 user=u_147 (trace_id=tr-cf2c39e4)"
  },
  {
-  "ts": "2026-11-23T09:11:58",
-  "service": "database",
+  "ts": "2026-11-23T09:09:01",
   "level": "INFO",
-  "message": "autovacuum run",
-  "trace_id": "tr-76917752"
+  "service": "order-service",
+  "message": "order validated customer=u_879 (trace_id=tr-461d8db6)",
+  "trace_id": "tr-461d8db6",
+  "fields": {
+   "customer": "u_879",
+   "trace_id": "tr-461d8db6"
+  },
+  "raw": "2026-11-23T09:09:01 INFO order-service order validated customer=u_879 (trace_id=tr-461d8db6)"
+ },
+ {
+  "ts": "2026-11-23T09:09:42",
+  "level": "INFO",
+  "service": "payment-service",
+  "message": "charge captured amount=135 (trace_id=tr-8eb078c8)",
+  "trace_id": "tr-8eb078c8",
+  "fields": {
+   "amount": "135",
+   "trace_id": "tr-8eb078c8"
+  },
+  "raw": "2026-11-23T09:09:42 INFO payment-service charge captured amount=135 (trace_id=tr-8eb078c8)"
+ },
+ {
+  "ts": "2026-11-23T09:09:58",
+  "level": "INFO",
+  "service": "api-gateway",
+  "message": "GET /v1/orders 200 41ms (trace_id=tr-bbca6b41)",
+  "trace_id": "tr-bbca6b41",
+  "fields": {
+   "trace_id": "tr-bbca6b41"
+  },
+  "raw": "2026-11-23T09:09:58 INFO api-gateway GET /v1/orders 200 41ms (trace_id=tr-bbca6b41)"
+ },
+ {
+  "ts": "2026-11-23T09:10:45",
+  "level": "INFO",
+  "service": "auth-service",
+  "message": "token issued sub=u_485 (trace_id=tr-6329cfd3)",
+  "trace_id": "tr-6329cfd3",
+  "fields": {
+   "sub": "u_485",
+   "trace_id": "tr-6329cfd3"
+  },
+  "raw": "2026-11-23T09:10:45 INFO auth-service token issued sub=u_485 (trace_id=tr-6329cfd3)"
+ },
+ {
+  "ts": "2026-11-23T09:10:57",
+  "level": "INFO",
+  "service": "order-service",
+  "message": "order created id=727 (trace_id=tr-ab7e892d)",
+  "trace_id": "tr-ab7e892d",
+  "fields": {
+   "id": "727",
+   "trace_id": "tr-ab7e892d"
+  },
+  "raw": "2026-11-23T09:10:57 INFO order-service order created id=727 (trace_id=tr-ab7e892d)"
+ },
+ {
+  "ts": "2026-11-23T09:11:01",
+  "level": "INFO",
+  "service": "database",
+  "message": "autovacuum run (trace_id=tr-a0d09c62)",
+  "trace_id": "tr-a0d09c62",
+  "fields": {
+   "trace_id": "tr-a0d09c62"
+  },
+  "raw": "2026-11-23T09:11:01 INFO database autovacuum run (trace_id=tr-a0d09c62)"
+ },
+ {
+  "ts": "2026-11-23T09:11:09",
+  "level": "INFO",
+  "service": "notification-service",
+  "message": "notification sent recipient=u_459 (trace_id=tr-de9943a6)",
+  "trace_id": "tr-de9943a6",
+  "fields": {
+   "recipient": "u_459",
+   "trace_id": "tr-de9943a6"
+  },
+  "raw": "2026-11-23T09:11:09 INFO notification-service notification sent recipient=u_459 (trace_id=tr-de9943a6)"
  },
  {
   "ts": "2026-11-23T09:12:00",
-  "service": "payment-service",
   "level": "WARN",
-  "message": "slow card-network response 900ms",
-  "trace_id": "tr-a5aef8a6"
- },
- {
-  "ts": "2026-11-23T09:13:17",
   "service": "payment-service",
-  "level": "INFO",
-  "message": "refund queued",
-  "trace_id": "tr-f6c8a64a"
+  "message": "slow card-network response 900ms (trace_id=tr-a21a2672)",
+  "trace_id": "tr-a21a2672",
+  "fields": {
+   "trace_id": "tr-a21a2672"
+  },
+  "raw": "2026-11-23T09:12:00 WARN payment-service slow card-network response 900ms (trace_id=tr-a21a2672)"
  },
  {
-  "ts": "2026-11-23T09:13:18",
-  "service": "api-gateway",
+  "ts": "2026-11-23T09:12:07",
   "level": "INFO",
-  "message": "GET /healthz 200 2ms",
-  "trace_id": "tr-450f002a"
- },
- {
-  "ts": "2026-11-23T09:13:46",
-  "service": "auth-service",
-  "level": "INFO",
-  "message": "token issued sub=u_366",
-  "trace_id": "tr-e79a95aa"
- },
- {
-  "ts": "2026-11-23T09:14:34",
-  "service": "database",
-  "level": "INFO",
-  "message": "autovacuum run",
-  "trace_id": "tr-3b246b47"
- },
- {
-  "ts": "2026-11-23T09:15:48",
-  "service": "api-gateway",
-  "level": "INFO",
-  "message": "POST /v1/charges 200 188ms",
-  "trace_id": "tr-0e5e928c"
- },
- {
-  "ts": "2026-11-23T09:15:51",
-  "service": "auth-service",
-  "level": "INFO",
-  "message": "token issued sub=u_263",
-  "trace_id": "tr-bf03c644"
- },
- {
-  "ts": "2026-11-23T09:16:17",
   "service": "payment-service",
-  "level": "INFO",
-  "message": "refund queued",
-  "trace_id": "tr-49a35964"
+  "message": "refund queued (trace_id=tr-f27c07f5)",
+  "trace_id": "tr-f27c07f5",
+  "fields": {
+   "trace_id": "tr-f27c07f5"
+  },
+  "raw": "2026-11-23T09:12:07 INFO payment-service refund queued (trace_id=tr-f27c07f5)"
  },
  {
-  "ts": "2026-11-23T09:16:23",
-  "service": "database",
+  "ts": "2026-11-23T09:12:54",
   "level": "INFO",
-  "message": "autovacuum run",
-  "trace_id": "tr-e2979619"
+  "service": "notification-service",
+  "message": "notification sent recipient=u_146 (trace_id=tr-45e42f4d)",
+  "trace_id": "tr-45e42f4d",
+  "fields": {
+   "recipient": "u_146",
+   "trace_id": "tr-45e42f4d"
+  },
+  "raw": "2026-11-23T09:12:54 INFO notification-service notification sent recipient=u_146 (trace_id=tr-45e42f4d)"
+ },
+ {
+  "ts": "2026-11-23T09:13:20",
+  "level": "INFO",
+  "service": "api-gateway",
+  "message": "GET /v1/orders 200 41ms (trace_id=tr-c6266064)",
+  "trace_id": "tr-c6266064",
+  "fields": {
+   "trace_id": "tr-c6266064"
+  },
+  "raw": "2026-11-23T09:13:20 INFO api-gateway GET /v1/orders 200 41ms (trace_id=tr-c6266064)"
+ },
+ {
+  "ts": "2026-11-23T09:13:26",
+  "level": "INFO",
+  "service": "database",
+  "message": "autovacuum run (trace_id=tr-bc6e9d5f)",
+  "trace_id": "tr-bc6e9d5f",
+  "fields": {
+   "trace_id": "tr-bc6e9d5f"
+  },
+  "raw": "2026-11-23T09:13:26 INFO database autovacuum run (trace_id=tr-bc6e9d5f)"
+ },
+ {
+  "ts": "2026-11-23T09:13:58",
+  "level": "INFO",
+  "service": "auth-service",
+  "message": "token issued sub=u_926 (trace_id=tr-73866561)",
+  "trace_id": "tr-73866561",
+  "fields": {
+   "sub": "u_926",
+   "trace_id": "tr-73866561"
+  },
+  "raw": "2026-11-23T09:13:58 INFO auth-service token issued sub=u_926 (trace_id=tr-73866561)"
+ },
+ {
+  "ts": "2026-11-23T09:14:13",
+  "level": "INFO",
+  "service": "order-service",
+  "message": "order created id=696 (trace_id=tr-4edbfef8)",
+  "trace_id": "tr-4edbfef8",
+  "fields": {
+   "id": "696",
+   "trace_id": "tr-4edbfef8"
+  },
+  "raw": "2026-11-23T09:14:13 INFO order-service order created id=696 (trace_id=tr-4edbfef8)"
+ },
+ {
+  "ts": "2026-11-23T09:14:42",
+  "level": "INFO",
+  "service": "notification-service",
+  "message": "push dispatch queued (trace_id=tr-803183c3)",
+  "trace_id": "tr-803183c3",
+  "fields": {
+   "trace_id": "tr-803183c3"
+  },
+  "raw": "2026-11-23T09:14:42 INFO notification-service push dispatch queued (trace_id=tr-803183c3)"
+ },
+ {
+  "ts": "2026-11-23T09:15:04",
+  "level": "INFO",
+  "service": "database",
+  "message": "autovacuum run (trace_id=tr-e3aa471c)",
+  "trace_id": "tr-e3aa471c",
+  "fields": {
+   "trace_id": "tr-e3aa471c"
+  },
+  "raw": "2026-11-23T09:15:04 INFO database autovacuum run (trace_id=tr-e3aa471c)"
+ },
+ {
+  "ts": "2026-11-23T09:15:44",
+  "level": "INFO",
+  "service": "payment-service",
+  "message": "charge captured amount=983 (trace_id=tr-991aff0a)",
+  "trace_id": "tr-991aff0a",
+  "fields": {
+   "amount": "983",
+   "trace_id": "tr-991aff0a"
+  },
+  "raw": "2026-11-23T09:15:44 INFO payment-service charge captured amount=983 (trace_id=tr-991aff0a)"
+ },
+ {
+  "ts": "2026-11-23T09:16:10",
+  "level": "INFO",
+  "service": "auth-service",
+  "message": "token issued sub=u_429 (trace_id=tr-4356e358)",
+  "trace_id": "tr-4356e358",
+  "fields": {
+   "sub": "u_429",
+   "trace_id": "tr-4356e358"
+  },
+  "raw": "2026-11-23T09:16:10 INFO auth-service token issued sub=u_429 (trace_id=tr-4356e358)"
+ },
+ {
+  "ts": "2026-11-23T09:16:13",
+  "level": "INFO",
+  "service": "order-service",
+  "message": "order created id=808 (trace_id=tr-bb933a15)",
+  "trace_id": "tr-bb933a15",
+  "fields": {
+   "id": "808",
+   "trace_id": "tr-bb933a15"
+  },
+  "raw": "2026-11-23T09:16:13 INFO order-service order created id=808 (trace_id=tr-bb933a15)"
+ },
+ {
+  "ts": "2026-11-23T09:16:42",
+  "level": "INFO",
+  "service": "api-gateway",
+  "message": "GET /healthz 200 2ms (trace_id=tr-2511957e)",
+  "trace_id": "tr-2511957e",
+  "fields": {
+   "trace_id": "tr-2511957e"
+  },
+  "raw": "2026-11-23T09:16:42 INFO api-gateway GET /healthz 200 2ms (trace_id=tr-2511957e)"
+ },
+ {
+  "ts": "2026-11-23T09:16:56",
+  "level": "INFO",
+  "service": "database",
+  "message": "checkpoint complete (trace_id=tr-6b134907)",
+  "trace_id": "tr-6b134907",
+  "fields": {
+   "trace_id": "tr-6b134907"
+  },
+  "raw": "2026-11-23T09:16:56 INFO database checkpoint complete (trace_id=tr-6b134907)"
  },
  {
   "ts": "2026-11-23T09:17:00",
-  "service": "auth-service",
   "level": "WARN",
-  "message": "token refresh retry attempt=1 user=u_334",
-  "trace_id": "tr-aafb3717"
- },
- {
-  "ts": "2026-11-23T09:18:55",
-  "service": "api-gateway",
-  "level": "INFO",
-  "message": "GET /healthz 200 2ms",
-  "trace_id": "tr-983fd973"
- },
- {
-  "ts": "2026-11-23T09:19:20",
-  "service": "payment-service",
-  "level": "INFO",
-  "message": "charge captured amount=907",
-  "trace_id": "tr-69b52fc2"
- },
- {
-  "ts": "2026-11-23T09:19:38",
   "service": "auth-service",
-  "level": "INFO",
-  "message": "token issued sub=u_498",
-  "trace_id": "tr-541c18d5"
+  "message": "token refresh retry attempt=1 user=u_141 (trace_id=tr-08ccb63c)",
+  "trace_id": "tr-08ccb63c",
+  "fields": {
+   "attempt": "1",
+   "user": "u_141",
+   "trace_id": "tr-08ccb63c"
+  },
+  "raw": "2026-11-23T09:17:00 WARN auth-service token refresh retry attempt=1 user=u_141 (trace_id=tr-08ccb63c)"
  },
  {
-  "ts": "2026-11-23T09:19:38",
-  "service": "database",
+  "ts": "2026-11-23T09:18:06",
   "level": "INFO",
-  "message": "checkpoint complete",
-  "trace_id": "tr-4d2f9bba"
+  "service": "notification-service",
+  "message": "notification sent recipient=u_224 (trace_id=tr-1f1d7202)",
+  "trace_id": "tr-1f1d7202",
+  "fields": {
+   "recipient": "u_224",
+   "trace_id": "tr-1f1d7202"
+  },
+  "raw": "2026-11-23T09:18:06 INFO notification-service notification sent recipient=u_224 (trace_id=tr-1f1d7202)"
  },
  {
-  "ts": "2026-11-23T09:20:55",
-  "service": "payment-service",
+  "ts": "2026-11-23T09:18:20",
   "level": "INFO",
-  "message": "charge captured amount=455",
-  "trace_id": "tr-780c8fb0"
- },
- {
-  "ts": "2026-11-23T09:22:02",
-  "service": "api-gateway",
-  "level": "INFO",
-  "message": "POST /v1/charges 200 188ms",
-  "trace_id": "tr-efe98772"
- },
- {
-  "ts": "2026-11-23T09:22:38",
   "service": "auth-service",
-  "level": "INFO",
-  "message": "session validated",
-  "trace_id": "tr-a1754ba6"
+  "message": "token issued sub=u_700 (trace_id=tr-ebac31fb)",
+  "trace_id": "tr-ebac31fb",
+  "fields": {
+   "sub": "u_700",
+   "trace_id": "tr-ebac31fb"
+  },
+  "raw": "2026-11-23T09:18:20 INFO auth-service token issued sub=u_700 (trace_id=tr-ebac31fb)"
  },
  {
-  "ts": "2026-11-23T09:23:01",
-  "service": "database",
+  "ts": "2026-11-23T09:18:50",
   "level": "INFO",
-  "message": "checkpoint complete",
-  "trace_id": "tr-27eeae0a"
- },
- {
-  "ts": "2026-11-23T09:24:11",
   "service": "payment-service",
-  "level": "INFO",
-  "message": "charge captured amount=831",
-  "trace_id": "tr-dcbbb757"
+  "message": "charge captured amount=823 (trace_id=tr-f5947675)",
+  "trace_id": "tr-f5947675",
+  "fields": {
+   "amount": "823",
+   "trace_id": "tr-f5947675"
+  },
+  "raw": "2026-11-23T09:18:50 INFO payment-service charge captured amount=823 (trace_id=tr-f5947675)"
  },
  {
-  "ts": "2026-11-23T09:24:49",
-  "service": "api-gateway",
+  "ts": "2026-11-23T09:19:01",
   "level": "INFO",
-  "message": "POST /v1/charges 200 188ms",
-  "trace_id": "tr-2a43f047"
+  "service": "order-service",
+  "message": "order created id=630 (trace_id=tr-cf869269)",
+  "trace_id": "tr-cf869269",
+  "fields": {
+   "id": "630",
+   "trace_id": "tr-cf869269"
+  },
+  "raw": "2026-11-23T09:19:01 INFO order-service order created id=630 (trace_id=tr-cf869269)"
+ },
+ {
+  "ts": "2026-11-23T09:19:28",
+  "level": "INFO",
+  "service": "database",
+  "message": "checkpoint complete (trace_id=tr-456746fe)",
+  "trace_id": "tr-456746fe",
+  "fields": {
+   "trace_id": "tr-456746fe"
+  },
+  "raw": "2026-11-23T09:19:28 INFO database checkpoint complete (trace_id=tr-456746fe)"
+ },
+ {
+  "ts": "2026-11-23T09:20:01",
+  "level": "INFO",
+  "service": "api-gateway",
+  "message": "GET /v1/orders 200 41ms (trace_id=tr-a0ed7277)",
+  "trace_id": "tr-a0ed7277",
+  "fields": {
+   "trace_id": "tr-a0ed7277"
+  },
+  "raw": "2026-11-23T09:20:01 INFO api-gateway GET /v1/orders 200 41ms (trace_id=tr-a0ed7277)"
+ },
+ {
+  "ts": "2026-11-23T09:20:33",
+  "level": "INFO",
+  "service": "payment-service",
+  "message": "refund queued (trace_id=tr-3bb3830a)",
+  "trace_id": "tr-3bb3830a",
+  "fields": {
+   "trace_id": "tr-3bb3830a"
+  },
+  "raw": "2026-11-23T09:20:33 INFO payment-service refund queued (trace_id=tr-3bb3830a)"
+ },
+ {
+  "ts": "2026-11-23T09:20:37",
+  "level": "INFO",
+  "service": "notification-service",
+  "message": "notification sent recipient=u_654 (trace_id=tr-9780ff20)",
+  "trace_id": "tr-9780ff20",
+  "fields": {
+   "recipient": "u_654",
+   "trace_id": "tr-9780ff20"
+  },
+  "raw": "2026-11-23T09:20:37 INFO notification-service notification sent recipient=u_654 (trace_id=tr-9780ff20)"
+ },
+ {
+  "ts": "2026-11-23T09:21:24",
+  "level": "INFO",
+  "service": "order-service",
+  "message": "order validated customer=u_962 (trace_id=tr-a3a15d24)",
+  "trace_id": "tr-a3a15d24",
+  "fields": {
+   "customer": "u_962",
+   "trace_id": "tr-a3a15d24"
+  },
+  "raw": "2026-11-23T09:21:24 INFO order-service order validated customer=u_962 (trace_id=tr-a3a15d24)"
+ },
+ {
+  "ts": "2026-11-23T09:21:53",
+  "level": "INFO",
+  "service": "auth-service",
+  "message": "token issued sub=u_395 (trace_id=tr-d54ea035)",
+  "trace_id": "tr-d54ea035",
+  "fields": {
+   "sub": "u_395",
+   "trace_id": "tr-d54ea035"
+  },
+  "raw": "2026-11-23T09:21:53 INFO auth-service token issued sub=u_395 (trace_id=tr-d54ea035)"
+ },
+ {
+  "ts": "2026-11-23T09:22:23",
+  "level": "INFO",
+  "service": "database",
+  "message": "autovacuum run (trace_id=tr-cddc68d6)",
+  "trace_id": "tr-cddc68d6",
+  "fields": {
+   "trace_id": "tr-cddc68d6"
+  },
+  "raw": "2026-11-23T09:22:23 INFO database autovacuum run (trace_id=tr-cddc68d6)"
+ },
+ {
+  "ts": "2026-11-23T09:22:41",
+  "level": "INFO",
+  "service": "notification-service",
+  "message": "notification sent recipient=u_250 (trace_id=tr-ab34e0fd)",
+  "trace_id": "tr-ab34e0fd",
+  "fields": {
+   "recipient": "u_250",
+   "trace_id": "tr-ab34e0fd"
+  },
+  "raw": "2026-11-23T09:22:41 INFO notification-service notification sent recipient=u_250 (trace_id=tr-ab34e0fd)"
+ },
+ {
+  "ts": "2026-11-23T09:22:55",
+  "level": "INFO",
+  "service": "api-gateway",
+  "message": "POST /v1/charges 200 188ms (trace_id=tr-ab670e4d)",
+  "trace_id": "tr-ab670e4d",
+  "fields": {
+   "trace_id": "tr-ab670e4d"
+  },
+  "raw": "2026-11-23T09:22:55 INFO api-gateway POST /v1/charges 200 188ms (trace_id=tr-ab670e4d)"
+ },
+ {
+  "ts": "2026-11-23T09:23:40",
+  "level": "INFO",
+  "service": "payment-service",
+  "message": "refund queued (trace_id=tr-72c6a297)",
+  "trace_id": "tr-72c6a297",
+  "fields": {
+   "trace_id": "tr-72c6a297"
+  },
+  "raw": "2026-11-23T09:23:40 INFO payment-service refund queued (trace_id=tr-72c6a297)"
+ },
+ {
+  "ts": "2026-11-23T09:23:44",
+  "level": "INFO",
+  "service": "auth-service",
+  "message": "token issued sub=u_380 (trace_id=tr-f9b1de86)",
+  "trace_id": "tr-f9b1de86",
+  "fields": {
+   "sub": "u_380",
+   "trace_id": "tr-f9b1de86"
+  },
+  "raw": "2026-11-23T09:23:44 INFO auth-service token issued sub=u_380 (trace_id=tr-f9b1de86)"
+ },
+ {
+  "ts": "2026-11-23T09:24:19",
+  "level": "INFO",
+  "service": "database",
+  "message": "autovacuum run (trace_id=tr-516cd45d)",
+  "trace_id": "tr-516cd45d",
+  "fields": {
+   "trace_id": "tr-516cd45d"
+  },
+  "raw": "2026-11-23T09:24:19 INFO database autovacuum run (trace_id=tr-516cd45d)"
+ },
+ {
+  "ts": "2026-11-23T09:25:03",
+  "level": "INFO",
+  "service": "order-service",
+  "message": "order validated customer=u_192 (trace_id=tr-03f43676)",
+  "trace_id": "tr-03f43676",
+  "fields": {
+   "customer": "u_192",
+   "trace_id": "tr-03f43676"
+  },
+  "raw": "2026-11-23T09:25:03 INFO order-service order validated customer=u_192 (trace_id=tr-03f43676)"
+ },
+ {
+  "ts": "2026-11-23T09:25:37",
+  "level": "INFO",
+  "service": "notification-service",
+  "message": "push dispatch queued (trace_id=tr-f2bcde3d)",
+  "trace_id": "tr-f2bcde3d",
+  "fields": {
+   "trace_id": "tr-f2bcde3d"
+  },
+  "raw": "2026-11-23T09:25:37 INFO notification-service push dispatch queued (trace_id=tr-f2bcde3d)"
  },
  {
   "ts": "2026-11-23T09:26:00",
-  "service": "auth-service",
   "level": "WARN",
-  "message": "token refresh retry attempt=1 user=u_839",
-  "trace_id": "tr-a7094548"
+  "service": "auth-service",
+  "message": "token refresh retry attempt=1 user=u_986 (trace_id=tr-a43e3769)",
+  "trace_id": "tr-a43e3769",
+  "fields": {
+   "attempt": "1",
+   "user": "u_986",
+   "trace_id": "tr-a43e3769"
+  },
+  "raw": "2026-11-23T09:26:00 WARN auth-service token refresh retry attempt=1 user=u_986 (trace_id=tr-a43e3769)"
  },
  {
-  "ts": "2026-11-23T09:26:27",
-  "service": "auth-service",
+  "ts": "2026-11-23T09:26:45",
   "level": "INFO",
-  "message": "session validated",
-  "trace_id": "tr-d6f75151"
+  "service": "api-gateway",
+  "message": "POST /v1/charges 200 188ms (trace_id=tr-b79b14f3)",
+  "trace_id": "tr-b79b14f3",
+  "fields": {
+   "trace_id": "tr-b79b14f3"
+  },
+  "raw": "2026-11-23T09:26:45 INFO api-gateway POST /v1/charges 200 188ms (trace_id=tr-b79b14f3)"
  },
  {
   "ts": "2026-11-23T09:26:57",
+  "level": "INFO",
   "service": "database",
-  "level": "INFO",
-  "message": "autovacuum run",
-  "trace_id": "tr-85ad81d7"
+  "message": "autovacuum run (trace_id=tr-2743314b)",
+  "trace_id": "tr-2743314b",
+  "fields": {
+   "trace_id": "tr-2743314b"
+  },
+  "raw": "2026-11-23T09:26:57 INFO database autovacuum run (trace_id=tr-2743314b)"
  },
  {
-  "ts": "2026-11-23T09:27:45",
+  "ts": "2026-11-23T09:27:17",
+  "level": "INFO",
   "service": "payment-service",
-  "level": "INFO",
-  "message": "refund queued",
-  "trace_id": "tr-6fa176ac"
+  "message": "refund queued (trace_id=tr-fde11576)",
+  "trace_id": "tr-fde11576",
+  "fields": {
+   "trace_id": "tr-fde11576"
+  },
+  "raw": "2026-11-23T09:27:17 INFO payment-service refund queued (trace_id=tr-fde11576)"
  },
  {
-  "ts": "2026-11-23T09:28:35",
-  "service": "api-gateway",
+  "ts": "2026-11-23T09:27:22",
   "level": "INFO",
-  "message": "GET /v1/orders 200 41ms",
-  "trace_id": "tr-88122e14"
- },
- {
-  "ts": "2026-11-23T09:29:15",
-  "service": "payment-service",
-  "level": "INFO",
-  "message": "charge captured amount=395",
-  "trace_id": "tr-c31e4b97"
- },
- {
-  "ts": "2026-11-23T09:29:16",
   "service": "auth-service",
-  "level": "INFO",
-  "message": "token issued sub=u_978",
-  "trace_id": "tr-06c9cd95"
+  "message": "session validated (trace_id=tr-88d8c0a5)",
+  "trace_id": "tr-88d8c0a5",
+  "fields": {
+   "trace_id": "tr-88d8c0a5"
+  },
+  "raw": "2026-11-23T09:27:22 INFO auth-service session validated (trace_id=tr-88d8c0a5)"
  },
  {
-  "ts": "2026-11-23T09:29:19",
+  "ts": "2026-11-23T09:27:35",
+  "level": "INFO",
+  "service": "order-service",
+  "message": "order validated customer=u_236 (trace_id=tr-df3c49ba)",
+  "trace_id": "tr-df3c49ba",
+  "fields": {
+   "customer": "u_236",
+   "trace_id": "tr-df3c49ba"
+  },
+  "raw": "2026-11-23T09:27:35 INFO order-service order validated customer=u_236 (trace_id=tr-df3c49ba)"
+ },
+ {
+  "ts": "2026-11-23T09:28:19",
+  "level": "INFO",
+  "service": "api-gateway",
+  "message": "GET /v1/orders 200 41ms (trace_id=tr-e2220a7f)",
+  "trace_id": "tr-e2220a7f",
+  "fields": {
+   "trace_id": "tr-e2220a7f"
+  },
+  "raw": "2026-11-23T09:28:19 INFO api-gateway GET /v1/orders 200 41ms (trace_id=tr-e2220a7f)"
+ },
+ {
+  "ts": "2026-11-23T09:29:04",
+  "level": "INFO",
+  "service": "auth-service",
+  "message": "session validated (trace_id=tr-61b99161)",
+  "trace_id": "tr-61b99161",
+  "fields": {
+   "trace_id": "tr-61b99161"
+  },
+  "raw": "2026-11-23T09:29:04 INFO auth-service session validated (trace_id=tr-61b99161)"
+ },
+ {
+  "ts": "2026-11-23T09:29:11",
+  "level": "INFO",
+  "service": "notification-service",
+  "message": "push dispatch queued (trace_id=tr-6ba4d827)",
+  "trace_id": "tr-6ba4d827",
+  "fields": {
+   "trace_id": "tr-6ba4d827"
+  },
+  "raw": "2026-11-23T09:29:11 INFO notification-service push dispatch queued (trace_id=tr-6ba4d827)"
+ },
+ {
+  "ts": "2026-11-23T09:30:35",
+  "level": "INFO",
+  "service": "payment-service",
+  "message": "charge captured amount=139 (trace_id=tr-f11425e4)",
+  "trace_id": "tr-f11425e4",
+  "fields": {
+   "amount": "139",
+   "trace_id": "tr-f11425e4"
+  },
+  "raw": "2026-11-23T09:30:35 INFO payment-service charge captured amount=139 (trace_id=tr-f11425e4)"
+ },
+ {
+  "ts": "2026-11-23T09:30:44",
+  "level": "INFO",
+  "service": "order-service",
+  "message": "order created id=290 (trace_id=tr-90292165)",
+  "trace_id": "tr-90292165",
+  "fields": {
+   "id": "290",
+   "trace_id": "tr-90292165"
+  },
+  "raw": "2026-11-23T09:30:44 INFO order-service order created id=290 (trace_id=tr-90292165)"
+ },
+ {
+  "ts": "2026-11-23T09:30:54",
+  "level": "INFO",
   "service": "database",
-  "level": "INFO",
-  "message": "checkpoint complete",
-  "trace_id": "tr-f4aedd02"
+  "message": "checkpoint complete (trace_id=tr-e5212f05)",
+  "trace_id": "tr-e5212f05",
+  "fields": {
+   "trace_id": "tr-e5212f05"
+  },
+  "raw": "2026-11-23T09:30:54 INFO database checkpoint complete (trace_id=tr-e5212f05)"
  },
  {
-  "ts": "2026-11-23T09:30:09",
-  "service": "api-gateway",
+  "ts": "2026-11-23T09:31:04",
   "level": "INFO",
-  "message": "GET /v1/orders 200 41ms",
-  "trace_id": "tr-28c26bb2"
- },
- {
-  "ts": "2026-11-23T09:31:18",
-  "service": "database",
-  "level": "INFO",
-  "message": "checkpoint complete",
-  "trace_id": "tr-f65ee8fc"
- },
- {
-  "ts": "2026-11-23T09:31:47",
-  "service": "api-gateway",
-  "level": "INFO",
-  "message": "GET /v1/orders 200 41ms",
-  "trace_id": "tr-9cd5f2bb"
- },
- {
-  "ts": "2026-11-23T09:31:52",
   "service": "auth-service",
-  "level": "INFO",
-  "message": "token issued sub=u_684",
-  "trace_id": "tr-e27f8be8"
+  "message": "token issued sub=u_416 (trace_id=tr-9b5dae4e)",
+  "trace_id": "tr-9b5dae4e",
+  "fields": {
+   "sub": "u_416",
+   "trace_id": "tr-9b5dae4e"
+  },
+  "raw": "2026-11-23T09:31:04 INFO auth-service token issued sub=u_416 (trace_id=tr-9b5dae4e)"
  },
  {
-  "ts": "2026-11-23T09:32:37",
+  "ts": "2026-11-23T09:31:27",
+  "level": "INFO",
+  "service": "api-gateway",
+  "message": "GET /healthz 200 2ms (trace_id=tr-63922438)",
+  "trace_id": "tr-63922438",
+  "fields": {
+   "trace_id": "tr-63922438"
+  },
+  "raw": "2026-11-23T09:31:27 INFO api-gateway GET /healthz 200 2ms (trace_id=tr-63922438)"
+ },
+ {
+  "ts": "2026-11-23T09:32:11",
+  "level": "INFO",
+  "service": "notification-service",
+  "message": "notification sent recipient=u_505 (trace_id=tr-f8722666)",
+  "trace_id": "tr-f8722666",
+  "fields": {
+   "recipient": "u_505",
+   "trace_id": "tr-f8722666"
+  },
+  "raw": "2026-11-23T09:32:11 INFO notification-service notification sent recipient=u_505 (trace_id=tr-f8722666)"
+ },
+ {
+  "ts": "2026-11-23T09:32:43",
+  "level": "INFO",
+  "service": "auth-service",
+  "message": "session validated (trace_id=tr-b555b9fa)",
+  "trace_id": "tr-b555b9fa",
+  "fields": {
+   "trace_id": "tr-b555b9fa"
+  },
+  "raw": "2026-11-23T09:32:43 INFO auth-service session validated (trace_id=tr-b555b9fa)"
+ },
+ {
+  "ts": "2026-11-23T09:32:44",
+  "level": "INFO",
   "service": "payment-service",
-  "level": "INFO",
-  "message": "charge captured amount=104",
-  "trace_id": "tr-5909a958"
+  "message": "refund queued (trace_id=tr-e71aeba5)",
+  "trace_id": "tr-e71aeba5",
+  "fields": {
+   "trace_id": "tr-e71aeba5"
+  },
+  "raw": "2026-11-23T09:32:44 INFO payment-service refund queued (trace_id=tr-e71aeba5)"
  },
  {
-  "ts": "2026-11-23T09:34:08",
-  "service": "auth-service",
+  "ts": "2026-11-23T09:33:44",
   "level": "INFO",
-  "message": "token issued sub=u_500",
-  "trace_id": "tr-9f6428ef"
+  "service": "api-gateway",
+  "message": "GET /healthz 200 2ms (trace_id=tr-2a7ec806)",
+  "trace_id": "tr-2a7ec806",
+  "fields": {
+   "trace_id": "tr-2a7ec806"
+  },
+  "raw": "2026-11-23T09:33:44 INFO api-gateway GET /healthz 200 2ms (trace_id=tr-2a7ec806)"
  },
  {
-  "ts": "2026-11-23T09:34:26",
+  "ts": "2026-11-23T09:34:19",
+  "level": "INFO",
+  "service": "order-service",
+  "message": "order validated customer=u_137 (trace_id=tr-29da5ad2)",
+  "trace_id": "tr-29da5ad2",
+  "fields": {
+   "customer": "u_137",
+   "trace_id": "tr-29da5ad2"
+  },
+  "raw": "2026-11-23T09:34:19 INFO order-service order validated customer=u_137 (trace_id=tr-29da5ad2)"
+ },
+ {
+  "ts": "2026-11-23T09:34:22",
+  "level": "INFO",
   "service": "database",
-  "level": "INFO",
-  "message": "checkpoint complete",
-  "trace_id": "tr-26a55215"
+  "message": "checkpoint complete (trace_id=tr-7a3a8394)",
+  "trace_id": "tr-7a3a8394",
+  "fields": {
+   "trace_id": "tr-7a3a8394"
+  },
+  "raw": "2026-11-23T09:34:22 INFO database checkpoint complete (trace_id=tr-7a3a8394)"
  },
  {
-  "ts": "2026-11-23T09:34:40",
-  "service": "api-gateway",
+  "ts": "2026-11-23T09:34:44",
   "level": "INFO",
-  "message": "GET /v1/orders 200 41ms",
-  "trace_id": "tr-69c60d1b"
- },
- {
-  "ts": "2026-11-23T09:35:21",
-  "service": "payment-service",
-  "level": "INFO",
-  "message": "refund queued",
-  "trace_id": "tr-cbf93e3f"
- },
- {
-  "ts": "2026-11-23T09:36:40",
-  "service": "api-gateway",
-  "level": "INFO",
-  "message": "GET /healthz 200 2ms",
-  "trace_id": "tr-81c75bab"
- },
- {
-  "ts": "2026-11-23T09:37:06",
   "service": "auth-service",
+  "message": "session validated (trace_id=tr-c04a4a4c)",
+  "trace_id": "tr-c04a4a4c",
+  "fields": {
+   "trace_id": "tr-c04a4a4c"
+  },
+  "raw": "2026-11-23T09:34:44 INFO auth-service session validated (trace_id=tr-c04a4a4c)"
+ },
+ {
+  "ts": "2026-11-23T09:35:36",
   "level": "INFO",
-  "message": "token issued sub=u_248",
-  "trace_id": "tr-086d06d8"
+  "service": "payment-service",
+  "message": "charge captured amount=957 (trace_id=tr-eb4acb49)",
+  "trace_id": "tr-eb4acb49",
+  "fields": {
+   "amount": "957",
+   "trace_id": "tr-eb4acb49"
+  },
+  "raw": "2026-11-23T09:35:36 INFO payment-service charge captured amount=957 (trace_id=tr-eb4acb49)"
+ },
+ {
+  "ts": "2026-11-23T09:36:02",
+  "level": "INFO",
+  "service": "notification-service",
+  "message": "push dispatch queued (trace_id=tr-6694b89e)",
+  "trace_id": "tr-6694b89e",
+  "fields": {
+   "trace_id": "tr-6694b89e"
+  },
+  "raw": "2026-11-23T09:36:02 INFO notification-service push dispatch queued (trace_id=tr-6694b89e)"
+ },
+ {
+  "ts": "2026-11-23T09:36:15",
+  "level": "INFO",
+  "service": "auth-service",
+  "message": "session validated (trace_id=tr-8a6243fd)",
+  "trace_id": "tr-8a6243fd",
+  "fields": {
+   "trace_id": "tr-8a6243fd"
+  },
+  "raw": "2026-11-23T09:36:15 INFO auth-service session validated (trace_id=tr-8a6243fd)"
+ },
+ {
+  "ts": "2026-11-23T09:37:14",
+  "level": "INFO",
+  "service": "payment-service",
+  "message": "refund queued (trace_id=tr-19dedb49)",
+  "trace_id": "tr-19dedb49",
+  "fields": {
+   "trace_id": "tr-19dedb49"
+  },
+  "raw": "2026-11-23T09:37:14 INFO payment-service refund queued (trace_id=tr-19dedb49)"
+ },
+ {
+  "ts": "2026-11-23T09:37:35",
+  "level": "INFO",
+  "service": "order-service",
+  "message": "order created id=464 (trace_id=tr-85131e93)",
+  "trace_id": "tr-85131e93",
+  "fields": {
+   "id": "464",
+   "trace_id": "tr-85131e93"
+  },
+  "raw": "2026-11-23T09:37:35 INFO order-service order created id=464 (trace_id=tr-85131e93)"
+ },
+ {
+  "ts": "2026-11-23T09:37:37",
+  "level": "INFO",
+  "service": "api-gateway",
+  "message": "POST /v1/charges 200 188ms (trace_id=tr-0f4dad88)",
+  "trace_id": "tr-0f4dad88",
+  "fields": {
+   "trace_id": "tr-0f4dad88"
+  },
+  "raw": "2026-11-23T09:37:37 INFO api-gateway POST /v1/charges 200 188ms (trace_id=tr-0f4dad88)"
+ },
+ {
+  "ts": "2026-11-23T09:37:57",
+  "level": "INFO",
+  "service": "database",
+  "message": "checkpoint complete (trace_id=tr-c13de7cf)",
+  "trace_id": "tr-c13de7cf",
+  "fields": {
+   "trace_id": "tr-c13de7cf"
+  },
+  "raw": "2026-11-23T09:37:57 INFO database checkpoint complete (trace_id=tr-c13de7cf)"
+ },
+ {
+  "ts": "2026-11-23T09:37:59",
+  "level": "INFO",
+  "service": "auth-service",
+  "message": "session validated (trace_id=tr-100899d1)",
+  "trace_id": "tr-100899d1",
+  "fields": {
+   "trace_id": "tr-100899d1"
+  },
+  "raw": "2026-11-23T09:37:59 INFO auth-service session validated (trace_id=tr-100899d1)"
  },
  {
   "ts": "2026-11-23T09:38:00",
-  "service": "auth-service",
   "level": "WARN",
-  "message": "token refresh retry attempt=1 user=u_998",
-  "trace_id": "tr-c628087d"
- },
- {
-  "ts": "2026-11-23T09:38:24",
-  "service": "database",
-  "level": "INFO",
-  "message": "autovacuum run",
-  "trace_id": "tr-4c22b1f4"
- },
- {
-  "ts": "2026-11-23T09:38:40",
   "service": "auth-service",
-  "level": "INFO",
-  "message": "token issued sub=u_736",
-  "trace_id": "tr-edcf975c"
+  "message": "token refresh retry attempt=1 user=u_735 (trace_id=tr-4409a232)",
+  "trace_id": "tr-4409a232",
+  "fields": {
+   "attempt": "1",
+   "user": "u_735",
+   "trace_id": "tr-4409a232"
+  },
+  "raw": "2026-11-23T09:38:00 WARN auth-service token refresh retry attempt=1 user=u_735 (trace_id=tr-4409a232)"
  },
  {
-  "ts": "2026-11-23T09:38:55",
+  "ts": "2026-11-23T09:38:08",
+  "level": "INFO",
+  "service": "notification-service",
+  "message": "push dispatch queued (trace_id=tr-6f824b44)",
+  "trace_id": "tr-6f824b44",
+  "fields": {
+   "trace_id": "tr-6f824b44"
+  },
+  "raw": "2026-11-23T09:38:08 INFO notification-service push dispatch queued (trace_id=tr-6f824b44)"
+ },
+ {
+  "ts": "2026-11-23T09:39:00",
+  "level": "INFO",
+  "service": "notification-service",
+  "message": "Dispatching alert notification batch (trace_id=tr-ac51a8fc)",
+  "trace_id": "tr-ac51a8fc",
+  "fields": {
+   "trace_id": "tr-ac51a8fc"
+  },
+  "raw": "2026-11-23T09:39:00 INFO notification-service Dispatching alert notification batch (trace_id=tr-ac51a8fc)"
+ },
+ {
+  "ts": "2026-11-23T09:39:05",
+  "level": "INFO",
   "service": "payment-service",
-  "level": "INFO",
-  "message": "refund queued",
-  "trace_id": "tr-58e1290d"
+  "message": "charge captured amount=303 (trace_id=tr-ad489bce)",
+  "trace_id": "tr-ad489bce",
+  "fields": {
+   "amount": "303",
+   "trace_id": "tr-ad489bce"
+  },
+  "raw": "2026-11-23T09:39:05 INFO payment-service charge captured amount=303 (trace_id=tr-ad489bce)"
  },
  {
-  "ts": "2026-11-23T09:39:47",
-  "service": "api-gateway",
+  "ts": "2026-11-23T09:39:55",
   "level": "INFO",
-  "message": "POST /v1/charges 200 188ms",
-  "trace_id": "tr-9cf99a99"
+  "service": "api-gateway",
+  "message": "GET /healthz 200 2ms (trace_id=tr-70503308)",
+  "trace_id": "tr-70503308",
+  "fields": {
+   "trace_id": "tr-70503308"
+  },
+  "raw": "2026-11-23T09:39:55 INFO api-gateway GET /healthz 200 2ms (trace_id=tr-70503308)"
+ },
+ {
+  "ts": "2026-11-23T09:39:58",
+  "level": "INFO",
+  "service": "database",
+  "message": "autovacuum run (trace_id=tr-fdb38c62)",
+  "trace_id": "tr-fdb38c62",
+  "fields": {
+   "trace_id": "tr-fdb38c62"
+  },
+  "raw": "2026-11-23T09:39:58 INFO database autovacuum run (trace_id=tr-fdb38c62)"
  },
  {
   "ts": "2026-11-23T09:40:00",
-  "service": "database",
   "level": "WARN",
-  "message": "shared buffer cache growth rss=6400MB",
-  "trace_id": "tr-238191e9"
- },
- {
-  "ts": "2026-11-23T09:40:34",
-  "service": "auth-service",
-  "level": "INFO",
-  "message": "token issued sub=u_817",
-  "trace_id": "tr-075b058b"
- },
- {
-  "ts": "2026-11-23T09:40:59",
   "service": "database",
-  "level": "INFO",
-  "message": "checkpoint complete",
-  "trace_id": "tr-a352b6b5"
+  "message": "shared buffer cache growth rss=6400MB (trace_id=tr-376afb43)",
+  "trace_id": "tr-376afb43",
+  "fields": {
+   "rss": "6400MB",
+   "trace_id": "tr-376afb43"
+  },
+  "raw": "2026-11-23T09:40:00 WARN database shared buffer cache growth rss=6400MB (trace_id=tr-376afb43)"
  },
  {
-  "ts": "2026-11-23T09:41:43",
-  "service": "api-gateway",
-  "level": "INFO",
-  "message": "POST /v1/charges 200 188ms",
-  "trace_id": "tr-4cde3e5a"
+  "ts": "2026-11-23T09:40:00",
+  "level": "WARN",
+  "service": "order-service",
+  "message": "Heap buffer usage elevated active_objects=8800 (trace_id=tr-21859a18)",
+  "trace_id": "tr-21859a18",
+  "fields": {
+   "active_objects": "8800",
+   "trace_id": "tr-21859a18"
+  },
+  "raw": "2026-11-23T09:40:00 WARN order-service Heap buffer usage elevated active_objects=8800 (trace_id=tr-21859a18)"
  },
  {
-  "ts": "2026-11-23T09:42:09",
+  "ts": "2026-11-23T09:40:04",
+  "level": "INFO",
   "service": "auth-service",
-  "level": "INFO",
-  "message": "token issued sub=u_809",
-  "trace_id": "tr-a4bf58e7"
+  "message": "session validated (trace_id=tr-8598853a)",
+  "trace_id": "tr-8598853a",
+  "fields": {
+   "trace_id": "tr-8598853a"
+  },
+  "raw": "2026-11-23T09:40:04 INFO auth-service session validated (trace_id=tr-8598853a)"
  },
  {
-  "ts": "2026-11-23T09:42:48",
-  "service": "payment-service",
+  "ts": "2026-11-23T09:41:00",
   "level": "INFO",
-  "message": "refund queued",
-  "trace_id": "tr-f1a17500"
+  "service": "notification-service",
+  "message": "Dispatching alert notification batch (trace_id=tr-830aa30d)",
+  "trace_id": "tr-830aa30d",
+  "fields": {
+   "trace_id": "tr-830aa30d"
+  },
+  "raw": "2026-11-23T09:41:00 INFO notification-service Dispatching alert notification batch (trace_id=tr-830aa30d)"
+ },
+ {
+  "ts": "2026-11-23T09:41:24",
+  "level": "INFO",
+  "service": "order-service",
+  "message": "order created id=223 (trace_id=tr-5b51e2c0)",
+  "trace_id": "tr-5b51e2c0",
+  "fields": {
+   "id": "223",
+   "trace_id": "tr-5b51e2c0"
+  },
+  "raw": "2026-11-23T09:41:24 INFO order-service order created id=223 (trace_id=tr-5b51e2c0)"
+ },
+ {
+  "ts": "2026-11-23T09:41:44",
+  "level": "INFO",
+  "service": "notification-service",
+  "message": "push dispatch queued (trace_id=tr-668d3355)",
+  "trace_id": "tr-668d3355",
+  "fields": {
+   "trace_id": "tr-668d3355"
+  },
+  "raw": "2026-11-23T09:41:44 INFO notification-service push dispatch queued (trace_id=tr-668d3355)"
+ },
+ {
+  "ts": "2026-11-23T09:42:00",
+  "level": "WARN",
+  "service": "order-service",
+  "message": "Heap buffer usage elevated active_objects=9240 (trace_id=tr-f12ca00d)",
+  "trace_id": "tr-f12ca00d",
+  "fields": {
+   "active_objects": "9240",
+   "trace_id": "tr-f12ca00d"
+  },
+  "raw": "2026-11-23T09:42:00 WARN order-service Heap buffer usage elevated active_objects=9240 (trace_id=tr-f12ca00d)"
+ },
+ {
+  "ts": "2026-11-23T09:42:07",
+  "level": "INFO",
+  "service": "database",
+  "message": "checkpoint complete (trace_id=tr-18fa029e)",
+  "trace_id": "tr-18fa029e",
+  "fields": {
+   "trace_id": "tr-18fa029e"
+  },
+  "raw": "2026-11-23T09:42:07 INFO database checkpoint complete (trace_id=tr-18fa029e)"
+ },
+ {
+  "ts": "2026-11-23T09:42:22",
+  "level": "INFO",
+  "service": "auth-service",
+  "message": "token issued sub=u_293 (trace_id=tr-3673174d)",
+  "trace_id": "tr-3673174d",
+  "fields": {
+   "sub": "u_293",
+   "trace_id": "tr-3673174d"
+  },
+  "raw": "2026-11-23T09:42:22 INFO auth-service token issued sub=u_293 (trace_id=tr-3673174d)"
+ },
+ {
+  "ts": "2026-11-23T09:42:27",
+  "level": "INFO",
+  "service": "payment-service",
+  "message": "refund queued (trace_id=tr-a70b407e)",
+  "trace_id": "tr-a70b407e",
+  "fields": {
+   "trace_id": "tr-a70b407e"
+  },
+  "raw": "2026-11-23T09:42:27 INFO payment-service refund queued (trace_id=tr-a70b407e)"
+ },
+ {
+  "ts": "2026-11-23T09:42:35",
+  "level": "INFO",
+  "service": "api-gateway",
+  "message": "GET /v1/orders 200 41ms (trace_id=tr-f7630f70)",
+  "trace_id": "tr-f7630f70",
+  "fields": {
+   "trace_id": "tr-f7630f70"
+  },
+  "raw": "2026-11-23T09:42:35 INFO api-gateway GET /v1/orders 200 41ms (trace_id=tr-f7630f70)"
  },
  {
   "ts": "2026-11-23T09:43:00",
-  "service": "database",
   "level": "WARN",
-  "message": "shared buffer cache growth rss=6880MB",
-  "trace_id": "tr-c95ab050"
+  "service": "database",
+  "message": "shared buffer cache growth rss=6880MB (trace_id=tr-b8f38d1b)",
+  "trace_id": "tr-b8f38d1b",
+  "fields": {
+   "rss": "6880MB",
+   "trace_id": "tr-b8f38d1b"
+  },
+  "raw": "2026-11-23T09:43:00 WARN database shared buffer cache growth rss=6880MB (trace_id=tr-b8f38d1b)"
+ },
+ {
+  "ts": "2026-11-23T09:43:00",
+  "level": "INFO",
+  "service": "notification-service",
+  "message": "Dispatching alert notification batch (trace_id=tr-d8b86cdc)",
+  "trace_id": "tr-d8b86cdc",
+  "fields": {
+   "trace_id": "tr-d8b86cdc"
+  },
+  "raw": "2026-11-23T09:43:00 INFO notification-service Dispatching alert notification batch (trace_id=tr-d8b86cdc)"
+ },
+ {
+  "ts": "2026-11-23T09:44:00",
+  "level": "WARN",
+  "service": "order-service",
+  "message": "Heap buffer usage elevated active_objects=9680 (trace_id=tr-b4db6cf0)",
+  "trace_id": "tr-b4db6cf0",
+  "fields": {
+   "active_objects": "9680",
+   "trace_id": "tr-b4db6cf0"
+  },
+  "raw": "2026-11-23T09:44:00 WARN order-service Heap buffer usage elevated active_objects=9680 (trace_id=tr-b4db6cf0)"
+ },
+ {
+  "ts": "2026-11-23T09:44:13",
+  "level": "INFO",
+  "service": "payment-service",
+  "message": "refund queued (trace_id=tr-41cb712f)",
+  "trace_id": "tr-41cb712f",
+  "fields": {
+   "trace_id": "tr-41cb712f"
+  },
+  "raw": "2026-11-23T09:44:13 INFO payment-service refund queued (trace_id=tr-41cb712f)"
+ },
+ {
+  "ts": "2026-11-23T09:44:21",
+  "level": "INFO",
+  "service": "auth-service",
+  "message": "token issued sub=u_925 (trace_id=tr-b378f0cb)",
+  "trace_id": "tr-b378f0cb",
+  "fields": {
+   "sub": "u_925",
+   "trace_id": "tr-b378f0cb"
+  },
+  "raw": "2026-11-23T09:44:21 INFO auth-service token issued sub=u_925 (trace_id=tr-b378f0cb)"
+ },
+ {
+  "ts": "2026-11-23T09:44:30",
+  "level": "ERROR",
+  "service": "notification-service",
+  "message": "External provider outage: SendGrid API returned 503 Service Unavailable (rate-limit quota exceeded) (trace_id=tr-7d50881b)",
+  "trace_id": "tr-7d50881b",
+  "fields": {
+   "trace_id": "tr-7d50881b"
+  },
+  "raw": "2026-11-23T09:44:30 ERROR notification-service External provider outage: SendGrid API returned 503 Service Unavailable (rate-limit quota exceeded) (trace_id=tr-7d50881b)"
+ },
+ {
+  "ts": "2026-11-23T09:44:35",
+  "level": "INFO",
+  "service": "database",
+  "message": "autovacuum run (trace_id=tr-0eb72a15)",
+  "trace_id": "tr-0eb72a15",
+  "fields": {
+   "trace_id": "tr-0eb72a15"
+  },
+  "raw": "2026-11-23T09:44:35 INFO database autovacuum run (trace_id=tr-0eb72a15)"
  },
  {
   "ts": "2026-11-23T09:44:42",
-  "service": "payment-service",
   "level": "INFO",
-  "message": "charge captured amount=816",
-  "trace_id": "tr-3b4563c7"
+  "service": "order-service",
+  "message": "order validated customer=u_897 (trace_id=tr-b6105065)",
+  "trace_id": "tr-b6105065",
+  "fields": {
+   "customer": "u_897",
+   "trace_id": "tr-b6105065"
+  },
+  "raw": "2026-11-23T09:44:42 INFO order-service order validated customer=u_897 (trace_id=tr-b6105065)"
  },
  {
-  "ts": "2026-11-23T09:44:46",
-  "service": "database",
-  "level": "INFO",
-  "message": "autovacuum run",
-  "trace_id": "tr-e29f9ecb"
+  "ts": "2026-11-23T09:44:55",
+  "level": "ERROR",
+  "service": "notification-service",
+  "message": "Third-party provider outage: connection refused by mail gateway; external service unreachable (trace_id=tr-2cae0c45)",
+  "trace_id": "tr-2cae0c45",
+  "fields": {
+   "trace_id": "tr-2cae0c45"
+  },
+  "raw": "2026-11-23T09:44:55 ERROR notification-service Third-party provider outage: connection refused by mail gateway; external service unreachable (trace_id=tr-2cae0c45)"
  },
  {
-  "ts": "2026-11-23T09:44:47",
-  "service": "api-gateway",
+  "ts": "2026-11-23T09:45:21",
   "level": "INFO",
-  "message": "GET /healthz 200 2ms",
-  "trace_id": "tr-7a594f67"
- },
- {
-  "ts": "2026-11-23T09:45:14",
-  "service": "auth-service",
-  "level": "INFO",
-  "message": "token issued sub=u_854",
-  "trace_id": "tr-0bf3d0a7"
+  "service": "notification-service",
+  "message": "notification sent recipient=u_432 (trace_id=tr-8472a7bb)",
+  "trace_id": "tr-8472a7bb",
+  "fields": {
+   "recipient": "u_432",
+   "trace_id": "tr-8472a7bb"
+  },
+  "raw": "2026-11-23T09:45:21 INFO notification-service notification sent recipient=u_432 (trace_id=tr-8472a7bb)"
  },
  {
   "ts": "2026-11-23T09:45:30",
-  "service": "payment-service",
   "level": "ERROR",
-  "message": "HikariPool-1 - Connection is not available, request timed out after 30000ms (pool size=5)",
-  "trace_id": "tr-adfa09b0"
+  "service": "payment-service",
+  "message": "HikariPool-1 - Connection is not available, request timed out after 30000ms (pool size=5) (trace_id=tr-9f0ac017)",
+  "trace_id": "tr-9f0ac017",
+  "fields": {
+   "size": "5",
+   "trace_id": "tr-9f0ac017"
+  },
+  "raw": "2026-11-23T09:45:30 ERROR payment-service HikariPool-1 - Connection is not available, request timed out after 30000ms (pool size=5) (trace_id=tr-9f0ac017)"
+ },
+ {
+  "ts": "2026-11-23T09:45:30",
+  "level": "ERROR",
+  "service": "order-service",
+  "message": "Failed to allocate memory buffer for order processing: JVM OOM killer triggered (trace_id=tr-98906251)",
+  "trace_id": "tr-98906251",
+  "fields": {
+   "trace_id": "tr-98906251"
+  },
+  "raw": "2026-11-23T09:45:30 ERROR order-service Failed to allocate memory buffer for order processing: JVM OOM killer triggered (trace_id=tr-98906251)"
  },
  {
   "ts": "2026-11-23T09:45:36",
-  "service": "payment-service",
   "level": "WARN",
-  "message": "Connection pool exhausted: active=5 idle=0 waiting=27",
-  "trace_id": "tr-7432f79d"
+  "service": "payment-service",
+  "message": "Connection pool exhausted: active=5 idle=0 waiting=27 (trace_id=tr-8532b56c)",
+  "trace_id": "tr-8532b56c",
+  "fields": {
+   "active": "5",
+   "idle": "0",
+   "waiting": "27",
+   "trace_id": "tr-8532b56c"
+  },
+  "raw": "2026-11-23T09:45:36 WARN payment-service Connection pool exhausted: active=5 idle=0 waiting=27 (trace_id=tr-8532b56c)"
  },
  {
-  "ts": "2026-11-23T09:45:49",
-  "service": "payment-service",
+  "ts": "2026-11-23T09:45:42",
   "level": "ERROR",
-  "message": "Charge failed: SQLTransientConnectionException: could not acquire connection",
-  "trace_id": "tr-a0d6c1fe"
+  "service": "payment-service",
+  "message": "HikariPool-1 - Connection is not available, request timed out after 30000ms (pool size=5) (trace_id=tr-f36bf211)",
+  "trace_id": "tr-f36bf211",
+  "fields": {
+   "size": "5",
+   "trace_id": "tr-f36bf211"
+  },
+  "raw": "2026-11-23T09:45:42 ERROR payment-service HikariPool-1 - Connection is not available, request timed out after 30000ms (pool size=5) (trace_id=tr-f36bf211)"
+ },
+ {
+  "ts": "2026-11-23T09:45:48",
+  "level": "WARN",
+  "service": "payment-service",
+  "message": "Connection pool exhausted: active=5 idle=0 waiting=27 (trace_id=tr-4e2f76c2)",
+  "trace_id": "tr-4e2f76c2",
+  "fields": {
+   "active": "5",
+   "idle": "0",
+   "waiting": "27",
+   "trace_id": "tr-4e2f76c2"
+  },
+  "raw": "2026-11-23T09:45:48 WARN payment-service Connection pool exhausted: active=5 idle=0 waiting=27 (trace_id=tr-4e2f76c2)"
+ },
+ {
+  "ts": "2026-11-23T09:45:48",
+  "level": "ERROR",
+  "service": "notification-service",
+  "message": "External provider outage: SendGrid API returned 503 Service Unavailable (rate-limit quota exceeded) (trace_id=tr-8b3f19e5)",
+  "trace_id": "tr-8b3f19e5",
+  "fields": {
+   "trace_id": "tr-8b3f19e5"
+  },
+  "raw": "2026-11-23T09:45:48 ERROR notification-service External provider outage: SendGrid API returned 503 Service Unavailable (rate-limit quota exceeded) (trace_id=tr-8b3f19e5)"
  },
  {
   "ts": "2026-11-23T09:46:00",
-  "service": "database",
+  "level": "ERROR",
+  "service": "payment-service",
+  "message": "HikariPool-1 - Connection is not available, request timed out after 30000ms (pool size=5) (trace_id=tr-1ed14e6a)",
+  "trace_id": "tr-1ed14e6a",
+  "fields": {
+   "size": "5",
+   "trace_id": "tr-1ed14e6a"
+  },
+  "raw": "2026-11-23T09:46:00 ERROR payment-service HikariPool-1 - Connection is not available, request timed out after 30000ms (pool size=5) (trace_id=tr-1ed14e6a)"
+ },
+ {
+  "ts": "2026-11-23T09:46:00",
   "level": "WARN",
-  "message": "shared buffer cache growth rss=7360MB",
-  "trace_id": "tr-4f314b00"
+  "service": "database",
+  "message": "shared buffer cache growth rss=7360MB (trace_id=tr-67b80c22)",
+  "trace_id": "tr-67b80c22",
+  "fields": {
+   "rss": "7360MB",
+   "trace_id": "tr-67b80c22"
+  },
+  "raw": "2026-11-23T09:46:00 WARN database shared buffer cache growth rss=7360MB (trace_id=tr-67b80c22)"
+ },
+ {
+  "ts": "2026-11-23T09:46:00",
+  "level": "WARN",
+  "service": "notification-service",
+  "message": "Retrying delivery after external provider rate-limit backoff (trace_id=tr-f6aeedff)",
+  "trace_id": "tr-f6aeedff",
+  "fields": {
+   "trace_id": "tr-f6aeedff"
+  },
+  "raw": "2026-11-23T09:46:00 WARN notification-service Retrying delivery after external provider rate-limit backoff (trace_id=tr-f6aeedff)"
+ },
+ {
+  "ts": "2026-11-23T09:46:05",
+  "level": "INFO",
+  "service": "api-gateway",
+  "message": "POST /v1/charges 200 188ms (trace_id=tr-29fd96b2)",
+  "trace_id": "tr-29fd96b2",
+  "fields": {
+   "trace_id": "tr-29fd96b2"
+  },
+  "raw": "2026-11-23T09:46:05 INFO api-gateway POST /v1/charges 200 188ms (trace_id=tr-29fd96b2)"
+ },
+ {
+  "ts": "2026-11-23T09:46:05",
+  "level": "ERROR",
+  "service": "order-service",
+  "message": "Failed to allocate memory buffer for order processing: JVM OOM killer triggered (trace_id=tr-88df8c67)",
+  "trace_id": "tr-88df8c67",
+  "fields": {
+   "trace_id": "tr-88df8c67"
+  },
+  "raw": "2026-11-23T09:46:05 ERROR order-service Failed to allocate memory buffer for order processing: JVM OOM killer triggered (trace_id=tr-88df8c67)"
+ },
+ {
+  "ts": "2026-11-23T09:46:06",
+  "level": "WARN",
+  "service": "payment-service",
+  "message": "Connection pool exhausted: active=5 idle=0 waiting=52 (trace_id=tr-e6c38898)",
+  "trace_id": "tr-e6c38898",
+  "fields": {
+   "active": "5",
+   "idle": "0",
+   "waiting": "52",
+   "trace_id": "tr-e6c38898"
+  },
+  "raw": "2026-11-23T09:46:06 WARN payment-service Connection pool exhausted: active=5 idle=0 waiting=52 (trace_id=tr-e6c38898)"
+ },
+ {
+  "ts": "2026-11-23T09:46:11",
+  "level": "WARN",
+  "service": "order-service",
+  "message": "Garbage collection pause exceeded 2500ms; memory buffer full (trace_id=tr-9bb33b8c)",
+  "trace_id": "tr-9bb33b8c",
+  "fields": {
+   "trace_id": "tr-9bb33b8c"
+  },
+  "raw": "2026-11-23T09:46:11 WARN order-service Garbage collection pause exceeded 2500ms; memory buffer full (trace_id=tr-9bb33b8c)"
+ },
+ {
+  "ts": "2026-11-23T09:46:14",
+  "level": "ERROR",
+  "service": "notification-service",
+  "message": "Third-party provider outage: connection refused by mail gateway; external service unreachable (trace_id=tr-58e40045)",
+  "trace_id": "tr-58e40045",
+  "fields": {
+   "trace_id": "tr-58e40045"
+  },
+  "raw": "2026-11-23T09:46:14 ERROR notification-service Third-party provider outage: connection refused by mail gateway; external service unreachable (trace_id=tr-58e40045)"
  },
  {
   "ts": "2026-11-23T09:46:17",
-  "service": "payment-service",
   "level": "ERROR",
-  "message": "HikariPool-1 - Connection is not available, request timed out after 30000ms (pool size=5)",
-  "trace_id": "tr-c849ed81"
+  "service": "payment-service",
+  "message": "Charge failed: SQLTransientConnectionException: could not acquire connection (trace_id=tr-971a80e9)",
+  "trace_id": "tr-971a80e9",
+  "fields": {
+   "trace_id": "tr-971a80e9"
+  },
+  "raw": "2026-11-23T09:46:17 ERROR payment-service Charge failed: SQLTransientConnectionException: could not acquire connection (trace_id=tr-971a80e9)"
  },
  {
-  "ts": "2026-11-23T09:46:23",
-  "service": "payment-service",
+  "ts": "2026-11-23T09:46:26",
   "level": "WARN",
-  "message": "Connection pool exhausted: active=5 idle=0 waiting=60",
-  "trace_id": "tr-280da853"
+  "service": "notification-service",
+  "message": "Retrying delivery after external provider rate-limit backoff (trace_id=tr-338faa86)",
+  "trace_id": "tr-338faa86",
+  "fields": {
+   "trace_id": "tr-338faa86"
+  },
+  "raw": "2026-11-23T09:46:26 WARN notification-service Retrying delivery after external provider rate-limit backoff (trace_id=tr-338faa86)"
  },
  {
   "ts": "2026-11-23T09:46:30",
-  "service": "api-gateway",
   "level": "ERROR",
-  "message": "upstream payment-service timed out after 5000ms",
-  "trace_id": "tr-cf0061ca"
+  "service": "api-gateway",
+  "message": "upstream payment-service timed out after 5000ms (trace_id=tr-9cedd8ab)",
+  "trace_id": "tr-9cedd8ab",
+  "fields": {
+   "trace_id": "tr-9cedd8ab"
+  },
+  "raw": "2026-11-23T09:46:30 ERROR api-gateway upstream payment-service timed out after 5000ms (trace_id=tr-9cedd8ab)"
+ },
+ {
+  "ts": "2026-11-23T09:46:32",
+  "level": "ERROR",
+  "service": "payment-service",
+  "message": "HikariPool-1 - Connection is not available, request timed out after 30000ms (pool size=5) (trace_id=tr-82fa5847)",
+  "trace_id": "tr-82fa5847",
+  "fields": {
+   "size": "5",
+   "trace_id": "tr-82fa5847"
+  },
+  "raw": "2026-11-23T09:46:32 ERROR payment-service HikariPool-1 - Connection is not available, request timed out after 30000ms (pool size=5) (trace_id=tr-82fa5847)"
  },
  {
   "ts": "2026-11-23T09:46:34",
-  "service": "payment-service",
-  "level": "ERROR",
-  "message": "Charge failed: SQLTransientConnectionException: could not acquire connection",
-  "trace_id": "tr-7b951593"
- },
- {
-  "ts": "2026-11-23T09:46:40",
-  "service": "payment-service",
-  "level": "WARN",
-  "message": "Connection pool exhausted: active=5 idle=0 waiting=59",
-  "trace_id": "tr-dbc91d04"
- },
- {
-  "ts": "2026-11-23T09:46:53",
-  "service": "payment-service",
-  "level": "ERROR",
-  "message": "HikariPool-1 - Connection is not available, request timed out after 30000ms (pool size=5)",
-  "trace_id": "tr-e4fd960e"
- },
- {
-  "ts": "2026-11-23T09:46:54",
+  "level": "INFO",
   "service": "auth-service",
-  "level": "INFO",
-  "message": "session validated",
-  "trace_id": "tr-d14bb7f5"
+  "message": "session validated (trace_id=tr-c7966470)",
+  "trace_id": "tr-c7966470",
+  "fields": {
+   "trace_id": "tr-c7966470"
+  },
+  "raw": "2026-11-23T09:46:34 INFO auth-service session validated (trace_id=tr-c7966470)"
  },
  {
-  "ts": "2026-11-23T09:47:11",
-  "service": "api-gateway",
-  "level": "ERROR",
-  "message": "upstream payment-service timed out after 5000ms",
-  "trace_id": "tr-7c13b267"
- },
- {
-  "ts": "2026-11-23T09:47:14",
-  "service": "database",
-  "level": "INFO",
-  "message": "checkpoint complete",
-  "trace_id": "tr-66263f9f"
- },
- {
-  "ts": "2026-11-23T09:47:19",
-  "service": "payment-service",
-  "level": "ERROR",
-  "message": "Charge failed: SQLTransientConnectionException: could not acquire connection",
-  "trace_id": "tr-d4f58692"
- },
- {
-  "ts": "2026-11-23T09:47:25",
-  "service": "payment-service",
+  "ts": "2026-11-23T09:46:38",
   "level": "WARN",
-  "message": "Connection pool exhausted: active=5 idle=0 waiting=26",
-  "trace_id": "tr-09c3e7c0"
+  "service": "payment-service",
+  "message": "Connection pool exhausted: active=5 idle=0 waiting=38 (trace_id=tr-ea63fc95)",
+  "trace_id": "tr-ea63fc95",
+  "fields": {
+   "active": "5",
+   "idle": "0",
+   "waiting": "38",
+   "trace_id": "tr-ea63fc95"
+  },
+  "raw": "2026-11-23T09:46:38 WARN payment-service Connection pool exhausted: active=5 idle=0 waiting=38 (trace_id=tr-ea63fc95)"
  },
  {
-  "ts": "2026-11-23T09:47:27",
-  "service": "payment-service",
-  "level": "INFO",
-  "message": "charge captured amount=751",
-  "trace_id": "tr-c44da161"
- },
- {
-  "ts": "2026-11-23T09:47:36",
-  "service": "payment-service",
+  "ts": "2026-11-23T09:46:38",
   "level": "ERROR",
-  "message": "HikariPool-1 - Connection is not available, request timed out after 30000ms (pool size=5)",
-  "trace_id": "tr-292cfb34"
+  "service": "order-service",
+  "message": "java.lang.OutOfMemoryError: Java heap space in batch buffer allocation cache (trace_id=tr-df54fa50)",
+  "trace_id": "tr-df54fa50",
+  "fields": {
+   "trace_id": "tr-df54fa50"
+  },
+  "raw": "2026-11-23T09:46:38 ERROR order-service java.lang.OutOfMemoryError: Java heap space in batch buffer allocation cache (trace_id=tr-df54fa50)"
+ },
+ {
+  "ts": "2026-11-23T09:46:42",
+  "level": "INFO",
+  "service": "payment-service",
+  "message": "refund queued (trace_id=tr-61307c05)",
+  "trace_id": "tr-61307c05",
+  "fields": {
+   "trace_id": "tr-61307c05"
+  },
+  "raw": "2026-11-23T09:46:42 INFO payment-service refund queued (trace_id=tr-61307c05)"
+ },
+ {
+  "ts": "2026-11-23T09:46:51",
+  "level": "ERROR",
+  "service": "payment-service",
+  "message": "Charge failed: SQLTransientConnectionException: could not acquire connection (trace_id=tr-462c3476)",
+  "trace_id": "tr-462c3476",
+  "fields": {
+   "trace_id": "tr-462c3476"
+  },
+  "raw": "2026-11-23T09:46:51 ERROR payment-service Charge failed: SQLTransientConnectionException: could not acquire connection (trace_id=tr-462c3476)"
+ },
+ {
+  "ts": "2026-11-23T09:46:57",
+  "level": "WARN",
+  "service": "payment-service",
+  "message": "Connection pool exhausted: active=5 idle=0 waiting=25 (trace_id=tr-bd8b16d7)",
+  "trace_id": "tr-bd8b16d7",
+  "fields": {
+   "active": "5",
+   "idle": "0",
+   "waiting": "25",
+   "trace_id": "tr-bd8b16d7"
+  },
+  "raw": "2026-11-23T09:46:57 WARN payment-service Connection pool exhausted: active=5 idle=0 waiting=25 (trace_id=tr-bd8b16d7)"
+ },
+ {
+  "ts": "2026-11-23T09:46:57",
+  "level": "ERROR",
+  "service": "notification-service",
+  "message": "External provider outage: SendGrid API returned 503 Service Unavailable (rate-limit quota exceeded) (trace_id=tr-22f526fc)",
+  "trace_id": "tr-22f526fc",
+  "fields": {
+   "trace_id": "tr-22f526fc"
+  },
+  "raw": "2026-11-23T09:46:57 ERROR notification-service External provider outage: SendGrid API returned 503 Service Unavailable (rate-limit quota exceeded) (trace_id=tr-22f526fc)"
+ },
+ {
+  "ts": "2026-11-23T09:46:58",
+  "level": "ERROR",
+  "service": "api-gateway",
+  "message": "upstream payment-service returned 503 for POST /v1/charges (trace_id=tr-a66cf88b)",
+  "trace_id": "tr-a66cf88b",
+  "fields": {
+   "trace_id": "tr-a66cf88b"
+  },
+  "raw": "2026-11-23T09:46:58 ERROR api-gateway upstream payment-service returned 503 for POST /v1/charges (trace_id=tr-a66cf88b)"
+ },
+ {
+  "ts": "2026-11-23T09:47:13",
+  "level": "INFO",
+  "service": "notification-service",
+  "message": "push dispatch queued (trace_id=tr-ded8ddd2)",
+  "trace_id": "tr-ded8ddd2",
+  "fields": {
+   "trace_id": "tr-ded8ddd2"
+  },
+  "raw": "2026-11-23T09:47:13 INFO notification-service push dispatch queued (trace_id=tr-ded8ddd2)"
+ },
+ {
+  "ts": "2026-11-23T09:47:13",
+  "level": "ERROR",
+  "service": "payment-service",
+  "message": "Charge failed: SQLTransientConnectionException: could not acquire connection (trace_id=tr-9c25da84)",
+  "trace_id": "tr-9c25da84",
+  "fields": {
+   "trace_id": "tr-9c25da84"
+  },
+  "raw": "2026-11-23T09:47:13 ERROR payment-service Charge failed: SQLTransientConnectionException: could not acquire connection (trace_id=tr-9c25da84)"
+ },
+ {
+  "ts": "2026-11-23T09:47:16",
+  "level": "ERROR",
+  "service": "api-gateway",
+  "message": "upstream payment-service timed out after 5000ms (trace_id=tr-24d868cb)",
+  "trace_id": "tr-24d868cb",
+  "fields": {
+   "trace_id": "tr-24d868cb"
+  },
+  "raw": "2026-11-23T09:47:16 ERROR api-gateway upstream payment-service timed out after 5000ms (trace_id=tr-24d868cb)"
+ },
+ {
+  "ts": "2026-11-23T09:47:17",
+  "level": "ERROR",
+  "service": "order-service",
+  "message": "java.lang.OutOfMemoryError: Java heap space in batch buffer allocation cache (trace_id=tr-8ae75d3f)",
+  "trace_id": "tr-8ae75d3f",
+  "fields": {
+   "trace_id": "tr-8ae75d3f"
+  },
+  "raw": "2026-11-23T09:47:17 ERROR order-service java.lang.OutOfMemoryError: Java heap space in batch buffer allocation cache (trace_id=tr-8ae75d3f)"
+ },
+ {
+  "ts": "2026-11-23T09:47:29",
+  "level": "ERROR",
+  "service": "payment-service",
+  "message": "Charge failed: SQLTransientConnectionException: could not acquire connection (trace_id=tr-33814f57)",
+  "trace_id": "tr-33814f57",
+  "fields": {
+   "trace_id": "tr-33814f57"
+  },
+  "raw": "2026-11-23T09:47:29 ERROR payment-service Charge failed: SQLTransientConnectionException: could not acquire connection (trace_id=tr-33814f57)"
+ },
+ {
+  "ts": "2026-11-23T09:47:35",
+  "level": "ERROR",
+  "service": "notification-service",
+  "message": "Third-party provider outage: connection refused by mail gateway; external service unreachable (trace_id=tr-3ce53892)",
+  "trace_id": "tr-3ce53892",
+  "fields": {
+   "trace_id": "tr-3ce53892"
+  },
+  "raw": "2026-11-23T09:47:35 ERROR notification-service Third-party provider outage: connection refused by mail gateway; external service unreachable (trace_id=tr-3ce53892)"
  },
  {
   "ts": "2026-11-23T09:47:47",
-  "service": "api-gateway",
   "level": "ERROR",
-  "message": "upstream payment-service returned 503 for POST /v1/charges",
-  "trace_id": "tr-08ad794c"
+  "service": "payment-service",
+  "message": "Charge failed: SQLTransientConnectionException: could not acquire connection (trace_id=tr-9ce070a2)",
+  "trace_id": "tr-9ce070a2",
+  "fields": {
+   "trace_id": "tr-9ce070a2"
+  },
+  "raw": "2026-11-23T09:47:47 ERROR payment-service Charge failed: SQLTransientConnectionException: could not acquire connection (trace_id=tr-9ce070a2)"
+ },
+ {
+  "ts": "2026-11-23T09:47:51",
+  "level": "ERROR",
+  "service": "api-gateway",
+  "message": "upstream payment-service timed out after 5000ms (trace_id=tr-4683beba)",
+  "trace_id": "tr-4683beba",
+  "fields": {
+   "trace_id": "tr-4683beba"
+  },
+  "raw": "2026-11-23T09:47:51 ERROR api-gateway upstream payment-service timed out after 5000ms (trace_id=tr-4683beba)"
+ },
+ {
+  "ts": "2026-11-23T09:47:53",
+  "level": "WARN",
+  "service": "payment-service",
+  "message": "Connection pool exhausted: active=5 idle=0 waiting=39 (trace_id=tr-07ed25f3)",
+  "trace_id": "tr-07ed25f3",
+  "fields": {
+   "active": "5",
+   "idle": "0",
+   "waiting": "39",
+   "trace_id": "tr-07ed25f3"
+  },
+  "raw": "2026-11-23T09:47:53 WARN payment-service Connection pool exhausted: active=5 idle=0 waiting=39 (trace_id=tr-07ed25f3)"
+ },
+ {
+  "ts": "2026-11-23T09:47:57",
+  "level": "ERROR",
+  "service": "order-service",
+  "message": "Failed to allocate memory buffer for order processing: JVM OOM killer triggered (trace_id=tr-0759fc0e)",
+  "trace_id": "tr-0759fc0e",
+  "fields": {
+   "trace_id": "tr-0759fc0e"
+  },
+  "raw": "2026-11-23T09:47:57 ERROR order-service Failed to allocate memory buffer for order processing: JVM OOM killer triggered (trace_id=tr-0759fc0e)"
+ },
+ {
+  "ts": "2026-11-23T09:48:00",
+  "level": "ERROR",
+  "service": "notification-service",
+  "message": "Third-party provider outage: connection refused by mail gateway; external service unreachable (trace_id=tr-2212fb12)",
+  "trace_id": "tr-2212fb12",
+  "fields": {
+   "trace_id": "tr-2212fb12"
+  },
+  "raw": "2026-11-23T09:48:00 ERROR notification-service Third-party provider outage: connection refused by mail gateway; external service unreachable (trace_id=tr-2212fb12)"
  },
  {
   "ts": "2026-11-23T09:48:04",
-  "service": "api-gateway",
-  "level": "INFO",
-  "message": "GET /v1/orders 200 41ms",
-  "trace_id": "tr-d82cba01"
- },
- {
-  "ts": "2026-11-23T09:48:05",
-  "service": "payment-service",
   "level": "ERROR",
-  "message": "HikariPool-1 - Connection is not available, request timed out after 30000ms (pool size=5)",
-  "trace_id": "tr-84eb99bd"
+  "service": "payment-service",
+  "message": "HikariPool-1 - Connection is not available, request timed out after 30000ms (pool size=5) (trace_id=tr-305576f3)",
+  "trace_id": "tr-305576f3",
+  "fields": {
+   "size": "5",
+   "trace_id": "tr-305576f3"
+  },
+  "raw": "2026-11-23T09:48:04 ERROR payment-service HikariPool-1 - Connection is not available, request timed out after 30000ms (pool size=5) (trace_id=tr-305576f3)"
  },
  {
   "ts": "2026-11-23T09:48:10",
-  "service": "api-gateway",
-  "level": "ERROR",
-  "message": "upstream payment-service timed out after 5000ms",
-  "trace_id": "tr-a01235b8"
- },
- {
-  "ts": "2026-11-23T09:48:11",
-  "service": "payment-service",
-  "level": "WARN",
-  "message": "Connection pool exhausted: active=5 idle=0 waiting=56",
-  "trace_id": "tr-74efd764"
- },
- {
-  "ts": "2026-11-23T09:48:27",
-  "service": "payment-service",
-  "level": "ERROR",
-  "message": "Charge failed: SQLTransientConnectionException: could not acquire connection",
-  "trace_id": "tr-831ef5c3"
- },
- {
-  "ts": "2026-11-23T09:48:31",
-  "service": "api-gateway",
-  "level": "ERROR",
-  "message": "upstream payment-service returned 503 for POST /v1/charges",
-  "trace_id": "tr-dc97b77e"
- },
- {
-  "ts": "2026-11-23T09:48:33",
-  "service": "payment-service",
-  "level": "WARN",
-  "message": "Connection pool exhausted: active=5 idle=0 waiting=43",
-  "trace_id": "tr-858d5cd2"
- },
- {
-  "ts": "2026-11-23T09:48:45",
-  "service": "payment-service",
-  "level": "ERROR",
-  "message": "Charge failed: SQLTransientConnectionException: could not acquire connection",
-  "trace_id": "tr-35c86b78"
- },
- {
-  "ts": "2026-11-23T09:49:00",
-  "service": "auth-service",
-  "level": "WARN",
-  "message": "token refresh retry attempt=1 user=u_757",
-  "trace_id": "tr-b33858a1"
- },
- {
-  "ts": "2026-11-23T09:49:00",
-  "service": "payment-service",
-  "level": "ERROR",
-  "message": "HikariPool-1 - Connection is not available, request timed out after 30000ms (pool size=5)",
-  "trace_id": "tr-baa6b8e6"
- },
- {
-  "ts": "2026-11-23T09:49:00",
+  "level": "INFO",
   "service": "database",
-  "level": "WARN",
-  "message": "shared buffer cache growth rss=7840MB",
-  "trace_id": "tr-8fe5e1ab"
+  "message": "autovacuum run (trace_id=tr-fa8792bf)",
+  "trace_id": "tr-fa8792bf",
+  "fields": {
+   "trace_id": "tr-fa8792bf"
+  },
+  "raw": "2026-11-23T09:48:10 INFO database autovacuum run (trace_id=tr-fa8792bf)"
  },
  {
-  "ts": "2026-11-23T09:49:05",
-  "service": "api-gateway",
+  "ts": "2026-11-23T09:48:13",
   "level": "ERROR",
-  "message": "upstream payment-service timed out after 5000ms",
-  "trace_id": "tr-797b0779"
+  "service": "api-gateway",
+  "message": "upstream payment-service timed out after 5000ms (trace_id=tr-a0f25e4b)",
+  "trace_id": "tr-a0f25e4b",
+  "fields": {
+   "trace_id": "tr-a0f25e4b"
+  },
+  "raw": "2026-11-23T09:48:13 ERROR api-gateway upstream payment-service timed out after 5000ms (trace_id=tr-a0f25e4b)"
+ },
+ {
+  "ts": "2026-11-23T09:48:22",
+  "level": "INFO",
+  "service": "order-service",
+  "message": "order created id=398 (trace_id=tr-df700a5f)",
+  "trace_id": "tr-df700a5f",
+  "fields": {
+   "id": "398",
+   "trace_id": "tr-df700a5f"
+  },
+  "raw": "2026-11-23T09:48:22 INFO order-service order created id=398 (trace_id=tr-df700a5f)"
+ },
+ {
+  "ts": "2026-11-23T09:48:23",
+  "level": "ERROR",
+  "service": "payment-service",
+  "message": "Charge failed: SQLTransientConnectionException: could not acquire connection (trace_id=tr-030a7221)",
+  "trace_id": "tr-030a7221",
+  "fields": {
+   "trace_id": "tr-030a7221"
+  },
+  "raw": "2026-11-23T09:48:23 ERROR payment-service Charge failed: SQLTransientConnectionException: could not acquire connection (trace_id=tr-030a7221)"
+ },
+ {
+  "ts": "2026-11-23T09:48:32",
+  "level": "ERROR",
+  "service": "order-service",
+  "message": "Failed to allocate memory buffer for order processing: JVM OOM killer triggered (trace_id=tr-03d71035)",
+  "trace_id": "tr-03d71035",
+  "fields": {
+   "trace_id": "tr-03d71035"
+  },
+  "raw": "2026-11-23T09:48:32 ERROR order-service Failed to allocate memory buffer for order processing: JVM OOM killer triggered (trace_id=tr-03d71035)"
+ },
+ {
+  "ts": "2026-11-23T09:48:34",
+  "level": "ERROR",
+  "service": "api-gateway",
+  "message": "upstream payment-service returned 503 for POST /v1/charges (trace_id=tr-595116e1)",
+  "trace_id": "tr-595116e1",
+  "fields": {
+   "trace_id": "tr-595116e1"
+  },
+  "raw": "2026-11-23T09:48:34 ERROR api-gateway upstream payment-service returned 503 for POST /v1/charges (trace_id=tr-595116e1)"
+ },
+ {
+  "ts": "2026-11-23T09:48:34",
+  "level": "ERROR",
+  "service": "notification-service",
+  "message": "Third-party provider outage: connection refused by mail gateway; external service unreachable (trace_id=tr-222670d0)",
+  "trace_id": "tr-222670d0",
+  "fields": {
+   "trace_id": "tr-222670d0"
+  },
+  "raw": "2026-11-23T09:48:34 ERROR notification-service Third-party provider outage: connection refused by mail gateway; external service unreachable (trace_id=tr-222670d0)"
+ },
+ {
+  "ts": "2026-11-23T09:48:37",
+  "level": "INFO",
+  "service": "payment-service",
+  "message": "charge captured amount=926 (trace_id=tr-24a56edd)",
+  "trace_id": "tr-24a56edd",
+  "fields": {
+   "amount": "926",
+   "trace_id": "tr-24a56edd"
+  },
+  "raw": "2026-11-23T09:48:37 INFO payment-service charge captured amount=926 (trace_id=tr-24a56edd)"
+ },
+ {
+  "ts": "2026-11-23T09:48:37",
+  "level": "ERROR",
+  "service": "payment-service",
+  "message": "HikariPool-1 - Connection is not available, request timed out after 30000ms (pool size=5) (trace_id=tr-52ee8d44)",
+  "trace_id": "tr-52ee8d44",
+  "fields": {
+   "size": "5",
+   "trace_id": "tr-52ee8d44"
+  },
+  "raw": "2026-11-23T09:48:37 ERROR payment-service HikariPool-1 - Connection is not available, request timed out after 30000ms (pool size=5) (trace_id=tr-52ee8d44)"
+ },
+ {
+  "ts": "2026-11-23T09:48:38",
+  "level": "WARN",
+  "service": "order-service",
+  "message": "Garbage collection pause exceeded 2500ms; memory buffer full (trace_id=tr-160684b7)",
+  "trace_id": "tr-160684b7",
+  "fields": {
+   "trace_id": "tr-160684b7"
+  },
+  "raw": "2026-11-23T09:48:38 WARN order-service Garbage collection pause exceeded 2500ms; memory buffer full (trace_id=tr-160684b7)"
+ },
+ {
+  "ts": "2026-11-23T09:48:56",
+  "level": "ERROR",
+  "service": "api-gateway",
+  "message": "upstream payment-service timed out after 5000ms (trace_id=tr-05011ece)",
+  "trace_id": "tr-05011ece",
+  "fields": {
+   "trace_id": "tr-05011ece"
+  },
+  "raw": "2026-11-23T09:48:56 ERROR api-gateway upstream payment-service timed out after 5000ms (trace_id=tr-05011ece)"
+ },
+ {
+  "ts": "2026-11-23T09:48:58",
+  "level": "ERROR",
+  "service": "payment-service",
+  "message": "Charge failed: SQLTransientConnectionException: could not acquire connection (trace_id=tr-e0dd06f2)",
+  "trace_id": "tr-e0dd06f2",
+  "fields": {
+   "trace_id": "tr-e0dd06f2"
+  },
+  "raw": "2026-11-23T09:48:58 ERROR payment-service Charge failed: SQLTransientConnectionException: could not acquire connection (trace_id=tr-e0dd06f2)"
+ },
+ {
+  "ts": "2026-11-23T09:49:00",
+  "level": "WARN",
+  "service": "auth-service",
+  "message": "token refresh retry attempt=1 user=u_794 (trace_id=tr-9f9bc6d3)",
+  "trace_id": "tr-9f9bc6d3",
+  "fields": {
+   "attempt": "1",
+   "user": "u_794",
+   "trace_id": "tr-9f9bc6d3"
+  },
+  "raw": "2026-11-23T09:49:00 WARN auth-service token refresh retry attempt=1 user=u_794 (trace_id=tr-9f9bc6d3)"
+ },
+ {
+  "ts": "2026-11-23T09:49:00",
+  "level": "WARN",
+  "service": "database",
+  "message": "shared buffer cache growth rss=7840MB (trace_id=tr-607c1966)",
+  "trace_id": "tr-607c1966",
+  "fields": {
+   "rss": "7840MB",
+   "trace_id": "tr-607c1966"
+  },
+  "raw": "2026-11-23T09:49:00 WARN database shared buffer cache growth rss=7840MB (trace_id=tr-607c1966)"
+ },
+ {
+  "ts": "2026-11-23T09:49:02",
+  "level": "ERROR",
+  "service": "notification-service",
+  "message": "External provider outage: SendGrid API returned 503 Service Unavailable (rate-limit quota exceeded) (trace_id=tr-5564f44a)",
+  "trace_id": "tr-5564f44a",
+  "fields": {
+   "trace_id": "tr-5564f44a"
+  },
+  "raw": "2026-11-23T09:49:02 ERROR notification-service External provider outage: SendGrid API returned 503 Service Unavailable (rate-limit quota exceeded) (trace_id=tr-5564f44a)"
  },
  {
   "ts": "2026-11-23T09:49:09",
-  "service": "payment-service",
   "level": "INFO",
-  "message": "charge captured amount=743",
-  "trace_id": "tr-539ef49c"
+  "service": "api-gateway",
+  "message": "POST /v1/charges 200 188ms (trace_id=tr-62bfb10e)",
+  "trace_id": "tr-62bfb10e",
+  "fields": {
+   "trace_id": "tr-62bfb10e"
+  },
+  "raw": "2026-11-23T09:49:09 INFO api-gateway POST /v1/charges 200 188ms (trace_id=tr-62bfb10e)"
  },
  {
-  "ts": "2026-11-23T09:49:19",
-  "service": "payment-service",
+  "ts": "2026-11-23T09:49:11",
   "level": "ERROR",
-  "message": "HikariPool-1 - Connection is not available, request timed out after 30000ms (pool size=5)",
-  "trace_id": "tr-40a111b9"
+  "service": "order-service",
+  "message": "java.lang.OutOfMemoryError: Java heap space in batch buffer allocation cache (trace_id=tr-522f7dd3)",
+  "trace_id": "tr-522f7dd3",
+  "fields": {
+   "trace_id": "tr-522f7dd3"
+  },
+  "raw": "2026-11-23T09:49:11 ERROR order-service java.lang.OutOfMemoryError: Java heap space in batch buffer allocation cache (trace_id=tr-522f7dd3)"
  },
  {
-  "ts": "2026-11-23T09:49:25",
+  "ts": "2026-11-23T09:49:16",
+  "level": "ERROR",
   "service": "payment-service",
+  "message": "HikariPool-1 - Connection is not available, request timed out after 30000ms (pool size=5) (trace_id=tr-2897d372)",
+  "trace_id": "tr-2897d372",
+  "fields": {
+   "size": "5",
+   "trace_id": "tr-2897d372"
+  },
+  "raw": "2026-11-23T09:49:16 ERROR payment-service HikariPool-1 - Connection is not available, request timed out after 30000ms (pool size=5) (trace_id=tr-2897d372)"
+ },
+ {
+  "ts": "2026-11-23T09:49:16",
+  "level": "ERROR",
+  "service": "api-gateway",
+  "message": "upstream payment-service timed out after 5000ms (trace_id=tr-95295835)",
+  "trace_id": "tr-95295835",
+  "fields": {
+   "trace_id": "tr-95295835"
+  },
+  "raw": "2026-11-23T09:49:16 ERROR api-gateway upstream payment-service timed out after 5000ms (trace_id=tr-95295835)"
+ },
+ {
+  "ts": "2026-11-23T09:49:17",
   "level": "WARN",
-  "message": "Connection pool exhausted: active=5 idle=0 waiting=45",
-  "trace_id": "tr-0fbeb716"
+  "service": "order-service",
+  "message": "Garbage collection pause exceeded 2500ms; memory buffer full (trace_id=tr-e42d981a)",
+  "trace_id": "tr-e42d981a",
+  "fields": {
+   "trace_id": "tr-e42d981a"
+  },
+  "raw": "2026-11-23T09:49:17 WARN order-service Garbage collection pause exceeded 2500ms; memory buffer full (trace_id=tr-e42d981a)"
  },
  {
-  "ts": "2026-11-23T09:49:31",
-  "service": "payment-service",
-  "level": "ERROR",
-  "message": "Charge failed: SQLTransientConnectionException: could not acquire connection",
-  "trace_id": "tr-ea59fdda"
- },
- {
-  "ts": "2026-11-23T09:49:37",
-  "service": "payment-service",
-  "level": "WARN",
-  "message": "Connection pool exhausted: active=5 idle=0 waiting=42",
-  "trace_id": "tr-94865d85"
- },
- {
-  "ts": "2026-11-23T09:49:42",
-  "service": "api-gateway",
-  "level": "ERROR",
-  "message": "upstream payment-service returned 503 for POST /v1/charges",
-  "trace_id": "tr-48be1fa6"
- },
- {
-  "ts": "2026-11-23T09:49:48",
-  "service": "payment-service",
-  "level": "ERROR",
-  "message": "HikariPool-1 - Connection is not available, request timed out after 30000ms (pool size=5)",
-  "trace_id": "tr-4db1df93"
- },
- {
-  "ts": "2026-11-23T09:50:10",
-  "service": "api-gateway",
-  "level": "ERROR",
-  "message": "upstream payment-service timed out after 5000ms",
-  "trace_id": "tr-40670507"
- },
- {
-  "ts": "2026-11-23T09:50:16",
-  "service": "payment-service",
-  "level": "ERROR",
-  "message": "HikariPool-1 - Connection is not available, request timed out after 30000ms (pool size=5)",
-  "trace_id": "tr-fe85dfb1"
- },
- {
-  "ts": "2026-11-23T09:50:36",
-  "service": "payment-service",
-  "level": "ERROR",
-  "message": "HikariPool-1 - Connection is not available, request timed out after 30000ms (pool size=5)",
-  "trace_id": "tr-2a1edb8c"
- },
- {
-  "ts": "2026-11-23T09:50:40",
-  "service": "api-gateway",
+  "ts": "2026-11-23T09:49:22",
   "level": "INFO",
-  "message": "POST /v1/charges 200 188ms",
-  "trace_id": "tr-bde3a6e4"
- },
- {
-  "ts": "2026-11-23T09:50:42",
-  "service": "payment-service",
-  "level": "WARN",
-  "message": "Connection pool exhausted: active=5 idle=0 waiting=24",
-  "trace_id": "tr-cf402339"
- },
- {
-  "ts": "2026-11-23T09:50:42",
-  "service": "api-gateway",
-  "level": "ERROR",
-  "message": "upstream payment-service timed out after 5000ms",
-  "trace_id": "tr-4afa5e69"
- },
- {
-  "ts": "2026-11-23T09:50:47",
   "service": "auth-service",
-  "level": "INFO",
-  "message": "token issued sub=u_988",
-  "trace_id": "tr-c17a4f81"
+  "message": "token issued sub=u_352 (trace_id=tr-0b6a8ad2)",
+  "trace_id": "tr-0b6a8ad2",
+  "fields": {
+   "sub": "u_352",
+   "trace_id": "tr-0b6a8ad2"
+  },
+  "raw": "2026-11-23T09:49:22 INFO auth-service token issued sub=u_352 (trace_id=tr-0b6a8ad2)"
  },
  {
-  "ts": "2026-11-23T09:50:52",
+  "ts": "2026-11-23T09:49:30",
+  "level": "ERROR",
+  "service": "notification-service",
+  "message": "Third-party provider outage: connection refused by mail gateway; external service unreachable (trace_id=tr-c2b13eac)",
+  "trace_id": "tr-c2b13eac",
+  "fields": {
+   "trace_id": "tr-c2b13eac"
+  },
+  "raw": "2026-11-23T09:49:30 ERROR notification-service Third-party provider outage: connection refused by mail gateway; external service unreachable (trace_id=tr-c2b13eac)"
+ },
+ {
+  "ts": "2026-11-23T09:49:32",
+  "level": "ERROR",
+  "service": "order-service",
+  "message": "Failed to allocate memory buffer for order processing: JVM OOM killer triggered (trace_id=tr-ce204c96)",
+  "trace_id": "tr-ce204c96",
+  "fields": {
+   "trace_id": "tr-ce204c96"
+  },
+  "raw": "2026-11-23T09:49:32 ERROR order-service Failed to allocate memory buffer for order processing: JVM OOM killer triggered (trace_id=tr-ce204c96)"
+ },
+ {
+  "ts": "2026-11-23T09:49:38",
+  "level": "ERROR",
+  "service": "payment-service",
+  "message": "Charge failed: SQLTransientConnectionException: could not acquire connection (trace_id=tr-70a2ee42)",
+  "trace_id": "tr-70a2ee42",
+  "fields": {
+   "trace_id": "tr-70a2ee42"
+  },
+  "raw": "2026-11-23T09:49:38 ERROR payment-service Charge failed: SQLTransientConnectionException: could not acquire connection (trace_id=tr-70a2ee42)"
+ },
+ {
+  "ts": "2026-11-23T09:49:47",
+  "level": "INFO",
+  "service": "notification-service",
+  "message": "notification sent recipient=u_473 (trace_id=tr-1be917e5)",
+  "trace_id": "tr-1be917e5",
+  "fields": {
+   "recipient": "u_473",
+   "trace_id": "tr-1be917e5"
+  },
+  "raw": "2026-11-23T09:49:47 INFO notification-service notification sent recipient=u_473 (trace_id=tr-1be917e5)"
+ },
+ {
+  "ts": "2026-11-23T09:49:52",
+  "level": "ERROR",
+  "service": "api-gateway",
+  "message": "upstream payment-service returned 503 for POST /v1/charges (trace_id=tr-708c5162)",
+  "trace_id": "tr-708c5162",
+  "fields": {
+   "trace_id": "tr-708c5162"
+  },
+  "raw": "2026-11-23T09:49:52 ERROR api-gateway upstream payment-service returned 503 for POST /v1/charges (trace_id=tr-708c5162)"
+ },
+ {
+  "ts": "2026-11-23T09:49:59",
+  "level": "ERROR",
+  "service": "order-service",
+  "message": "java.lang.OutOfMemoryError: Java heap space in batch buffer allocation cache (trace_id=tr-b7fdf4c5)",
+  "trace_id": "tr-b7fdf4c5",
+  "fields": {
+   "trace_id": "tr-b7fdf4c5"
+  },
+  "raw": "2026-11-23T09:49:59 ERROR order-service java.lang.OutOfMemoryError: Java heap space in batch buffer allocation cache (trace_id=tr-b7fdf4c5)"
+ },
+ {
+  "ts": "2026-11-23T09:50:00",
+  "level": "ERROR",
+  "service": "payment-service",
+  "message": "Charge failed: SQLTransientConnectionException: could not acquire connection (trace_id=tr-5aa72b97)",
+  "trace_id": "tr-5aa72b97",
+  "fields": {
+   "trace_id": "tr-5aa72b97"
+  },
+  "raw": "2026-11-23T09:50:00 ERROR payment-service Charge failed: SQLTransientConnectionException: could not acquire connection (trace_id=tr-5aa72b97)"
+ },
+ {
+  "ts": "2026-11-23T09:50:05",
+  "level": "WARN",
+  "service": "order-service",
+  "message": "Garbage collection pause exceeded 2500ms; memory buffer full (trace_id=tr-39f6fa2d)",
+  "trace_id": "tr-39f6fa2d",
+  "fields": {
+   "trace_id": "tr-39f6fa2d"
+  },
+  "raw": "2026-11-23T09:50:05 WARN order-service Garbage collection pause exceeded 2500ms; memory buffer full (trace_id=tr-39f6fa2d)"
+ },
+ {
+  "ts": "2026-11-23T09:50:08",
+  "level": "INFO",
+  "service": "order-service",
+  "message": "order validated customer=u_557 (trace_id=tr-83688d07)",
+  "trace_id": "tr-83688d07",
+  "fields": {
+   "customer": "u_557",
+   "trace_id": "tr-83688d07"
+  },
+  "raw": "2026-11-23T09:50:08 INFO order-service order validated customer=u_557 (trace_id=tr-83688d07)"
+ },
+ {
+  "ts": "2026-11-23T09:50:11",
+  "level": "ERROR",
+  "service": "api-gateway",
+  "message": "upstream payment-service returned 503 for POST /v1/charges (trace_id=tr-3fd40dd8)",
+  "trace_id": "tr-3fd40dd8",
+  "fields": {
+   "trace_id": "tr-3fd40dd8"
+  },
+  "raw": "2026-11-23T09:50:11 ERROR api-gateway upstream payment-service returned 503 for POST /v1/charges (trace_id=tr-3fd40dd8)"
+ },
+ {
+  "ts": "2026-11-23T09:50:14",
+  "level": "ERROR",
+  "service": "payment-service",
+  "message": "HikariPool-1 - Connection is not available, request timed out after 30000ms (pool size=5) (trace_id=tr-fd43345c)",
+  "trace_id": "tr-fd43345c",
+  "fields": {
+   "size": "5",
+   "trace_id": "tr-fd43345c"
+  },
+  "raw": "2026-11-23T09:50:14 ERROR payment-service HikariPool-1 - Connection is not available, request timed out after 30000ms (pool size=5) (trace_id=tr-fd43345c)"
+ },
+ {
+  "ts": "2026-11-23T09:50:14",
+  "level": "ERROR",
+  "service": "notification-service",
+  "message": "External provider outage: SendGrid API returned 503 Service Unavailable (rate-limit quota exceeded) (trace_id=tr-99434ea9)",
+  "trace_id": "tr-99434ea9",
+  "fields": {
+   "trace_id": "tr-99434ea9"
+  },
+  "raw": "2026-11-23T09:50:14 ERROR notification-service External provider outage: SendGrid API returned 503 Service Unavailable (rate-limit quota exceeded) (trace_id=tr-99434ea9)"
+ },
+ {
+  "ts": "2026-11-23T09:50:26",
+  "level": "ERROR",
+  "service": "order-service",
+  "message": "Failed to allocate memory buffer for order processing: JVM OOM killer triggered (trace_id=tr-484902df)",
+  "trace_id": "tr-484902df",
+  "fields": {
+   "trace_id": "tr-484902df"
+  },
+  "raw": "2026-11-23T09:50:26 ERROR order-service Failed to allocate memory buffer for order processing: JVM OOM killer triggered (trace_id=tr-484902df)"
+ },
+ {
+  "ts": "2026-11-23T09:50:32",
+  "level": "WARN",
+  "service": "order-service",
+  "message": "Garbage collection pause exceeded 2500ms; memory buffer full (trace_id=tr-d82830a6)",
+  "trace_id": "tr-d82830a6",
+  "fields": {
+   "trace_id": "tr-d82830a6"
+  },
+  "raw": "2026-11-23T09:50:32 WARN order-service Garbage collection pause exceeded 2500ms; memory buffer full (trace_id=tr-d82830a6)"
+ },
+ {
+  "ts": "2026-11-23T09:50:35",
+  "level": "ERROR",
+  "service": "api-gateway",
+  "message": "upstream payment-service returned 503 for POST /v1/charges (trace_id=tr-ee4a6e55)",
+  "trace_id": "tr-ee4a6e55",
+  "fields": {
+   "trace_id": "tr-ee4a6e55"
+  },
+  "raw": "2026-11-23T09:50:35 ERROR api-gateway upstream payment-service returned 503 for POST /v1/charges (trace_id=tr-ee4a6e55)"
+ },
+ {
+  "ts": "2026-11-23T09:50:39",
+  "level": "ERROR",
+  "service": "payment-service",
+  "message": "HikariPool-1 - Connection is not available, request timed out after 30000ms (pool size=5) (trace_id=tr-6ab03eaa)",
+  "trace_id": "tr-6ab03eaa",
+  "fields": {
+   "size": "5",
+   "trace_id": "tr-6ab03eaa"
+  },
+  "raw": "2026-11-23T09:50:39 ERROR payment-service HikariPool-1 - Connection is not available, request timed out after 30000ms (pool size=5) (trace_id=tr-6ab03eaa)"
+ },
+ {
+  "ts": "2026-11-23T09:50:45",
+  "level": "WARN",
+  "service": "payment-service",
+  "message": "Connection pool exhausted: active=5 idle=0 waiting=42 (trace_id=tr-23ec7c0c)",
+  "trace_id": "tr-23ec7c0c",
+  "fields": {
+   "active": "5",
+   "idle": "0",
+   "waiting": "42",
+   "trace_id": "tr-23ec7c0c"
+  },
+  "raw": "2026-11-23T09:50:45 WARN payment-service Connection pool exhausted: active=5 idle=0 waiting=42 (trace_id=tr-23ec7c0c)"
+ },
+ {
+  "ts": "2026-11-23T09:51:03",
+  "level": "ERROR",
+  "service": "payment-service",
+  "message": "Charge failed: SQLTransientConnectionException: could not acquire connection (trace_id=tr-d239bf0b)",
+  "trace_id": "tr-d239bf0b",
+  "fields": {
+   "trace_id": "tr-d239bf0b"
+  },
+  "raw": "2026-11-23T09:51:03 ERROR payment-service Charge failed: SQLTransientConnectionException: could not acquire connection (trace_id=tr-d239bf0b)"
+ },
+ {
+  "ts": "2026-11-23T09:51:03",
+  "level": "ERROR",
+  "service": "notification-service",
+  "message": "Third-party provider outage: connection refused by mail gateway; external service unreachable (trace_id=tr-d4c79ec8)",
+  "trace_id": "tr-d4c79ec8",
+  "fields": {
+   "trace_id": "tr-d4c79ec8"
+  },
+  "raw": "2026-11-23T09:51:03 ERROR notification-service Third-party provider outage: connection refused by mail gateway; external service unreachable (trace_id=tr-d4c79ec8)"
+ },
+ {
+  "ts": "2026-11-23T09:51:07",
+  "level": "ERROR",
+  "service": "api-gateway",
+  "message": "upstream payment-service returned 503 for POST /v1/charges (trace_id=tr-50964e95)",
+  "trace_id": "tr-50964e95",
+  "fields": {
+   "trace_id": "tr-50964e95"
+  },
+  "raw": "2026-11-23T09:51:07 ERROR api-gateway upstream payment-service returned 503 for POST /v1/charges (trace_id=tr-50964e95)"
+ },
+ {
+  "ts": "2026-11-23T09:51:11",
+  "level": "ERROR",
+  "service": "order-service",
+  "message": "java.lang.OutOfMemoryError: Java heap space in batch buffer allocation cache (trace_id=tr-efce3323)",
+  "trace_id": "tr-efce3323",
+  "fields": {
+   "trace_id": "tr-efce3323"
+  },
+  "raw": "2026-11-23T09:51:11 ERROR order-service java.lang.OutOfMemoryError: Java heap space in batch buffer allocation cache (trace_id=tr-efce3323)"
+ },
+ {
+  "ts": "2026-11-23T09:51:15",
+  "level": "WARN",
+  "service": "notification-service",
+  "message": "Retrying delivery after external provider rate-limit backoff (trace_id=tr-b0ac658d)",
+  "trace_id": "tr-b0ac658d",
+  "fields": {
+   "trace_id": "tr-b0ac658d"
+  },
+  "raw": "2026-11-23T09:51:15 WARN notification-service Retrying delivery after external provider rate-limit backoff (trace_id=tr-b0ac658d)"
+ },
+ {
+  "ts": "2026-11-23T09:51:16",
+  "level": "INFO",
   "service": "database",
-  "level": "INFO",
-  "message": "autovacuum run",
-  "trace_id": "tr-38f2a031"
+  "message": "autovacuum run (trace_id=tr-81feaf2b)",
+  "trace_id": "tr-81feaf2b",
+  "fields": {
+   "trace_id": "tr-81feaf2b"
+  },
+  "raw": "2026-11-23T09:51:16 INFO database autovacuum run (trace_id=tr-81feaf2b)"
  },
  {
-  "ts": "2026-11-23T09:51:02",
-  "service": "payment-service",
+  "ts": "2026-11-23T09:51:17",
   "level": "ERROR",
-  "message": "HikariPool-1 - Connection is not available, request timed out after 30000ms (pool size=5)",
-  "trace_id": "tr-781ac78f"
+  "service": "payment-service",
+  "message": "Charge failed: SQLTransientConnectionException: could not acquire connection (trace_id=tr-44c862cf)",
+  "trace_id": "tr-44c862cf",
+  "fields": {
+   "trace_id": "tr-44c862cf"
+  },
+  "raw": "2026-11-23T09:51:17 ERROR payment-service Charge failed: SQLTransientConnectionException: could not acquire connection (trace_id=tr-44c862cf)"
  },
  {
-  "ts": "2026-11-23T09:51:08",
+  "ts": "2026-11-23T09:51:17",
+  "level": "WARN",
+  "service": "order-service",
+  "message": "Garbage collection pause exceeded 2500ms; memory buffer full (trace_id=tr-07922a93)",
+  "trace_id": "tr-07922a93",
+  "fields": {
+   "trace_id": "tr-07922a93"
+  },
+  "raw": "2026-11-23T09:51:17 WARN order-service Garbage collection pause exceeded 2500ms; memory buffer full (trace_id=tr-07922a93)"
+ },
+ {
+  "ts": "2026-11-23T09:51:25",
+  "level": "ERROR",
   "service": "api-gateway",
-  "level": "ERROR",
-  "message": "upstream payment-service timed out after 5000ms",
-  "trace_id": "tr-675ad461"
+  "message": "upstream payment-service timed out after 5000ms (trace_id=tr-4dbdbf12)",
+  "trace_id": "tr-4dbdbf12",
+  "fields": {
+   "trace_id": "tr-4dbdbf12"
+  },
+  "raw": "2026-11-23T09:51:25 ERROR api-gateway upstream payment-service timed out after 5000ms (trace_id=tr-4dbdbf12)"
  },
  {
-  "ts": "2026-11-23T09:51:27",
-  "service": "payment-service",
+  "ts": "2026-11-23T09:51:36",
   "level": "ERROR",
-  "message": "HikariPool-1 - Connection is not available, request timed out after 30000ms (pool size=5)",
-  "trace_id": "tr-5a66d71a"
+  "service": "notification-service",
+  "message": "Third-party provider outage: connection refused by mail gateway; external service unreachable (trace_id=tr-7c9262d5)",
+  "trace_id": "tr-7c9262d5",
+  "fields": {
+   "trace_id": "tr-7c9262d5"
+  },
+  "raw": "2026-11-23T09:51:36 ERROR notification-service Third-party provider outage: connection refused by mail gateway; external service unreachable (trace_id=tr-7c9262d5)"
  },
  {
-  "ts": "2026-11-23T09:51:33",
-  "service": "payment-service",
+  "ts": "2026-11-23T09:51:40",
+  "level": "ERROR",
+  "service": "order-service",
+  "message": "Failed to allocate memory buffer for order processing: JVM OOM killer triggered (trace_id=tr-e59e1f0c)",
+  "trace_id": "tr-e59e1f0c",
+  "fields": {
+   "trace_id": "tr-e59e1f0c"
+  },
+  "raw": "2026-11-23T09:51:40 ERROR order-service Failed to allocate memory buffer for order processing: JVM OOM killer triggered (trace_id=tr-e59e1f0c)"
+ },
+ {
+  "ts": "2026-11-23T09:51:42",
   "level": "INFO",
-  "message": "refund queued",
-  "trace_id": "tr-e44fbd3e"
+  "service": "order-service",
+  "message": "order created id=121 (trace_id=tr-3e587e62)",
+  "trace_id": "tr-3e587e62",
+  "fields": {
+   "id": "121",
+   "trace_id": "tr-3e587e62"
+  },
+  "raw": "2026-11-23T09:51:42 INFO order-service order created id=121 (trace_id=tr-3e587e62)"
  },
  {
-  "ts": "2026-11-23T09:51:34",
-  "service": "api-gateway",
+  "ts": "2026-11-23T09:51:42",
   "level": "ERROR",
-  "message": "upstream payment-service timed out after 5000ms",
-  "trace_id": "tr-df7a9c99"
+  "service": "payment-service",
+  "message": "HikariPool-1 - Connection is not available, request timed out after 30000ms (pool size=5) (trace_id=tr-69bc9550)",
+  "trace_id": "tr-69bc9550",
+  "fields": {
+   "size": "5",
+   "trace_id": "tr-69bc9550"
+  },
+  "raw": "2026-11-23T09:51:42 ERROR payment-service HikariPool-1 - Connection is not available, request timed out after 30000ms (pool size=5) (trace_id=tr-69bc9550)"
+ },
+ {
+  "ts": "2026-11-23T09:51:46",
+  "level": "WARN",
+  "service": "order-service",
+  "message": "Garbage collection pause exceeded 2500ms; memory buffer full (trace_id=tr-a8b863bb)",
+  "trace_id": "tr-a8b863bb",
+  "fields": {
+   "trace_id": "tr-a8b863bb"
+  },
+  "raw": "2026-11-23T09:51:46 WARN order-service Garbage collection pause exceeded 2500ms; memory buffer full (trace_id=tr-a8b863bb)"
+ },
+ {
+  "ts": "2026-11-23T09:51:48",
+  "level": "WARN",
+  "service": "notification-service",
+  "message": "Retrying delivery after external provider rate-limit backoff (trace_id=tr-0f71e85e)",
+  "trace_id": "tr-0f71e85e",
+  "fields": {
+   "trace_id": "tr-0f71e85e"
+  },
+  "raw": "2026-11-23T09:51:48 WARN notification-service Retrying delivery after external provider rate-limit backoff (trace_id=tr-0f71e85e)"
+ },
+ {
+  "ts": "2026-11-23T09:51:53",
+  "level": "ERROR",
+  "service": "api-gateway",
+  "message": "upstream payment-service timed out after 5000ms (trace_id=tr-f5c475b0)",
+  "trace_id": "tr-f5c475b0",
+  "fields": {
+   "trace_id": "tr-f5c475b0"
+  },
+  "raw": "2026-11-23T09:51:53 ERROR api-gateway upstream payment-service timed out after 5000ms (trace_id=tr-f5c475b0)"
  },
  {
   "ts": "2026-11-23T09:51:54",
-  "service": "payment-service",
   "level": "ERROR",
-  "message": "Charge failed: SQLTransientConnectionException: could not acquire connection",
-  "trace_id": "tr-77d5759d"
+  "service": "payment-service",
+  "message": "HikariPool-1 - Connection is not available, request timed out after 30000ms (pool size=5) (trace_id=tr-7f7545c0)",
+  "trace_id": "tr-7f7545c0",
+  "fields": {
+   "size": "5",
+   "trace_id": "tr-7f7545c0"
+  },
+  "raw": "2026-11-23T09:51:54 ERROR payment-service HikariPool-1 - Connection is not available, request timed out after 30000ms (pool size=5) (trace_id=tr-7f7545c0)"
  },
  {
   "ts": "2026-11-23T09:52:00",
-  "service": "database",
-  "level": "ERROR",
-  "message": "Memory usage above 95% (rss=15863MB); OOM killer risk",
-  "trace_id": "tr-420c7738"
+  "level": "WARN",
+  "service": "payment-service",
+  "message": "Connection pool exhausted: active=5 idle=0 waiting=56 (trace_id=tr-264e5ace)",
+  "trace_id": "tr-264e5ace",
+  "fields": {
+   "active": "5",
+   "idle": "0",
+   "waiting": "56",
+   "trace_id": "tr-264e5ace"
+  },
+  "raw": "2026-11-23T09:52:00 WARN payment-service Connection pool exhausted: active=5 idle=0 waiting=56 (trace_id=tr-264e5ace)"
  },
  {
-  "ts": "2026-11-23T09:52:04",
-  "service": "api-gateway",
+  "ts": "2026-11-23T09:52:00",
   "level": "ERROR",
-  "message": "upstream payment-service returned 503 for POST /v1/charges",
-  "trace_id": "tr-a7913051"
+  "service": "database",
+  "message": "Memory usage above 95% (rss=15822MB); OOM killer risk (trace_id=tr-f559ea6b)",
+  "trace_id": "tr-f559ea6b",
+  "fields": {
+   "rss": "15822MB",
+   "trace_id": "tr-f559ea6b"
+  },
+  "raw": "2026-11-23T09:52:00 ERROR database Memory usage above 95% (rss=15822MB); OOM killer risk (trace_id=tr-f559ea6b)"
+ },
+ {
+  "ts": "2026-11-23T09:52:13",
+  "level": "ERROR",
+  "service": "payment-service",
+  "message": "Charge failed: SQLTransientConnectionException: could not acquire connection (trace_id=tr-df6d487a)",
+  "trace_id": "tr-df6d487a",
+  "fields": {
+   "trace_id": "tr-df6d487a"
+  },
+  "raw": "2026-11-23T09:52:13 ERROR payment-service Charge failed: SQLTransientConnectionException: could not acquire connection (trace_id=tr-df6d487a)"
  },
  {
   "ts": "2026-11-23T09:52:19",
-  "service": "payment-service",
   "level": "ERROR",
-  "message": "HikariPool-1 - Connection is not available, request timed out after 30000ms (pool size=5)",
-  "trace_id": "tr-c7a4084b"
+  "service": "order-service",
+  "message": "Failed to allocate memory buffer for order processing: JVM OOM killer triggered (trace_id=tr-3f9884b9)",
+  "trace_id": "tr-3f9884b9",
+  "fields": {
+   "trace_id": "tr-3f9884b9"
+  },
+  "raw": "2026-11-23T09:52:19 ERROR order-service Failed to allocate memory buffer for order processing: JVM OOM killer triggered (trace_id=tr-3f9884b9)"
  },
  {
-  "ts": "2026-11-23T09:52:34",
+  "ts": "2026-11-23T09:52:24",
+  "level": "INFO",
+  "service": "payment-service",
+  "message": "charge captured amount=579 (trace_id=tr-b79c2b63)",
+  "trace_id": "tr-b79c2b63",
+  "fields": {
+   "amount": "579",
+   "trace_id": "tr-b79c2b63"
+  },
+  "raw": "2026-11-23T09:52:24 INFO payment-service charge captured amount=579 (trace_id=tr-b79c2b63)"
+ },
+ {
+  "ts": "2026-11-23T09:52:27",
+  "level": "ERROR",
+  "service": "payment-service",
+  "message": "Charge failed: SQLTransientConnectionException: could not acquire connection (trace_id=tr-b1511400)",
+  "trace_id": "tr-b1511400",
+  "fields": {
+   "trace_id": "tr-b1511400"
+  },
+  "raw": "2026-11-23T09:52:27 ERROR payment-service Charge failed: SQLTransientConnectionException: could not acquire connection (trace_id=tr-b1511400)"
+ },
+ {
+  "ts": "2026-11-23T09:52:27",
+  "level": "ERROR",
+  "service": "notification-service",
+  "message": "Third-party provider outage: connection refused by mail gateway; external service unreachable (trace_id=tr-32760110)",
+  "trace_id": "tr-32760110",
+  "fields": {
+   "trace_id": "tr-32760110"
+  },
+  "raw": "2026-11-23T09:52:27 ERROR notification-service Third-party provider outage: connection refused by mail gateway; external service unreachable (trace_id=tr-32760110)"
+ },
+ {
+  "ts": "2026-11-23T09:52:32",
+  "level": "ERROR",
   "service": "api-gateway",
-  "level": "ERROR",
-  "message": "upstream payment-service returned 503 for POST /v1/charges",
-  "trace_id": "tr-54b59e2d"
+  "message": "upstream payment-service returned 503 for POST /v1/charges (trace_id=tr-3e30851d)",
+  "trace_id": "tr-3e30851d",
+  "fields": {
+   "trace_id": "tr-3e30851d"
+  },
+  "raw": "2026-11-23T09:52:32 ERROR api-gateway upstream payment-service returned 503 for POST /v1/charges (trace_id=tr-3e30851d)"
  },
  {
-  "ts": "2026-11-23T09:52:38",
-  "service": "payment-service",
-  "level": "ERROR",
-  "message": "HikariPool-1 - Connection is not available, request timed out after 30000ms (pool size=5)",
-  "trace_id": "tr-4475ee53"
- },
- {
-  "ts": "2026-11-23T09:52:57",
-  "service": "api-gateway",
-  "level": "ERROR",
-  "message": "upstream payment-service timed out after 5000ms",
-  "trace_id": "tr-20a87932"
- },
- {
-  "ts": "2026-11-23T09:53:02",
-  "service": "payment-service",
-  "level": "ERROR",
-  "message": "Charge failed: SQLTransientConnectionException: could not acquire connection",
-  "trace_id": "tr-adc70e94"
- },
- {
-  "ts": "2026-11-23T09:53:08",
-  "service": "payment-service",
+  "ts": "2026-11-23T09:52:33",
   "level": "WARN",
-  "message": "Connection pool exhausted: active=5 idle=0 waiting=20",
-  "trace_id": "tr-ce311752"
- },
- {
-  "ts": "2026-11-23T09:53:27",
   "service": "payment-service",
-  "level": "ERROR",
-  "message": "Charge failed: SQLTransientConnectionException: could not acquire connection",
-  "trace_id": "tr-5ba46881"
+  "message": "Connection pool exhausted: active=5 idle=0 waiting=42 (trace_id=tr-4afcbac6)",
+  "trace_id": "tr-4afcbac6",
+  "fields": {
+   "active": "5",
+   "idle": "0",
+   "waiting": "42",
+   "trace_id": "tr-4afcbac6"
+  },
+  "raw": "2026-11-23T09:52:33 WARN payment-service Connection pool exhausted: active=5 idle=0 waiting=42 (trace_id=tr-4afcbac6)"
  },
  {
-  "ts": "2026-11-23T09:53:29",
+  "ts": "2026-11-23T09:52:36",
+  "level": "INFO",
   "service": "api-gateway",
+  "message": "POST /v1/charges 200 188ms (trace_id=tr-c8dd21cd)",
+  "trace_id": "tr-c8dd21cd",
+  "fields": {
+   "trace_id": "tr-c8dd21cd"
+  },
+  "raw": "2026-11-23T09:52:36 INFO api-gateway POST /v1/charges 200 188ms (trace_id=tr-c8dd21cd)"
+ },
+ {
+  "ts": "2026-11-23T09:52:36",
+  "level": "INFO",
+  "service": "notification-service",
+  "message": "notification sent recipient=u_432 (trace_id=tr-6edbbe94)",
+  "trace_id": "tr-6edbbe94",
+  "fields": {
+   "recipient": "u_432",
+   "trace_id": "tr-6edbbe94"
+  },
+  "raw": "2026-11-23T09:52:36 INFO notification-service notification sent recipient=u_432 (trace_id=tr-6edbbe94)"
+ },
+ {
+  "ts": "2026-11-23T09:52:39",
+  "level": "WARN",
+  "service": "notification-service",
+  "message": "Retrying delivery after external provider rate-limit backoff (trace_id=tr-4f152945)",
+  "trace_id": "tr-4f152945",
+  "fields": {
+   "trace_id": "tr-4f152945"
+  },
+  "raw": "2026-11-23T09:52:39 WARN notification-service Retrying delivery after external provider rate-limit backoff (trace_id=tr-4f152945)"
+ },
+ {
+  "ts": "2026-11-23T09:52:46",
   "level": "ERROR",
-  "message": "upstream payment-service returned 503 for POST /v1/charges",
-  "trace_id": "tr-c8c259a2"
+  "service": "payment-service",
+  "message": "Charge failed: SQLTransientConnectionException: could not acquire connection (trace_id=tr-a5f08356)",
+  "trace_id": "tr-a5f08356",
+  "fields": {
+   "trace_id": "tr-a5f08356"
+  },
+  "raw": "2026-11-23T09:52:46 ERROR payment-service Charge failed: SQLTransientConnectionException: could not acquire connection (trace_id=tr-a5f08356)"
+ },
+ {
+  "ts": "2026-11-23T09:52:49",
+  "level": "ERROR",
+  "service": "order-service",
+  "message": "java.lang.OutOfMemoryError: Java heap space in batch buffer allocation cache (trace_id=tr-2e811113)",
+  "trace_id": "tr-2e811113",
+  "fields": {
+   "trace_id": "tr-2e811113"
+  },
+  "raw": "2026-11-23T09:52:49 ERROR order-service java.lang.OutOfMemoryError: Java heap space in batch buffer allocation cache (trace_id=tr-2e811113)"
+ },
+ {
+  "ts": "2026-11-23T09:52:52",
+  "level": "WARN",
+  "service": "payment-service",
+  "message": "Connection pool exhausted: active=5 idle=0 waiting=51 (trace_id=tr-6173db2a)",
+  "trace_id": "tr-6173db2a",
+  "fields": {
+   "active": "5",
+   "idle": "0",
+   "waiting": "51",
+   "trace_id": "tr-6173db2a"
+  },
+  "raw": "2026-11-23T09:52:52 WARN payment-service Connection pool exhausted: active=5 idle=0 waiting=51 (trace_id=tr-6173db2a)"
+ },
+ {
+  "ts": "2026-11-23T09:52:55",
+  "level": "WARN",
+  "service": "order-service",
+  "message": "Garbage collection pause exceeded 2500ms; memory buffer full (trace_id=tr-4558ee16)",
+  "trace_id": "tr-4558ee16",
+  "fields": {
+   "trace_id": "tr-4558ee16"
+  },
+  "raw": "2026-11-23T09:52:55 WARN order-service Garbage collection pause exceeded 2500ms; memory buffer full (trace_id=tr-4558ee16)"
+ },
+ {
+  "ts": "2026-11-23T09:53:04",
+  "level": "ERROR",
+  "service": "notification-service",
+  "message": "External provider outage: SendGrid API returned 503 Service Unavailable (rate-limit quota exceeded) (trace_id=tr-294c3d89)",
+  "trace_id": "tr-294c3d89",
+  "fields": {
+   "trace_id": "tr-294c3d89"
+  },
+  "raw": "2026-11-23T09:53:04 ERROR notification-service External provider outage: SendGrid API returned 503 Service Unavailable (rate-limit quota exceeded) (trace_id=tr-294c3d89)"
+ },
+ {
+  "ts": "2026-11-23T09:53:06",
+  "level": "ERROR",
+  "service": "payment-service",
+  "message": "HikariPool-1 - Connection is not available, request timed out after 30000ms (pool size=5) (trace_id=tr-8970978f)",
+  "trace_id": "tr-8970978f",
+  "fields": {
+   "size": "5",
+   "trace_id": "tr-8970978f"
+  },
+  "raw": "2026-11-23T09:53:06 ERROR payment-service HikariPool-1 - Connection is not available, request timed out after 30000ms (pool size=5) (trace_id=tr-8970978f)"
+ },
+ {
+  "ts": "2026-11-23T09:53:06",
+  "level": "ERROR",
+  "service": "api-gateway",
+  "message": "upstream payment-service returned 503 for POST /v1/charges (trace_id=tr-69dace38)",
+  "trace_id": "tr-69dace38",
+  "fields": {
+   "trace_id": "tr-69dace38"
+  },
+  "raw": "2026-11-23T09:53:06 ERROR api-gateway upstream payment-service returned 503 for POST /v1/charges (trace_id=tr-69dace38)"
+ },
+ {
+  "ts": "2026-11-23T09:53:10",
+  "level": "INFO",
+  "service": "auth-service",
+  "message": "session validated (trace_id=tr-ddca8b0c)",
+  "trace_id": "tr-ddca8b0c",
+  "fields": {
+   "trace_id": "tr-ddca8b0c"
+  },
+  "raw": "2026-11-23T09:53:10 INFO auth-service session validated (trace_id=tr-ddca8b0c)"
+ },
+ {
+  "ts": "2026-11-23T09:53:12",
+  "level": "WARN",
+  "service": "payment-service",
+  "message": "Connection pool exhausted: active=5 idle=0 waiting=29 (trace_id=tr-6f867ce3)",
+  "trace_id": "tr-6f867ce3",
+  "fields": {
+   "active": "5",
+   "idle": "0",
+   "waiting": "29",
+   "trace_id": "tr-6f867ce3"
+  },
+  "raw": "2026-11-23T09:53:12 WARN payment-service Connection pool exhausted: active=5 idle=0 waiting=29 (trace_id=tr-6f867ce3)"
+ },
+ {
+  "ts": "2026-11-23T09:53:16",
+  "level": "WARN",
+  "service": "notification-service",
+  "message": "Retrying delivery after external provider rate-limit backoff (trace_id=tr-77fa10a3)",
+  "trace_id": "tr-77fa10a3",
+  "fields": {
+   "trace_id": "tr-77fa10a3"
+  },
+  "raw": "2026-11-23T09:53:16 WARN notification-service Retrying delivery after external provider rate-limit backoff (trace_id=tr-77fa10a3)"
+ },
+ {
+  "ts": "2026-11-23T09:53:28",
+  "level": "ERROR",
+  "service": "payment-service",
+  "message": "HikariPool-1 - Connection is not available, request timed out after 30000ms (pool size=5) (trace_id=tr-16829005)",
+  "trace_id": "tr-16829005",
+  "fields": {
+   "size": "5",
+   "trace_id": "tr-16829005"
+  },
+  "raw": "2026-11-23T09:53:28 ERROR payment-service HikariPool-1 - Connection is not available, request timed out after 30000ms (pool size=5) (trace_id=tr-16829005)"
  },
  {
   "ts": "2026-11-23T09:53:30",
-  "service": "database",
   "level": "ERROR",
-  "message": "Memory usage above 95% (rss=15654MB); OOM killer risk",
-  "trace_id": "tr-2f4d8051"
+  "service": "database",
+  "message": "Memory usage above 95% (rss=15797MB); OOM killer risk (trace_id=tr-354359fe)",
+  "trace_id": "tr-354359fe",
+  "fields": {
+   "rss": "15797MB",
+   "trace_id": "tr-354359fe"
+  },
+  "raw": "2026-11-23T09:53:30 ERROR database Memory usage above 95% (rss=15797MB); OOM killer risk (trace_id=tr-354359fe)"
  },
  {
-  "ts": "2026-11-23T09:53:33",
-  "service": "payment-service",
-  "level": "WARN",
-  "message": "Connection pool exhausted: active=5 idle=0 waiting=39",
-  "trace_id": "tr-5200866c"
+  "ts": "2026-11-23T09:53:32",
+  "level": "ERROR",
+  "service": "api-gateway",
+  "message": "upstream payment-service timed out after 5000ms (trace_id=tr-05bdbe37)",
+  "trace_id": "tr-05bdbe37",
+  "fields": {
+   "trace_id": "tr-05bdbe37"
+  },
+  "raw": "2026-11-23T09:53:32 ERROR api-gateway upstream payment-service timed out after 5000ms (trace_id=tr-05bdbe37)"
+ },
+ {
+  "ts": "2026-11-23T09:53:34",
+  "level": "ERROR",
+  "service": "order-service",
+  "message": "java.lang.OutOfMemoryError: Java heap space in batch buffer allocation cache (trace_id=tr-b66c1b49)",
+  "trace_id": "tr-b66c1b49",
+  "fields": {
+   "trace_id": "tr-b66c1b49"
+  },
+  "raw": "2026-11-23T09:53:34 ERROR order-service java.lang.OutOfMemoryError: Java heap space in batch buffer allocation cache (trace_id=tr-b66c1b49)"
  },
  {
   "ts": "2026-11-23T09:53:37",
+  "level": "INFO",
   "service": "database",
-  "level": "INFO",
-  "message": "autovacuum run",
-  "trace_id": "tr-05a97aab"
+  "message": "checkpoint complete (trace_id=tr-007e0712)",
+  "trace_id": "tr-007e0712",
+  "fields": {
+   "trace_id": "tr-007e0712"
+  },
+  "raw": "2026-11-23T09:53:37 INFO database checkpoint complete (trace_id=tr-007e0712)"
  },
  {
-  "ts": "2026-11-23T09:53:48",
-  "service": "api-gateway",
-  "level": "INFO",
-  "message": "GET /v1/orders 200 41ms",
-  "trace_id": "tr-ff21dd5a"
- },
- {
-  "ts": "2026-11-23T09:53:48",
-  "service": "payment-service",
+  "ts": "2026-11-23T09:53:45",
   "level": "ERROR",
-  "message": "Charge failed: SQLTransientConnectionException: could not acquire connection",
-  "trace_id": "tr-9f94c755"
+  "service": "notification-service",
+  "message": "Third-party provider outage: connection refused by mail gateway; external service unreachable (trace_id=tr-2b084bd9)",
+  "trace_id": "tr-2b084bd9",
+  "fields": {
+   "trace_id": "tr-2b084bd9"
+  },
+  "raw": "2026-11-23T09:53:45 ERROR notification-service Third-party provider outage: connection refused by mail gateway; external service unreachable (trace_id=tr-2b084bd9)"
+ },
+ {
+  "ts": "2026-11-23T09:53:46",
+  "level": "ERROR",
+  "service": "payment-service",
+  "message": "HikariPool-1 - Connection is not available, request timed out after 30000ms (pool size=5) (trace_id=tr-f57181a7)",
+  "trace_id": "tr-f57181a7",
+  "fields": {
+   "size": "5",
+   "trace_id": "tr-f57181a7"
+  },
+  "raw": "2026-11-23T09:53:46 ERROR payment-service HikariPool-1 - Connection is not available, request timed out after 30000ms (pool size=5) (trace_id=tr-f57181a7)"
+ },
+ {
+  "ts": "2026-11-23T09:53:52",
+  "level": "WARN",
+  "service": "payment-service",
+  "message": "Connection pool exhausted: active=5 idle=0 waiting=47 (trace_id=tr-e429370c)",
+  "trace_id": "tr-e429370c",
+  "fields": {
+   "active": "5",
+   "idle": "0",
+   "waiting": "47",
+   "trace_id": "tr-e429370c"
+  },
+  "raw": "2026-11-23T09:53:52 WARN payment-service Connection pool exhausted: active=5 idle=0 waiting=47 (trace_id=tr-e429370c)"
+ },
+ {
+  "ts": "2026-11-23T09:54:04",
+  "level": "ERROR",
+  "service": "order-service",
+  "message": "java.lang.OutOfMemoryError: Java heap space in batch buffer allocation cache (trace_id=tr-6e428d63)",
+  "trace_id": "tr-6e428d63",
+  "fields": {
+   "trace_id": "tr-6e428d63"
+  },
+  "raw": "2026-11-23T09:54:04 ERROR order-service java.lang.OutOfMemoryError: Java heap space in batch buffer allocation cache (trace_id=tr-6e428d63)"
+ },
+ {
+  "ts": "2026-11-23T09:54:09",
+  "level": "ERROR",
+  "service": "api-gateway",
+  "message": "upstream payment-service returned 503 for POST /v1/charges (trace_id=tr-16642602)",
+  "trace_id": "tr-16642602",
+  "fields": {
+   "trace_id": "tr-16642602"
+  },
+  "raw": "2026-11-23T09:54:09 ERROR api-gateway upstream payment-service returned 503 for POST /v1/charges (trace_id=tr-16642602)"
+ },
+ {
+  "ts": "2026-11-23T09:54:10",
+  "level": "WARN",
+  "service": "order-service",
+  "message": "Garbage collection pause exceeded 2500ms; memory buffer full (trace_id=tr-4d9664cb)",
+  "trace_id": "tr-4d9664cb",
+  "fields": {
+   "trace_id": "tr-4d9664cb"
+  },
+  "raw": "2026-11-23T09:54:10 WARN order-service Garbage collection pause exceeded 2500ms; memory buffer full (trace_id=tr-4d9664cb)"
  },
  {
   "ts": "2026-11-23T09:54:11",
-  "service": "api-gateway",
   "level": "ERROR",
-  "message": "upstream payment-service timed out after 5000ms",
-  "trace_id": "tr-b9015459"
+  "service": "notification-service",
+  "message": "Third-party provider outage: connection refused by mail gateway; external service unreachable (trace_id=tr-fdfc191e)",
+  "trace_id": "tr-fdfc191e",
+  "fields": {
+   "trace_id": "tr-fdfc191e"
+  },
+  "raw": "2026-11-23T09:54:11 ERROR notification-service Third-party provider outage: connection refused by mail gateway; external service unreachable (trace_id=tr-fdfc191e)"
  },
  {
-  "ts": "2026-11-23T09:54:12",
+  "ts": "2026-11-23T09:54:14",
+  "level": "ERROR",
   "service": "payment-service",
-  "level": "ERROR",
-  "message": "Charge failed: SQLTransientConnectionException: could not acquire connection",
-  "trace_id": "tr-271ad4c0"
+  "message": "HikariPool-1 - Connection is not available, request timed out after 30000ms (pool size=5) (trace_id=tr-068c1935)",
+  "trace_id": "tr-068c1935",
+  "fields": {
+   "size": "5",
+   "trace_id": "tr-068c1935"
+  },
+  "raw": "2026-11-23T09:54:14 ERROR payment-service HikariPool-1 - Connection is not available, request timed out after 30000ms (pool size=5) (trace_id=tr-068c1935)"
  },
  {
-  "ts": "2026-11-23T09:54:34",
-  "service": "auth-service",
-  "level": "INFO",
-  "message": "session validated",
-  "trace_id": "tr-3f1fb241"
- },
- {
-  "ts": "2026-11-23T09:54:39",
-  "service": "payment-service",
-  "level": "ERROR",
-  "message": "HikariPool-1 - Connection is not available, request timed out after 30000ms (pool size=5)",
-  "trace_id": "tr-15d4e7c2"
- },
- {
-  "ts": "2026-11-23T09:54:42",
-  "service": "api-gateway",
-  "level": "ERROR",
-  "message": "upstream payment-service timed out after 5000ms",
-  "trace_id": "tr-8b9f684a"
- },
- {
-  "ts": "2026-11-23T09:55:00",
-  "service": "auth-service",
+  "ts": "2026-11-23T09:54:20",
   "level": "WARN",
-  "message": "token refresh retry attempt=1 user=u_697",
-  "trace_id": "tr-da39c4ea"
+  "service": "payment-service",
+  "message": "Connection pool exhausted: active=5 idle=0 waiting=56 (trace_id=tr-e55929b1)",
+  "trace_id": "tr-e55929b1",
+  "fields": {
+   "active": "5",
+   "idle": "0",
+   "waiting": "56",
+   "trace_id": "tr-e55929b1"
+  },
+  "raw": "2026-11-23T09:54:20 WARN payment-service Connection pool exhausted: active=5 idle=0 waiting=56 (trace_id=tr-e55929b1)"
+ },
+ {
+  "ts": "2026-11-23T09:54:27",
+  "level": "ERROR",
+  "service": "order-service",
+  "message": "java.lang.OutOfMemoryError: Java heap space in batch buffer allocation cache (trace_id=tr-8d667015)",
+  "trace_id": "tr-8d667015",
+  "fields": {
+   "trace_id": "tr-8d667015"
+  },
+  "raw": "2026-11-23T09:54:27 ERROR order-service java.lang.OutOfMemoryError: Java heap space in batch buffer allocation cache (trace_id=tr-8d667015)"
+ },
+ {
+  "ts": "2026-11-23T09:54:31",
+  "level": "ERROR",
+  "service": "api-gateway",
+  "message": "upstream payment-service timed out after 5000ms (trace_id=tr-6106c064)",
+  "trace_id": "tr-6106c064",
+  "fields": {
+   "trace_id": "tr-6106c064"
+  },
+  "raw": "2026-11-23T09:54:31 ERROR api-gateway upstream payment-service timed out after 5000ms (trace_id=tr-6106c064)"
+ },
+ {
+  "ts": "2026-11-23T09:54:33",
+  "level": "WARN",
+  "service": "order-service",
+  "message": "Garbage collection pause exceeded 2500ms; memory buffer full (trace_id=tr-a3689b02)",
+  "trace_id": "tr-a3689b02",
+  "fields": {
+   "trace_id": "tr-a3689b02"
+  },
+  "raw": "2026-11-23T09:54:33 WARN order-service Garbage collection pause exceeded 2500ms; memory buffer full (trace_id=tr-a3689b02)"
+ },
+ {
+  "ts": "2026-11-23T09:54:35",
+  "level": "ERROR",
+  "service": "payment-service",
+  "message": "Charge failed: SQLTransientConnectionException: could not acquire connection (trace_id=tr-89db1c3f)",
+  "trace_id": "tr-89db1c3f",
+  "fields": {
+   "trace_id": "tr-89db1c3f"
+  },
+  "raw": "2026-11-23T09:54:35 ERROR payment-service Charge failed: SQLTransientConnectionException: could not acquire connection (trace_id=tr-89db1c3f)"
+ },
+ {
+  "ts": "2026-11-23T09:54:36",
+  "level": "INFO",
+  "service": "notification-service",
+  "message": "notification sent recipient=u_330 (trace_id=tr-23b02845)",
+  "trace_id": "tr-23b02845",
+  "fields": {
+   "recipient": "u_330",
+   "trace_id": "tr-23b02845"
+  },
+  "raw": "2026-11-23T09:54:36 INFO notification-service notification sent recipient=u_330 (trace_id=tr-23b02845)"
+ },
+ {
+  "ts": "2026-11-23T09:54:49",
+  "level": "ERROR",
+  "service": "notification-service",
+  "message": "Third-party provider outage: connection refused by mail gateway; external service unreachable (trace_id=tr-faef7b98)",
+  "trace_id": "tr-faef7b98",
+  "fields": {
+   "trace_id": "tr-faef7b98"
+  },
+  "raw": "2026-11-23T09:54:49 ERROR notification-service Third-party provider outage: connection refused by mail gateway; external service unreachable (trace_id=tr-faef7b98)"
+ },
+ {
+  "ts": "2026-11-23T09:54:54",
+  "level": "ERROR",
+  "service": "api-gateway",
+  "message": "upstream payment-service timed out after 5000ms (trace_id=tr-65620481)",
+  "trace_id": "tr-65620481",
+  "fields": {
+   "trace_id": "tr-65620481"
+  },
+  "raw": "2026-11-23T09:54:54 ERROR api-gateway upstream payment-service timed out after 5000ms (trace_id=tr-65620481)"
+ },
+ {
+  "ts": "2026-11-23T09:54:55",
+  "level": "ERROR",
+  "service": "payment-service",
+  "message": "Charge failed: SQLTransientConnectionException: could not acquire connection (trace_id=tr-63b76c86)",
+  "trace_id": "tr-63b76c86",
+  "fields": {
+   "trace_id": "tr-63b76c86"
+  },
+  "raw": "2026-11-23T09:54:55 ERROR payment-service Charge failed: SQLTransientConnectionException: could not acquire connection (trace_id=tr-63b76c86)"
+ },
+ {
+  "ts": "2026-11-23T09:54:56",
+  "level": "INFO",
+  "service": "auth-service",
+  "message": "session validated (trace_id=tr-14ece04c)",
+  "trace_id": "tr-14ece04c",
+  "fields": {
+   "trace_id": "tr-14ece04c"
+  },
+  "raw": "2026-11-23T09:54:56 INFO auth-service session validated (trace_id=tr-14ece04c)"
  },
  {
   "ts": "2026-11-23T09:55:00",
+  "level": "WARN",
+  "service": "auth-service",
+  "message": "token refresh retry attempt=1 user=u_379 (trace_id=tr-a0d4f2e3)",
+  "trace_id": "tr-a0d4f2e3",
+  "fields": {
+   "attempt": "1",
+   "user": "u_379",
+   "trace_id": "tr-a0d4f2e3"
+  },
+  "raw": "2026-11-23T09:55:00 WARN auth-service token refresh retry attempt=1 user=u_379 (trace_id=tr-a0d4f2e3)"
+ },
+ {
+  "ts": "2026-11-23T09:55:00",
+  "level": "ERROR",
   "service": "database",
-  "level": "ERROR",
-  "message": "Memory usage above 95% (rss=15715MB); OOM killer risk",
-  "trace_id": "tr-08c401a1"
+  "message": "Memory usage above 95% (rss=15652MB); OOM killer risk (trace_id=tr-f370bdbc)",
+  "trace_id": "tr-f370bdbc",
+  "fields": {
+   "rss": "15652MB",
+   "trace_id": "tr-f370bdbc"
+  },
+  "raw": "2026-11-23T09:55:00 ERROR database Memory usage above 95% (rss=15652MB); OOM killer risk (trace_id=tr-f370bdbc)"
  },
  {
-  "ts": "2026-11-23T09:55:07",
+  "ts": "2026-11-23T09:55:01",
+  "level": "WARN",
   "service": "payment-service",
-  "level": "ERROR",
-  "message": "HikariPool-1 - Connection is not available, request timed out after 30000ms (pool size=5)",
-  "trace_id": "tr-87d88917"
+  "message": "Connection pool exhausted: active=5 idle=0 waiting=22 (trace_id=tr-983f9a9a)",
+  "trace_id": "tr-983f9a9a",
+  "fields": {
+   "active": "5",
+   "idle": "0",
+   "waiting": "22",
+   "trace_id": "tr-983f9a9a"
+  },
+  "raw": "2026-11-23T09:55:01 WARN payment-service Connection pool exhausted: active=5 idle=0 waiting=22 (trace_id=tr-983f9a9a)"
  },
  {
-  "ts": "2026-11-23T09:55:14",
-  "service": "api-gateway",
+  "ts": "2026-11-23T09:55:13",
   "level": "ERROR",
-  "message": "upstream payment-service timed out after 5000ms",
-  "trace_id": "tr-4ce76f14"
+  "service": "order-service",
+  "message": "java.lang.OutOfMemoryError: Java heap space in batch buffer allocation cache (trace_id=tr-91f659b6)",
+  "trace_id": "tr-91f659b6",
+  "fields": {
+   "trace_id": "tr-91f659b6"
+  },
+  "raw": "2026-11-23T09:55:13 ERROR order-service java.lang.OutOfMemoryError: Java heap space in batch buffer allocation cache (trace_id=tr-91f659b6)"
  },
  {
-  "ts": "2026-11-23T09:55:16",
+  "ts": "2026-11-23T09:55:19",
+  "level": "ERROR",
   "service": "payment-service",
-  "level": "INFO",
-  "message": "charge captured amount=532",
-  "trace_id": "tr-e371613e"
+  "message": "Charge failed: SQLTransientConnectionException: could not acquire connection (trace_id=tr-f2a991f8)",
+  "trace_id": "tr-f2a991f8",
+  "fields": {
+   "trace_id": "tr-f2a991f8"
+  },
+  "raw": "2026-11-23T09:55:19 ERROR payment-service Charge failed: SQLTransientConnectionException: could not acquire connection (trace_id=tr-f2a991f8)"
  },
  {
-  "ts": "2026-11-23T09:55:29",
-  "service": "database",
-  "level": "INFO",
-  "message": "autovacuum run",
-  "trace_id": "tr-bdae9f93"
+  "ts": "2026-11-23T09:55:19",
+  "level": "WARN",
+  "service": "order-service",
+  "message": "Garbage collection pause exceeded 2500ms; memory buffer full (trace_id=tr-8551cc0e)",
+  "trace_id": "tr-8551cc0e",
+  "fields": {
+   "trace_id": "tr-8551cc0e"
+  },
+  "raw": "2026-11-23T09:55:19 WARN order-service Garbage collection pause exceeded 2500ms; memory buffer full (trace_id=tr-8551cc0e)"
  },
  {
-  "ts": "2026-11-23T09:55:31",
+  "ts": "2026-11-23T09:55:21",
+  "level": "ERROR",
+  "service": "notification-service",
+  "message": "Third-party provider outage: connection refused by mail gateway; external service unreachable (trace_id=tr-f4ec72b1)",
+  "trace_id": "tr-f4ec72b1",
+  "fields": {
+   "trace_id": "tr-f4ec72b1"
+  },
+  "raw": "2026-11-23T09:55:21 ERROR notification-service Third-party provider outage: connection refused by mail gateway; external service unreachable (trace_id=tr-f4ec72b1)"
+ },
+ {
+  "ts": "2026-11-23T09:55:25",
+  "level": "WARN",
   "service": "payment-service",
-  "level": "ERROR",
-  "message": "HikariPool-1 - Connection is not available, request timed out after 30000ms (pool size=5)",
-  "trace_id": "tr-a845063a"
+  "message": "Connection pool exhausted: active=5 idle=0 waiting=24 (trace_id=tr-8676ab61)",
+  "trace_id": "tr-8676ab61",
+  "fields": {
+   "active": "5",
+   "idle": "0",
+   "waiting": "24",
+   "trace_id": "tr-8676ab61"
+  },
+  "raw": "2026-11-23T09:55:25 WARN payment-service Connection pool exhausted: active=5 idle=0 waiting=24 (trace_id=tr-8676ab61)"
  },
  {
-  "ts": "2026-11-23T09:55:34",
+  "ts": "2026-11-23T09:55:25",
+  "level": "ERROR",
   "service": "api-gateway",
-  "level": "INFO",
-  "message": "GET /v1/orders 200 41ms",
-  "trace_id": "tr-09eff2b4"
+  "message": "upstream payment-service returned 503 for POST /v1/charges (trace_id=tr-55c38305)",
+  "trace_id": "tr-55c38305",
+  "fields": {
+   "trace_id": "tr-55c38305"
+  },
+  "raw": "2026-11-23T09:55:25 ERROR api-gateway upstream payment-service returned 503 for POST /v1/charges (trace_id=tr-55c38305)"
  },
  {
-  "ts": "2026-11-23T09:55:34",
-  "service": "api-gateway",
+  "ts": "2026-11-23T09:55:33",
+  "level": "WARN",
+  "service": "notification-service",
+  "message": "Retrying delivery after external provider rate-limit backoff (trace_id=tr-30974c01)",
+  "trace_id": "tr-30974c01",
+  "fields": {
+   "trace_id": "tr-30974c01"
+  },
+  "raw": "2026-11-23T09:55:33 WARN notification-service Retrying delivery after external provider rate-limit backoff (trace_id=tr-30974c01)"
+ },
+ {
+  "ts": "2026-11-23T09:55:35",
   "level": "ERROR",
-  "message": "upstream payment-service returned 503 for POST /v1/charges",
-  "trace_id": "tr-309ff5b2"
+  "service": "payment-service",
+  "message": "Charge failed: SQLTransientConnectionException: could not acquire connection (trace_id=tr-5fd9b34a)",
+  "trace_id": "tr-5fd9b34a",
+  "fields": {
+   "trace_id": "tr-5fd9b34a"
+  },
+  "raw": "2026-11-23T09:55:35 ERROR payment-service Charge failed: SQLTransientConnectionException: could not acquire connection (trace_id=tr-5fd9b34a)"
  },
  {
   "ts": "2026-11-23T09:55:37",
-  "service": "payment-service",
-  "level": "WARN",
-  "message": "Connection pool exhausted: active=5 idle=0 waiting=24",
-  "trace_id": "tr-a7ecc7ee"
+  "level": "INFO",
+  "service": "order-service",
+  "message": "order created id=733 (trace_id=tr-2eb15ca2)",
+  "trace_id": "tr-2eb15ca2",
+  "fields": {
+   "id": "733",
+   "trace_id": "tr-2eb15ca2"
+  },
+  "raw": "2026-11-23T09:55:37 INFO order-service order created id=733 (trace_id=tr-2eb15ca2)"
  },
  {
-  "ts": "2026-11-23T09:55:48",
-  "service": "payment-service",
+  "ts": "2026-11-23T09:55:39",
   "level": "ERROR",
-  "message": "HikariPool-1 - Connection is not available, request timed out after 30000ms (pool size=5)",
-  "trace_id": "tr-9417bb43"
+  "service": "order-service",
+  "message": "Failed to allocate memory buffer for order processing: JVM OOM killer triggered (trace_id=tr-ab8de210)",
+  "trace_id": "tr-ab8de210",
+  "fields": {
+   "trace_id": "tr-ab8de210"
+  },
+  "raw": "2026-11-23T09:55:39 ERROR order-service Failed to allocate memory buffer for order processing: JVM OOM killer triggered (trace_id=tr-ab8de210)"
  },
  {
-  "ts": "2026-11-23T09:55:54",
-  "service": "payment-service",
-  "level": "WARN",
-  "message": "Connection pool exhausted: active=5 idle=0 waiting=34",
-  "trace_id": "tr-2f87a429"
- },
- {
-  "ts": "2026-11-23T09:56:12",
+  "ts": "2026-11-23T09:55:56",
+  "level": "ERROR",
   "service": "api-gateway",
-  "level": "ERROR",
-  "message": "upstream payment-service timed out after 5000ms",
-  "trace_id": "tr-9bd2d202"
+  "message": "upstream payment-service timed out after 5000ms (trace_id=tr-55fc410d)",
+  "trace_id": "tr-55fc410d",
+  "fields": {
+   "trace_id": "tr-55fc410d"
+  },
+  "raw": "2026-11-23T09:55:56 ERROR api-gateway upstream payment-service timed out after 5000ms (trace_id=tr-55fc410d)"
  },
  {
-  "ts": "2026-11-23T09:56:14",
-  "service": "payment-service",
-  "level": "ERROR",
-  "message": "Charge failed: SQLTransientConnectionException: could not acquire connection",
-  "trace_id": "tr-c8ee3c6e"
+  "ts": "2026-11-23T09:55:59",
+  "level": "INFO",
+  "service": "api-gateway",
+  "message": "POST /v1/charges 200 188ms (trace_id=tr-47a7fde0)",
+  "trace_id": "tr-47a7fde0",
+  "fields": {
+   "trace_id": "tr-47a7fde0"
+  },
+  "raw": "2026-11-23T09:55:59 INFO api-gateway POST /v1/charges 200 188ms (trace_id=tr-47a7fde0)"
  },
  {
-  "ts": "2026-11-23T09:56:20",
+  "ts": "2026-11-23T09:55:59",
+  "level": "ERROR",
   "service": "payment-service",
+  "message": "HikariPool-1 - Connection is not available, request timed out after 30000ms (pool size=5) (trace_id=tr-e13cdf92)",
+  "trace_id": "tr-e13cdf92",
+  "fields": {
+   "size": "5",
+   "trace_id": "tr-e13cdf92"
+  },
+  "raw": "2026-11-23T09:55:59 ERROR payment-service HikariPool-1 - Connection is not available, request timed out after 30000ms (pool size=5) (trace_id=tr-e13cdf92)"
+ },
+ {
+  "ts": "2026-11-23T09:56:05",
   "level": "WARN",
-  "message": "Connection pool exhausted: active=5 idle=0 waiting=45",
-  "trace_id": "tr-caab2b8d"
+  "service": "payment-service",
+  "message": "Connection pool exhausted: active=5 idle=0 waiting=46 (trace_id=tr-7c993a3a)",
+  "trace_id": "tr-7c993a3a",
+  "fields": {
+   "active": "5",
+   "idle": "0",
+   "waiting": "46",
+   "trace_id": "tr-7c993a3a"
+  },
+  "raw": "2026-11-23T09:56:05 WARN payment-service Connection pool exhausted: active=5 idle=0 waiting=46 (trace_id=tr-7c993a3a)"
+ },
+ {
+  "ts": "2026-11-23T09:56:08",
+  "level": "ERROR",
+  "service": "order-service",
+  "message": "java.lang.OutOfMemoryError: Java heap space in batch buffer allocation cache (trace_id=tr-1ca3a6a8)",
+  "trace_id": "tr-1ca3a6a8",
+  "fields": {
+   "trace_id": "tr-1ca3a6a8"
+  },
+  "raw": "2026-11-23T09:56:08 ERROR order-service java.lang.OutOfMemoryError: Java heap space in batch buffer allocation cache (trace_id=tr-1ca3a6a8)"
+ },
+ {
+  "ts": "2026-11-23T09:56:09",
+  "level": "ERROR",
+  "service": "notification-service",
+  "message": "Third-party provider outage: connection refused by mail gateway; external service unreachable (trace_id=tr-022016af)",
+  "trace_id": "tr-022016af",
+  "fields": {
+   "trace_id": "tr-022016af"
+  },
+  "raw": "2026-11-23T09:56:09 ERROR notification-service Third-party provider outage: connection refused by mail gateway; external service unreachable (trace_id=tr-022016af)"
+ },
+ {
+  "ts": "2026-11-23T09:56:11",
+  "level": "INFO",
+  "service": "payment-service",
+  "message": "charge captured amount=260 (trace_id=tr-ed7c5da0)",
+  "trace_id": "tr-ed7c5da0",
+  "fields": {
+   "amount": "260",
+   "trace_id": "tr-ed7c5da0"
+  },
+  "raw": "2026-11-23T09:56:11 INFO payment-service charge captured amount=260 (trace_id=tr-ed7c5da0)"
+ },
+ {
+  "ts": "2026-11-23T09:56:18",
+  "level": "ERROR",
+  "service": "payment-service",
+  "message": "Charge failed: SQLTransientConnectionException: could not acquire connection (trace_id=tr-b10b43a1)",
+  "trace_id": "tr-b10b43a1",
+  "fields": {
+   "trace_id": "tr-b10b43a1"
+  },
+  "raw": "2026-11-23T09:56:18 ERROR payment-service Charge failed: SQLTransientConnectionException: could not acquire connection (trace_id=tr-b10b43a1)"
+ },
+ {
+  "ts": "2026-11-23T09:56:21",
+  "level": "WARN",
+  "service": "notification-service",
+  "message": "Retrying delivery after external provider rate-limit backoff (trace_id=tr-1749a883)",
+  "trace_id": "tr-1749a883",
+  "fields": {
+   "trace_id": "tr-1749a883"
+  },
+  "raw": "2026-11-23T09:56:21 WARN notification-service Retrying delivery after external provider rate-limit backoff (trace_id=tr-1749a883)"
+ },
+ {
+  "ts": "2026-11-23T09:56:24",
+  "level": "ERROR",
+  "service": "api-gateway",
+  "message": "upstream payment-service returned 503 for POST /v1/charges (trace_id=tr-f61313f3)",
+  "trace_id": "tr-f61313f3",
+  "fields": {
+   "trace_id": "tr-f61313f3"
+  },
+  "raw": "2026-11-23T09:56:24 ERROR api-gateway upstream payment-service returned 503 for POST /v1/charges (trace_id=tr-f61313f3)"
  },
  {
   "ts": "2026-11-23T09:56:30",
+  "level": "ERROR",
   "service": "database",
+  "message": "Memory usage above 95% (rss=15743MB); OOM killer risk (trace_id=tr-813c855c)",
+  "trace_id": "tr-813c855c",
+  "fields": {
+   "rss": "15743MB",
+   "trace_id": "tr-813c855c"
+  },
+  "raw": "2026-11-23T09:56:30 ERROR database Memory usage above 95% (rss=15743MB); OOM killer risk (trace_id=tr-813c855c)"
+ },
+ {
+  "ts": "2026-11-23T09:56:44",
   "level": "ERROR",
-  "message": "Memory usage above 95% (rss=15663MB); OOM killer risk",
-  "trace_id": "tr-053869eb"
+  "service": "api-gateway",
+  "message": "upstream payment-service timed out after 5000ms (trace_id=tr-8dc88649)",
+  "trace_id": "tr-8dc88649",
+  "fields": {
+   "trace_id": "tr-8dc88649"
+  },
+  "raw": "2026-11-23T09:56:44 ERROR api-gateway upstream payment-service timed out after 5000ms (trace_id=tr-8dc88649)"
  },
  {
-  "ts": "2026-11-23T09:56:35",
-  "service": "auth-service",
-  "level": "INFO",
-  "message": "token issued sub=u_134",
-  "trace_id": "tr-08d0323c"
- },
- {
-  "ts": "2026-11-23T09:56:36",
+  "ts": "2026-11-23T09:56:45",
+  "level": "ERROR",
   "service": "payment-service",
-  "level": "ERROR",
-  "message": "HikariPool-1 - Connection is not available, request timed out after 30000ms (pool size=5)",
-  "trace_id": "tr-ab200eff"
+  "message": "HikariPool-1 - Connection is not available, request timed out after 30000ms (pool size=5) (trace_id=tr-5cdb039e)",
+  "trace_id": "tr-5cdb039e",
+  "fields": {
+   "size": "5",
+   "trace_id": "tr-5cdb039e"
+  },
+  "raw": "2026-11-23T09:56:45 ERROR payment-service HikariPool-1 - Connection is not available, request timed out after 30000ms (pool size=5) (trace_id=tr-5cdb039e)"
  },
  {
   "ts": "2026-11-23T09:56:49",
-  "service": "api-gateway",
-  "level": "ERROR",
-  "message": "upstream payment-service returned 503 for POST /v1/charges",
-  "trace_id": "tr-c9fdac3d"
+  "level": "INFO",
+  "service": "auth-service",
+  "message": "token issued sub=u_453 (trace_id=tr-47d1ffb9)",
+  "trace_id": "tr-47d1ffb9",
+  "fields": {
+   "sub": "u_453",
+   "trace_id": "tr-47d1ffb9"
+  },
+  "raw": "2026-11-23T09:56:49 INFO auth-service token issued sub=u_453 (trace_id=tr-47d1ffb9)"
  },
  {
-  "ts": "2026-11-23T09:56:58",
-  "service": "payment-service",
+  "ts": "2026-11-23T09:56:49",
   "level": "ERROR",
-  "message": "Charge failed: SQLTransientConnectionException: could not acquire connection",
-  "trace_id": "tr-3286dfae"
+  "service": "order-service",
+  "message": "Failed to allocate memory buffer for order processing: JVM OOM killer triggered (trace_id=tr-e6ac933f)",
+  "trace_id": "tr-e6ac933f",
+  "fields": {
+   "trace_id": "tr-e6ac933f"
+  },
+  "raw": "2026-11-23T09:56:49 ERROR order-service Failed to allocate memory buffer for order processing: JVM OOM killer triggered (trace_id=tr-e6ac933f)"
+ },
+ {
+  "ts": "2026-11-23T09:56:51",
+  "level": "WARN",
+  "service": "payment-service",
+  "message": "Connection pool exhausted: active=5 idle=0 waiting=24 (trace_id=tr-d376a833)",
+  "trace_id": "tr-d376a833",
+  "fields": {
+   "active": "5",
+   "idle": "0",
+   "waiting": "24",
+   "trace_id": "tr-d376a833"
+  },
+  "raw": "2026-11-23T09:56:51 WARN payment-service Connection pool exhausted: active=5 idle=0 waiting=24 (trace_id=tr-d376a833)"
+ },
+ {
+  "ts": "2026-11-23T09:56:52",
+  "level": "ERROR",
+  "service": "notification-service",
+  "message": "Third-party provider outage: connection refused by mail gateway; external service unreachable (trace_id=tr-a72fc9b3)",
+  "trace_id": "tr-a72fc9b3",
+  "fields": {
+   "trace_id": "tr-a72fc9b3"
+  },
+  "raw": "2026-11-23T09:56:52 ERROR notification-service Third-party provider outage: connection refused by mail gateway; external service unreachable (trace_id=tr-a72fc9b3)"
+ },
+ {
+  "ts": "2026-11-23T09:56:55",
+  "level": "WARN",
+  "service": "order-service",
+  "message": "Garbage collection pause exceeded 2500ms; memory buffer full (trace_id=tr-daa96ad5)",
+  "trace_id": "tr-daa96ad5",
+  "fields": {
+   "trace_id": "tr-daa96ad5"
+  },
+  "raw": "2026-11-23T09:56:55 WARN order-service Garbage collection pause exceeded 2500ms; memory buffer full (trace_id=tr-daa96ad5)"
+ },
+ {
+  "ts": "2026-11-23T09:57:03",
+  "level": "ERROR",
+  "service": "payment-service",
+  "message": "HikariPool-1 - Connection is not available, request timed out after 30000ms (pool size=5) (trace_id=tr-1c4a7f30)",
+  "trace_id": "tr-1c4a7f30",
+  "fields": {
+   "size": "5",
+   "trace_id": "tr-1c4a7f30"
+  },
+  "raw": "2026-11-23T09:57:03 ERROR payment-service HikariPool-1 - Connection is not available, request timed out after 30000ms (pool size=5) (trace_id=tr-1c4a7f30)"
  },
  {
   "ts": "2026-11-23T09:57:04",
-  "service": "payment-service",
   "level": "WARN",
-  "message": "Connection pool exhausted: active=5 idle=0 waiting=33",
-  "trace_id": "tr-87e23671"
+  "service": "notification-service",
+  "message": "Retrying delivery after external provider rate-limit backoff (trace_id=tr-237eba59)",
+  "trace_id": "tr-237eba59",
+  "fields": {
+   "trace_id": "tr-237eba59"
+  },
+  "raw": "2026-11-23T09:57:04 WARN notification-service Retrying delivery after external provider rate-limit backoff (trace_id=tr-237eba59)"
  },
  {
-  "ts": "2026-11-23T09:57:11",
-  "service": "payment-service",
-  "level": "ERROR",
-  "message": "Charge failed: SQLTransientConnectionException: could not acquire connection",
-  "trace_id": "tr-abd5a1ae"
- },
- {
-  "ts": "2026-11-23T09:57:19",
-  "service": "api-gateway",
-  "level": "ERROR",
-  "message": "upstream payment-service timed out after 5000ms",
-  "trace_id": "tr-9ddffec8"
- },
- {
-  "ts": "2026-11-23T09:57:23",
-  "service": "api-gateway",
+  "ts": "2026-11-23T09:57:06",
   "level": "INFO",
-  "message": "GET /healthz 200 2ms",
-  "trace_id": "tr-f15ea89d"
+  "service": "database",
+  "message": "autovacuum run (trace_id=tr-5c2f7626)",
+  "trace_id": "tr-5c2f7626",
+  "fields": {
+   "trace_id": "tr-5c2f7626"
+  },
+  "raw": "2026-11-23T09:57:06 INFO database autovacuum run (trace_id=tr-5c2f7626)"
+ },
+ {
+  "ts": "2026-11-23T09:57:08",
+  "level": "ERROR",
+  "service": "api-gateway",
+  "message": "upstream payment-service returned 503 for POST /v1/charges (trace_id=tr-778e384b)",
+  "trace_id": "tr-778e384b",
+  "fields": {
+   "trace_id": "tr-778e384b"
+  },
+  "raw": "2026-11-23T09:57:08 ERROR api-gateway upstream payment-service returned 503 for POST /v1/charges (trace_id=tr-778e384b)"
+ },
+ {
+  "ts": "2026-11-23T09:57:10",
+  "level": "INFO",
+  "service": "notification-service",
+  "message": "push dispatch queued (trace_id=tr-ff5c859d)",
+  "trace_id": "tr-ff5c859d",
+  "fields": {
+   "trace_id": "tr-ff5c859d"
+  },
+  "raw": "2026-11-23T09:57:10 INFO notification-service push dispatch queued (trace_id=tr-ff5c859d)"
+ },
+ {
+  "ts": "2026-11-23T09:57:20",
+  "level": "ERROR",
+  "service": "payment-service",
+  "message": "Charge failed: SQLTransientConnectionException: could not acquire connection (trace_id=tr-d20fde9d)",
+  "trace_id": "tr-d20fde9d",
+  "fields": {
+   "trace_id": "tr-d20fde9d"
+  },
+  "raw": "2026-11-23T09:57:20 ERROR payment-service Charge failed: SQLTransientConnectionException: could not acquire connection (trace_id=tr-d20fde9d)"
+ },
+ {
+  "ts": "2026-11-23T09:57:24",
+  "level": "ERROR",
+  "service": "order-service",
+  "message": "java.lang.OutOfMemoryError: Java heap space in batch buffer allocation cache (trace_id=tr-f9607af3)",
+  "trace_id": "tr-f9607af3",
+  "fields": {
+   "trace_id": "tr-f9607af3"
+  },
+  "raw": "2026-11-23T09:57:24 ERROR order-service java.lang.OutOfMemoryError: Java heap space in batch buffer allocation cache (trace_id=tr-f9607af3)"
+ },
+ {
+  "ts": "2026-11-23T09:57:30",
+  "level": "WARN",
+  "service": "order-service",
+  "message": "Garbage collection pause exceeded 2500ms; memory buffer full (trace_id=tr-1c76c5bb)",
+  "trace_id": "tr-1c76c5bb",
+  "fields": {
+   "trace_id": "tr-1c76c5bb"
+  },
+  "raw": "2026-11-23T09:57:30 WARN order-service Garbage collection pause exceeded 2500ms; memory buffer full (trace_id=tr-1c76c5bb)"
+ },
+ {
+  "ts": "2026-11-23T09:57:32",
+  "level": "INFO",
+  "service": "order-service",
+  "message": "order validated customer=u_356 (trace_id=tr-8e2c1685)",
+  "trace_id": "tr-8e2c1685",
+  "fields": {
+   "customer": "u_356",
+   "trace_id": "tr-8e2c1685"
+  },
+  "raw": "2026-11-23T09:57:32 INFO order-service order validated customer=u_356 (trace_id=tr-8e2c1685)"
  },
  {
   "ts": "2026-11-23T09:57:33",
-  "service": "payment-service",
   "level": "ERROR",
-  "message": "Charge failed: SQLTransientConnectionException: could not acquire connection",
-  "trace_id": "tr-6b46159a"
+  "service": "api-gateway",
+  "message": "upstream payment-service returned 503 for POST /v1/charges (trace_id=tr-6f81f00a)",
+  "trace_id": "tr-6f81f00a",
+  "fields": {
+   "trace_id": "tr-6f81f00a"
+  },
+  "raw": "2026-11-23T09:57:33 ERROR api-gateway upstream payment-service returned 503 for POST /v1/charges (trace_id=tr-6f81f00a)"
  },
  {
-  "ts": "2026-11-23T09:57:35",
-  "service": "database",
+  "ts": "2026-11-23T09:57:38",
   "level": "INFO",
-  "message": "autovacuum run",
-  "trace_id": "tr-92f03975"
+  "service": "api-gateway",
+  "message": "GET /healthz 200 2ms (trace_id=tr-cd4b9ff5)",
+  "trace_id": "tr-cd4b9ff5",
+  "fields": {
+   "trace_id": "tr-cd4b9ff5"
+  },
+  "raw": "2026-11-23T09:57:38 INFO api-gateway GET /healthz 200 2ms (trace_id=tr-cd4b9ff5)"
  },
  {
   "ts": "2026-11-23T09:57:39",
+  "level": "ERROR",
+  "service": "notification-service",
+  "message": "External provider outage: SendGrid API returned 503 Service Unavailable (rate-limit quota exceeded) (trace_id=tr-c6419adb)",
+  "trace_id": "tr-c6419adb",
+  "fields": {
+   "trace_id": "tr-c6419adb"
+  },
+  "raw": "2026-11-23T09:57:39 ERROR notification-service External provider outage: SendGrid API returned 503 Service Unavailable (rate-limit quota exceeded) (trace_id=tr-c6419adb)"
+ },
+ {
+  "ts": "2026-11-23T09:57:41",
+  "level": "ERROR",
   "service": "payment-service",
+  "message": "Charge failed: SQLTransientConnectionException: could not acquire connection (trace_id=tr-a18fda26)",
+  "trace_id": "tr-a18fda26",
+  "fields": {
+   "trace_id": "tr-a18fda26"
+  },
+  "raw": "2026-11-23T09:57:41 ERROR payment-service Charge failed: SQLTransientConnectionException: could not acquire connection (trace_id=tr-a18fda26)"
+ },
+ {
+  "ts": "2026-11-23T09:57:43",
+  "level": "ERROR",
+  "service": "order-service",
+  "message": "Failed to allocate memory buffer for order processing: JVM OOM killer triggered (trace_id=tr-35cbae1f)",
+  "trace_id": "tr-35cbae1f",
+  "fields": {
+   "trace_id": "tr-35cbae1f"
+  },
+  "raw": "2026-11-23T09:57:43 ERROR order-service Failed to allocate memory buffer for order processing: JVM OOM killer triggered (trace_id=tr-35cbae1f)"
+ },
+ {
+  "ts": "2026-11-23T09:57:47",
   "level": "WARN",
-  "message": "Connection pool exhausted: active=5 idle=0 waiting=28",
-  "trace_id": "tr-79265fef"
- },
- {
-  "ts": "2026-11-23T09:57:40",
-  "service": "api-gateway",
-  "level": "ERROR",
-  "message": "upstream payment-service returned 503 for POST /v1/charges",
-  "trace_id": "tr-36667dc9"
- },
- {
-  "ts": "2026-11-23T09:57:54",
   "service": "payment-service",
-  "level": "ERROR",
-  "message": "HikariPool-1 - Connection is not available, request timed out after 30000ms (pool size=5)",
-  "trace_id": "tr-7bffb6a4"
+  "message": "Connection pool exhausted: active=5 idle=0 waiting=38 (trace_id=tr-d0f00a15)",
+  "trace_id": "tr-d0f00a15",
+  "fields": {
+   "active": "5",
+   "idle": "0",
+   "waiting": "38",
+   "trace_id": "tr-d0f00a15"
+  },
+  "raw": "2026-11-23T09:57:47 WARN payment-service Connection pool exhausted: active=5 idle=0 waiting=38 (trace_id=tr-d0f00a15)"
  },
  {
-  "ts": "2026-11-23T09:57:59",
-  "service": "api-gateway",
+  "ts": "2026-11-23T09:57:51",
+  "level": "WARN",
+  "service": "notification-service",
+  "message": "Retrying delivery after external provider rate-limit backoff (trace_id=tr-2527b6fa)",
+  "trace_id": "tr-2527b6fa",
+  "fields": {
+   "trace_id": "tr-2527b6fa"
+  },
+  "raw": "2026-11-23T09:57:51 WARN notification-service Retrying delivery after external provider rate-limit backoff (trace_id=tr-2527b6fa)"
+ },
+ {
+  "ts": "2026-11-23T09:57:52",
   "level": "ERROR",
-  "message": "upstream payment-service timed out after 5000ms",
-  "trace_id": "tr-a0123246"
+  "service": "api-gateway",
+  "message": "upstream payment-service returned 503 for POST /v1/charges (trace_id=tr-57675f82)",
+  "trace_id": "tr-57675f82",
+  "fields": {
+   "trace_id": "tr-57675f82"
+  },
+  "raw": "2026-11-23T09:57:52 ERROR api-gateway upstream payment-service returned 503 for POST /v1/charges (trace_id=tr-57675f82)"
  },
  {
   "ts": "2026-11-23T09:58:00",
-  "service": "payment-service",
-  "level": "WARN",
-  "message": "Connection pool exhausted: active=5 idle=0 waiting=29",
-  "trace_id": "tr-b34ed4fa"
- },
- {
-  "ts": "2026-11-23T09:58:00",
+  "level": "ERROR",
   "service": "database",
+  "message": "Memory usage above 95% (rss=15604MB); OOM killer risk (trace_id=tr-3a2e9019)",
+  "trace_id": "tr-3a2e9019",
+  "fields": {
+   "rss": "15604MB",
+   "trace_id": "tr-3a2e9019"
+  },
+  "raw": "2026-11-23T09:58:00 ERROR database Memory usage above 95% (rss=15604MB); OOM killer risk (trace_id=tr-3a2e9019)"
+ },
+ {
+  "ts": "2026-11-23T09:58:02",
   "level": "ERROR",
-  "message": "Memory usage above 95% (rss=15720MB); OOM killer risk",
-  "trace_id": "tr-90fb2d7d"
+  "service": "payment-service",
+  "message": "HikariPool-1 - Connection is not available, request timed out after 30000ms (pool size=5) (trace_id=tr-6989d89e)",
+  "trace_id": "tr-6989d89e",
+  "fields": {
+   "size": "5",
+   "trace_id": "tr-6989d89e"
+  },
+  "raw": "2026-11-23T09:58:02 ERROR payment-service HikariPool-1 - Connection is not available, request timed out after 30000ms (pool size=5) (trace_id=tr-6989d89e)"
  },
  {
-  "ts": "2026-11-23T09:58:15",
+  "ts": "2026-11-23T09:58:08",
+  "level": "WARN",
   "service": "payment-service",
+  "message": "Connection pool exhausted: active=5 idle=0 waiting=60 (trace_id=tr-90a0aad5)",
+  "trace_id": "tr-90a0aad5",
+  "fields": {
+   "active": "5",
+   "idle": "0",
+   "waiting": "60",
+   "trace_id": "tr-90a0aad5"
+  },
+  "raw": "2026-11-23T09:58:08 WARN payment-service Connection pool exhausted: active=5 idle=0 waiting=60 (trace_id=tr-90a0aad5)"
+ },
+ {
+  "ts": "2026-11-23T09:58:11",
   "level": "ERROR",
-  "message": "Charge failed: SQLTransientConnectionException: could not acquire connection",
-  "trace_id": "tr-2a244cae"
+  "service": "notification-service",
+  "message": "External provider outage: SendGrid API returned 503 Service Unavailable (rate-limit quota exceeded) (trace_id=tr-f6471bab)",
+  "trace_id": "tr-f6471bab",
+  "fields": {
+   "trace_id": "tr-f6471bab"
+  },
+  "raw": "2026-11-23T09:58:11 ERROR notification-service External provider outage: SendGrid API returned 503 Service Unavailable (rate-limit quota exceeded) (trace_id=tr-f6471bab)"
  },
  {
-  "ts": "2026-11-23T09:58:23",
+  "ts": "2026-11-23T09:58:12",
+  "level": "ERROR",
+  "service": "order-service",
+  "message": "java.lang.OutOfMemoryError: Java heap space in batch buffer allocation cache (trace_id=tr-6acfffb7)",
+  "trace_id": "tr-6acfffb7",
+  "fields": {
+   "trace_id": "tr-6acfffb7"
+  },
+  "raw": "2026-11-23T09:58:12 ERROR order-service java.lang.OutOfMemoryError: Java heap space in batch buffer allocation cache (trace_id=tr-6acfffb7)"
+ },
+ {
+  "ts": "2026-11-23T09:58:25",
+  "level": "ERROR",
   "service": "payment-service",
-  "level": "INFO",
-  "message": "refund queued",
-  "trace_id": "tr-4d9aa696"
+  "message": "Charge failed: SQLTransientConnectionException: could not acquire connection (trace_id=tr-91e2cd45)",
+  "trace_id": "tr-91e2cd45",
+  "fields": {
+   "trace_id": "tr-91e2cd45"
+  },
+  "raw": "2026-11-23T09:58:25 ERROR payment-service Charge failed: SQLTransientConnectionException: could not acquire connection (trace_id=tr-91e2cd45)"
  },
  {
-  "ts": "2026-11-23T09:58:35",
+  "ts": "2026-11-23T09:58:29",
+  "level": "ERROR",
   "service": "api-gateway",
-  "level": "ERROR",
-  "message": "upstream payment-service returned 503 for POST /v1/charges",
-  "trace_id": "tr-a9e2fa40"
+  "message": "upstream payment-service returned 503 for POST /v1/charges (trace_id=tr-b4b3f864)",
+  "trace_id": "tr-b4b3f864",
+  "fields": {
+   "trace_id": "tr-b4b3f864"
+  },
+  "raw": "2026-11-23T09:58:29 ERROR api-gateway upstream payment-service returned 503 for POST /v1/charges (trace_id=tr-b4b3f864)"
  },
  {
   "ts": "2026-11-23T09:58:42",
-  "service": "payment-service",
   "level": "ERROR",
-  "message": "HikariPool-1 - Connection is not available, request timed out after 30000ms (pool size=5)",
-  "trace_id": "tr-290d2ec3"
+  "service": "order-service",
+  "message": "java.lang.OutOfMemoryError: Java heap space in batch buffer allocation cache (trace_id=tr-47fa7998)",
+  "trace_id": "tr-47fa7998",
+  "fields": {
+   "trace_id": "tr-47fa7998"
+  },
+  "raw": "2026-11-23T09:58:42 ERROR order-service java.lang.OutOfMemoryError: Java heap space in batch buffer allocation cache (trace_id=tr-47fa7998)"
  },
  {
-  "ts": "2026-11-23T09:58:58",
+  "ts": "2026-11-23T09:58:49",
+  "level": "ERROR",
+  "service": "payment-service",
+  "message": "HikariPool-1 - Connection is not available, request timed out after 30000ms (pool size=5) (trace_id=tr-b115d13b)",
+  "trace_id": "tr-b115d13b",
+  "fields": {
+   "size": "5",
+   "trace_id": "tr-b115d13b"
+  },
+  "raw": "2026-11-23T09:58:49 ERROR payment-service HikariPool-1 - Connection is not available, request timed out after 30000ms (pool size=5) (trace_id=tr-b115d13b)"
+ },
+ {
+  "ts": "2026-11-23T09:58:50",
+  "level": "ERROR",
   "service": "api-gateway",
-  "level": "ERROR",
-  "message": "upstream payment-service returned 503 for POST /v1/charges",
-  "trace_id": "tr-6bec1ab7"
+  "message": "upstream payment-service returned 503 for POST /v1/charges (trace_id=tr-4508f0a2)",
+  "trace_id": "tr-4508f0a2",
+  "fields": {
+   "trace_id": "tr-4508f0a2"
+  },
+  "raw": "2026-11-23T09:58:50 ERROR api-gateway upstream payment-service returned 503 for POST /v1/charges (trace_id=tr-4508f0a2)"
  },
  {
-  "ts": "2026-11-23T09:59:03",
-  "service": "payment-service",
-  "level": "ERROR",
-  "message": "Charge failed: SQLTransientConnectionException: could not acquire connection",
-  "trace_id": "tr-aa5122f7"
- },
- {
-  "ts": "2026-11-23T09:59:09",
-  "service": "payment-service",
+  "ts": "2026-11-23T09:58:55",
   "level": "WARN",
-  "message": "Connection pool exhausted: active=5 idle=0 waiting=49",
-  "trace_id": "tr-5ffd3d40"
+  "service": "payment-service",
+  "message": "Connection pool exhausted: active=5 idle=0 waiting=20 (trace_id=tr-4e868ac3)",
+  "trace_id": "tr-4e868ac3",
+  "fields": {
+   "active": "5",
+   "idle": "0",
+   "waiting": "20",
+   "trace_id": "tr-4e868ac3"
+  },
+  "raw": "2026-11-23T09:58:55 WARN payment-service Connection pool exhausted: active=5 idle=0 waiting=20 (trace_id=tr-4e868ac3)"
+ },
+ {
+  "ts": "2026-11-23T09:59:01",
+  "level": "ERROR",
+  "service": "notification-service",
+  "message": "External provider outage: SendGrid API returned 503 Service Unavailable (rate-limit quota exceeded) (trace_id=tr-1a2846ff)",
+  "trace_id": "tr-1a2846ff",
+  "fields": {
+   "trace_id": "tr-1a2846ff"
+  },
+  "raw": "2026-11-23T09:59:01 ERROR notification-service External provider outage: SendGrid API returned 503 Service Unavailable (rate-limit quota exceeded) (trace_id=tr-1a2846ff)"
+ },
+ {
+  "ts": "2026-11-23T09:59:10",
+  "level": "ERROR",
+  "service": "order-service",
+  "message": "Failed to allocate memory buffer for order processing: JVM OOM killer triggered (trace_id=tr-714b6caa)",
+  "trace_id": "tr-714b6caa",
+  "fields": {
+   "trace_id": "tr-714b6caa"
+  },
+  "raw": "2026-11-23T09:59:10 ERROR order-service Failed to allocate memory buffer for order processing: JVM OOM killer triggered (trace_id=tr-714b6caa)"
+ },
+ {
+  "ts": "2026-11-23T09:59:13",
+  "level": "ERROR",
+  "service": "payment-service",
+  "message": "HikariPool-1 - Connection is not available, request timed out after 30000ms (pool size=5) (trace_id=tr-eac29dbf)",
+  "trace_id": "tr-eac29dbf",
+  "fields": {
+   "size": "5",
+   "trace_id": "tr-eac29dbf"
+  },
+  "raw": "2026-11-23T09:59:13 ERROR payment-service HikariPool-1 - Connection is not available, request timed out after 30000ms (pool size=5) (trace_id=tr-eac29dbf)"
+ },
+ {
+  "ts": "2026-11-23T09:59:19",
+  "level": "WARN",
+  "service": "payment-service",
+  "message": "Connection pool exhausted: active=5 idle=0 waiting=26 (trace_id=tr-96113b67)",
+  "trace_id": "tr-96113b67",
+  "fields": {
+   "active": "5",
+   "idle": "0",
+   "waiting": "26",
+   "trace_id": "tr-96113b67"
+  },
+  "raw": "2026-11-23T09:59:19 WARN payment-service Connection pool exhausted: active=5 idle=0 waiting=26 (trace_id=tr-96113b67)"
  },
  {
   "ts": "2026-11-23T09:59:22",
-  "service": "payment-service",
   "level": "ERROR",
-  "message": "HikariPool-1 - Connection is not available, request timed out after 30000ms (pool size=5)",
-  "trace_id": "tr-2e367dcb"
+  "service": "api-gateway",
+  "message": "upstream payment-service returned 503 for POST /v1/charges (trace_id=tr-8e12e447)",
+  "trace_id": "tr-8e12e447",
+  "fields": {
+   "trace_id": "tr-8e12e447"
+  },
+  "raw": "2026-11-23T09:59:22 ERROR api-gateway upstream payment-service returned 503 for POST /v1/charges (trace_id=tr-8e12e447)"
+ },
+ {
+  "ts": "2026-11-23T09:59:26",
+  "level": "ERROR",
+  "service": "payment-service",
+  "message": "HikariPool-1 - Connection is not available, request timed out after 30000ms (pool size=5) (trace_id=tr-3257ae42)",
+  "trace_id": "tr-3257ae42",
+  "fields": {
+   "size": "5",
+   "trace_id": "tr-3257ae42"
+  },
+  "raw": "2026-11-23T09:59:26 ERROR payment-service HikariPool-1 - Connection is not available, request timed out after 30000ms (pool size=5) (trace_id=tr-3257ae42)"
  },
  {
   "ts": "2026-11-23T09:59:30",
-  "service": "database",
   "level": "ERROR",
-  "message": "Memory usage above 95% (rss=15828MB); OOM killer risk",
-  "trace_id": "tr-940a1624"
+  "service": "database",
+  "message": "Memory usage above 95% (rss=15731MB); OOM killer risk (trace_id=tr-ace09f75)",
+  "trace_id": "tr-ace09f75",
+  "fields": {
+   "rss": "15731MB",
+   "trace_id": "tr-ace09f75"
+  },
+  "raw": "2026-11-23T09:59:30 ERROR database Memory usage above 95% (rss=15731MB); OOM killer risk (trace_id=tr-ace09f75)"
  },
  {
-  "ts": "2026-11-23T09:59:34",
-  "service": "api-gateway",
+  "ts": "2026-11-23T09:59:32",
+  "level": "WARN",
+  "service": "payment-service",
+  "message": "Connection pool exhausted: active=5 idle=0 waiting=55 (trace_id=tr-9128a82e)",
+  "trace_id": "tr-9128a82e",
+  "fields": {
+   "active": "5",
+   "idle": "0",
+   "waiting": "55",
+   "trace_id": "tr-9128a82e"
+  },
+  "raw": "2026-11-23T09:59:32 WARN payment-service Connection pool exhausted: active=5 idle=0 waiting=55 (trace_id=tr-9128a82e)"
+ },
+ {
+  "ts": "2026-11-23T09:59:37",
+  "level": "INFO",
+  "service": "auth-service",
+  "message": "token issued sub=u_196 (trace_id=tr-0898a37e)",
+  "trace_id": "tr-0898a37e",
+  "fields": {
+   "sub": "u_196",
+   "trace_id": "tr-0898a37e"
+  },
+  "raw": "2026-11-23T09:59:37 INFO auth-service token issued sub=u_196 (trace_id=tr-0898a37e)"
+ },
+ {
+  "ts": "2026-11-23T09:59:41",
+  "level": "INFO",
+  "service": "database",
+  "message": "autovacuum run (trace_id=tr-46df761b)",
+  "trace_id": "tr-46df761b",
+  "fields": {
+   "trace_id": "tr-46df761b"
+  },
+  "raw": "2026-11-23T09:59:41 INFO database autovacuum run (trace_id=tr-46df761b)"
+ },
+ {
+  "ts": "2026-11-23T09:59:42",
   "level": "ERROR",
-  "message": "upstream payment-service returned 503 for POST /v1/charges",
-  "trace_id": "tr-5e6e383a"
+  "service": "payment-service",
+  "message": "HikariPool-1 - Connection is not available, request timed out after 30000ms (pool size=5) (trace_id=tr-93105115)",
+  "trace_id": "tr-93105115",
+  "fields": {
+   "size": "5",
+   "trace_id": "tr-93105115"
+  },
+  "raw": "2026-11-23T09:59:42 ERROR payment-service HikariPool-1 - Connection is not available, request timed out after 30000ms (pool size=5) (trace_id=tr-93105115)"
  },
  {
   "ts": "2026-11-23T09:59:46",
+  "level": "INFO",
   "service": "payment-service",
+  "message": "charge captured amount=733 (trace_id=tr-dde374d1)",
+  "trace_id": "tr-dde374d1",
+  "fields": {
+   "amount": "733",
+   "trace_id": "tr-dde374d1"
+  },
+  "raw": "2026-11-23T09:59:46 INFO payment-service charge captured amount=733 (trace_id=tr-dde374d1)"
+ },
+ {
+  "ts": "2026-11-23T09:59:48",
+  "level": "WARN",
+  "service": "payment-service",
+  "message": "Connection pool exhausted: active=5 idle=0 waiting=58 (trace_id=tr-1f1ab658)",
+  "trace_id": "tr-1f1ab658",
+  "fields": {
+   "active": "5",
+   "idle": "0",
+   "waiting": "58",
+   "trace_id": "tr-1f1ab658"
+  },
+  "raw": "2026-11-23T09:59:48 WARN payment-service Connection pool exhausted: active=5 idle=0 waiting=58 (trace_id=tr-1f1ab658)"
+ },
+ {
+  "ts": "2026-11-23T09:59:49",
   "level": "ERROR",
-  "message": "HikariPool-1 - Connection is not available, request timed out after 30000ms (pool size=5)",
-  "trace_id": "tr-054367ba"
+  "service": "order-service",
+  "message": "Failed to allocate memory buffer for order processing: JVM OOM killer triggered (trace_id=tr-82376e64)",
+  "trace_id": "tr-82376e64",
+  "fields": {
+   "trace_id": "tr-82376e64"
+  },
+  "raw": "2026-11-23T09:59:49 ERROR order-service Failed to allocate memory buffer for order processing: JVM OOM killer triggered (trace_id=tr-82376e64)"
+ },
+ {
+  "ts": "2026-11-23T09:59:50",
+  "level": "ERROR",
+  "service": "api-gateway",
+  "message": "upstream payment-service returned 503 for POST /v1/charges (trace_id=tr-28c2c5f3)",
+  "trace_id": "tr-28c2c5f3",
+  "fields": {
+   "trace_id": "tr-28c2c5f3"
+  },
+  "raw": "2026-11-23T09:59:50 ERROR api-gateway upstream payment-service returned 503 for POST /v1/charges (trace_id=tr-28c2c5f3)"
+ },
+ {
+  "ts": "2026-11-23T09:59:50",
+  "level": "ERROR",
+  "service": "notification-service",
+  "message": "Third-party provider outage: connection refused by mail gateway; external service unreachable (trace_id=tr-611ec19f)",
+  "trace_id": "tr-611ec19f",
+  "fields": {
+   "trace_id": "tr-611ec19f"
+  },
+  "raw": "2026-11-23T09:59:50 ERROR notification-service Third-party provider outage: connection refused by mail gateway; external service unreachable (trace_id=tr-611ec19f)"
+ },
+ {
+  "ts": "2026-11-23T09:59:55",
+  "level": "WARN",
+  "service": "order-service",
+  "message": "Garbage collection pause exceeded 2500ms; memory buffer full (trace_id=tr-b2c0da1a)",
+  "trace_id": "tr-b2c0da1a",
+  "fields": {
+   "trace_id": "tr-b2c0da1a"
+  },
+  "raw": "2026-11-23T09:59:55 WARN order-service Garbage collection pause exceeded 2500ms; memory buffer full (trace_id=tr-b2c0da1a)"
+ },
+ {
+  "ts": "2026-11-23T09:59:57",
+  "level": "ERROR",
+  "service": "payment-service",
+  "message": "HikariPool-1 - Connection is not available, request timed out after 30000ms (pool size=5) (trace_id=tr-076ec848)",
+  "trace_id": "tr-076ec848",
+  "fields": {
+   "size": "5",
+   "trace_id": "tr-076ec848"
+  },
+  "raw": "2026-11-23T09:59:57 ERROR payment-service HikariPool-1 - Connection is not available, request timed out after 30000ms (pool size=5) (trace_id=tr-076ec848)"
+ },
+ {
+  "ts": "2026-11-23T10:00:02",
+  "level": "WARN",
+  "service": "notification-service",
+  "message": "Retrying delivery after external provider rate-limit backoff (trace_id=tr-d3489d54)",
+  "trace_id": "tr-d3489d54",
+  "fields": {
+   "trace_id": "tr-d3489d54"
+  },
+  "raw": "2026-11-23T10:00:02 WARN notification-service Retrying delivery after external provider rate-limit backoff (trace_id=tr-d3489d54)"
+ },
+ {
+  "ts": "2026-11-23T10:00:03",
+  "level": "WARN",
+  "service": "payment-service",
+  "message": "Connection pool exhausted: active=5 idle=0 waiting=30 (trace_id=tr-f2a565ea)",
+  "trace_id": "tr-f2a565ea",
+  "fields": {
+   "active": "5",
+   "idle": "0",
+   "waiting": "30",
+   "trace_id": "tr-f2a565ea"
+  },
+  "raw": "2026-11-23T10:00:03 WARN payment-service Connection pool exhausted: active=5 idle=0 waiting=30 (trace_id=tr-f2a565ea)"
  }
 ]

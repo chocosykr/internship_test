@@ -355,8 +355,13 @@
 <body>
   <header>
     <h1>Incident triage</h1>
-    <div id="fire" style="display:flex;flex-wrap:wrap;gap:8px;align-items:center"><span class="empty">Simulate
-        alert:</span></div>
+    <div id="fire" style="display:flex;flex-wrap:wrap;gap:8px;align-items:center">
+      <span class="empty">Simulate alert:</span>
+    </div>
+    <form id="custom-alert-form" style="display:flex;gap:8px;align-items:center;margin-left:auto">
+      <input type="text" id="custom-alert-input" placeholder="Paste free-form alert (e.g. payment-service 5xx spike)..." style="font:inherit;font-size:13px;padding:6px 10px;border-radius:6px;border:1px solid var(--line);background:var(--bg);color:var(--ink);min-width:280px;" required>
+      <button type="submit" class="go">Send alert</button>
+    </form>
   </header>
   <main>
     <section>
@@ -377,10 +382,14 @@
     </section>
   </main>
   <script>
-    const PRESETS = [{ l: 'Payment 5xx spike', service: 'payment-service', symptom: '5xx error rate above 5% for 5 minutes' },
-    { l: 'Gateway 5xx', service: 'api-gateway', symptom: 'Gateway 5xx rate at 11%, checkout failing' },
-    { l: 'Database memory', service: 'database', symptom: 'Memory above 90% and climbing' },
-    { l: 'Auth latency blip', service: 'auth-service', symptom: 'p99 latency alert on token endpoint' }];
+    const PRESETS = [
+      { l: 'Payment 5xx spike', service: 'payment-service', symptom: '5xx error rate above 5% for 5 minutes' },
+      { l: 'Gateway 5xx', service: 'api-gateway', symptom: 'Gateway 5xx rate at 11%, checkout failing' },
+      { l: 'Order OOM', service: 'order-service', symptom: 'Out of memory error spike and high latency' },
+      { l: 'Database memory', service: 'database', symptom: 'Memory above 90% and climbing' },
+      { l: 'Email outage', service: 'notification-service', symptom: 'Email delivery failure rate above 40%' },
+      { l: 'Auth latency blip', service: 'auth-service', symptom: 'p99 latency alert on token endpoint' }
+    ];
     const $ = s => document.querySelector(s), esc = s => String(s ?? '').replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
     const api = async (p, o) => { const r = await fetch('/api' + p, o), j = await r.json(); if (!r.ok) throw new Error(j.detail || r.statusText); return j };
     const post = b => ({ method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(b) });
@@ -395,6 +404,21 @@
         else if (a) { await api(`/incidents/${sel}/approve`, post({ decision: a.dataset.act, actor: 'on-call' })); tick() }
       } catch (err) { alert(err.message) }
     });
+    const form = $('#custom-alert-form');
+    if (form) {
+      form.addEventListener('submit', async e => {
+        e.preventDefault();
+        const input = $('#custom-alert-input');
+        const text = input ? input.value.trim() : '';
+        if (!text) return;
+        try {
+          const res = await api('/alerts/text', { method: 'POST', headers: { 'Content-Type': 'text/plain' }, body: text });
+          input.value = '';
+          sel = res.id;
+          tick();
+        } catch (err) { alert(err.message) }
+      });
+    }
     function render(id, el, html) { if (seen[id] !== html) { seen[id] = html; $(el).innerHTML = html } }
     function detail(d) {
       const m = Array.from({ length: 8 }, (_, i) => `<i class="${i < d.steps.length ? 'on' : ''}"></i>`).join('');

@@ -38,5 +38,29 @@
   "author": "d.naik",
   "ts": "2026-11-14T10:00:00",
   "changes": "Add index on payments(created_at)"
+ },
+ {
+  "service": "order-service",
+  "version": "v4.2.1",
+  "commit": "d4e5f6a",
+  "author": "d.naik",
+  "ts": "2026-11-23T09:43:00",
+  "changes": "Updated checkout button label styling and CSS color theme"
+ },
+ {
+  "service": "order-service",
+  "version": "v4.2.0",
+  "commit": "c1b2a3f",
+  "author": "s.cardoso",
+  "ts": "2026-11-23T09:30:00",
+  "changes": "Introduced in-memory batch order caching buffer; increased preallocation memory threshold"
+ },
+ {
+  "service": "notification-service",
+  "version": "v1.9.3",
+  "commit": "f9e8d7c",
+  "author": "s.khobrekar",
+  "ts": "2026-11-23T09:41:00",
+  "changes": "Updated html template copyright footer and localized greeting header"
  }
 ]

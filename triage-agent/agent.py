@@ -1,15 +1,46 @@
 """Bounded, read-only tool-calling agent with two planners behind the same tools, step cap and guardrails:
-  - LLM planner (set ANTHROPIC_API_KEY, GEMINI_API_KEY or OPENAI_API_KEY): the model chooses tools and writes the report; evidence is verified against what the tools returned.
-  - Rule planner (default / automatic fallback): deterministic, no API key needed.
+- LLM planner (set ANTHROPIC_API_KEY, GEMINI_API_KEY or OPENAI_API_KEY): the model chooses tools and writes the report; evidence is verified against what the tools returned.
+- Rule planner (default / automatic fallback): deterministic, no API key needed.
 Env: LLM_PROVIDER (anthropic|gemini|openai; auto-detected from the key), LLM_MODEL, OPENAI_BASE_URL (any OpenAI-compatible host),
 LLM_MIN_INTERVAL (seconds between calls, for free-tier rate limits), AGENT_MODE=rules to force the rule planner, STEP_DELAY."""
 import datetime as dt, json, os, re, time, urllib.error, urllib.request
 import db
+import text_io
 
 _D = os.path.join(os.path.dirname(os.path.abspath(__file__)), "data")
 def _load(n):
-    with open(os.path.join(_D, n)) as f: return json.load(f)
-LOGS, DEPLOYS, _M = _load("logs.json"), _load("deploys.json"), _load("metrics.json")
+    p = os.path.join(_D, n)
+    if not os.path.exists(p): return [] if n == "logs.json" else {}
+    with open(p, encoding="utf-8") as f: return json.load(f)
+
+def load_logs():
+    json_path = os.path.join(_D, "logs.json")
+    txt_path = os.path.join(_D, "logs.txt")
+    log_path = os.path.join(_D, "logs.log")
+    txt_src = txt_path if os.path.exists(txt_path) else (log_path if os.path.exists(log_path) else None)
+    if txt_src and (not os.path.exists(json_path) or os.path.getmtime(txt_src) > os.path.getmtime(json_path)):
+        try:
+            return text_io.ingest_log_sources(txt_src, output_json=json_path)
+        except Exception:
+            pass
+    if os.path.exists(json_path):
+        with open(json_path, "r", encoding="utf-8") as f: return json.load(f)
+    elif txt_src:
+        return text_io.parse_log_file(txt_src)
+    return []
+
+def reload_data():
+    global LOGS, DEPLOYS, _M, SERIES, NOW, SERVICES
+    LOGS = load_logs()
+    DEPLOYS = _load("deploys.json")
+    _M = _load("metrics.json")
+    SERIES = _M.get("series", {})
+    NOW = _M.get("now", "")
+    SERVICES = list(SERIES)
+    return len(LOGS)
+
+LOGS = load_logs()
+DEPLOYS, _M = _load("deploys.json"), _load("metrics.json")
 SERIES, NOW = _M["series"], _M["now"]
 SERVICES = list(SERIES)
 MAX_STEPS = 8                                     # hard cap, includes the final propose_remediation call
@@ -41,6 +72,23 @@ def _anom(k, v, base):
     if k == "p99_ms": return v >= 2 * base
     return v >= 2 and v >= 3 * base                  # err_pct
 
+def normalize_log_records(records, default_service=""):
+    """Normalize raw text log lines or dicts while keeping the original text intact."""
+    out = []
+    for rec in records or []:
+        if isinstance(rec, str):
+            out.append(text_io.parse_log_line(rec, default_service=default_service))
+        elif isinstance(rec, dict):
+            item = dict(rec)
+            if not item.get("raw"):
+                ts = item.get("ts") or ""
+                lvl = item.get("level") or "INFO"
+                svc = item.get("service") or default_service
+                msg = item.get("message") or ""
+                item["raw"] = f"{ts} {lvl} {svc} {msg}".strip()
+            out.append(item)
+    return out
+
 def get_metrics(service, window=30):
     pts = SERIES.get(service)
     if not pts: return {"error": f"unknown service {service}"}
@@ -55,8 +103,9 @@ def get_metrics(service, window=30):
 
 def search_logs(service, query="", level=None, limit=5, window=60):
     cut = _minus(window); rx = re.compile(query, re.I) if query else None
-    hits = [l for l in LOGS if l["service"] == service and l["ts"] >= cut and (not level or l["level"] == level) and (not rx or rx.search(l["message"]))]
-    return {"service": service, "query": query, "level": level, "total": len(hits), "lines": hits[:limit]}
+    norm_logs = normalize_log_records(LOGS, default_service=service)
+    hits = [l for l in norm_logs if l.get("service") == service and l.get("ts", "") >= cut and (not level or l.get("level") == level) and (not rx or rx.search(l.get("message") or l.get("raw") or ""))]
+    return {"service": service, "query": query, "level": level, "total": len(hits), "lines": hits[:limit], "text_logs": text_io.format_log_entries_text(hits[:limit])}
 
 def list_deploys(service, limit=3):
     d = sorted((x for x in DEPLOYS if x["service"] == service and x["ts"] <= NOW), key=lambda x: x["ts"], reverse=True)
@@ -147,14 +196,17 @@ SUBMIT = {"name": "submit_report", "description": "Final ranked root-cause repor
 _last = [0.0]
 def _http(url, headers, body):
     gap = float(os.environ.get("LLM_MIN_INTERVAL", "0"))
-    for attempt in range(4):                       # polite pacing + retry on rate limit / overload (free tiers)
+    for attempt in range(4):                       # polite pacing + retry on rate limit / overload / timeout
         time.sleep(max(0, _last[0] + gap - time.time())); _last[0] = time.time()
         try:
             req = urllib.request.Request(url, data=json.dumps(body).encode(), method="POST", headers={"content-type": "application/json", **headers})
-            with urllib.request.urlopen(req, timeout=90) as r: return json.load(r)
+            with urllib.request.urlopen(req, timeout=120) as r: return json.load(r)
         except urllib.error.HTTPError as e:
             if e.code in (429, 503) and attempt < 3: time.sleep(5 * (attempt + 1)); continue
             raise RuntimeError(f"HTTP {e.code}: {e.read().decode()[:300]}")
+        except (TimeoutError, urllib.error.URLError) as e:
+            if attempt < 3 and "timed out" in str(e).lower(): time.sleep(5 * (attempt + 1)); continue
+            raise
 
 def _all_tools(): return TOOL_SCHEMAS + [{"name": SUBMIT["name"], "description": SUBMIT["description"], "parameters": SUBMIT["input_schema"]}]
 
@@ -235,7 +287,8 @@ def investigate(iid):
                 if "ticket_id" in r: st["tickets"].append(r)
             else: r = TOOLS[tool](**args)
         except Exception as ex: r = {"error": str(ex)}
-        st["logs"] += [l["message"] for l in r.get("lines", [])]; st["deps"] += r.get("deploys", [])
+        st["logs"] += [l.get("message") or l.get("raw") or "" for l in r.get("lines", []) if isinstance(l, dict)] + [l for l in r.get("lines", []) if isinstance(l, str)]
+        st["deps"] += r.get("deploys", [])
         db.add_step(iid, st["n"], tool, args, thought, describe(tool, r), r); return r
     def look(s, why):
         o = obs.setdefault(s, {})
@@ -248,7 +301,7 @@ def investigate(iid):
         look(svc, f"Alert: {inc['symptom']}.")
         up = None
         for l in (obs[svc].get("errors") or {}).get("lines", []):
-            mt = re.search(r"upstream ([a-z-]+)", l["message"])
+            mt = re.search(r"upstream ([a-z-]+)", l.get("message") or l.get("raw") or "")
             if mt and mt.group(1) in SERIES and mt.group(1) not in obs: up = mt.group(1); break
         if up: look(up, f"{svc} errors point to upstream {up}; following the dependency.")
         H = rank(obs)
@@ -275,4 +328,13 @@ def investigate(iid):
     if report["verdict"] == "INSUFFICIENT_EVIDENCE" and st["tickets"]:      # never leave an approvable fix behind an "insufficient evidence" verdict
         for t in st["tickets"]: db.set_remediation_status(t["ticket_id"], "REJECTED")
     report.update(steps_used=st["n"], max_steps=MAX_STEPS, mode=mode)
-    db.set_report(iid, report); db.set_status(iid, "AWAITING_APPROVAL"); db.audit(iid, "agent", "investigation_finished", report["verdict"])
+    has_pending = report["verdict"] == "ROOT_CAUSE_FOUND" and bool(st["tickets"])
+    db.set_report(iid, report); db.set_status(iid, "AWAITING_APPROVAL" if has_pending else "OPEN"); db.audit(iid, "agent", "investigation_finished", report["verdict"])
+
+def investigate_text(alert_text):
+    """Parse plain-text alert/logs, run investigation, and return formatted plain text + logs."""
+    parsed = text_io.parse_alert_text(alert_text)
+    svc = parsed["service"] if parsed["service"] in SERVICES else (SERVICES[0] if SERVICES else "unknown-service")
+    iid = db.create_incident(svc, parsed["summary"], parsed["severity"])
+    investigate(iid)
+    return text_io.format_incident_text(db.get_incident(iid) or {})

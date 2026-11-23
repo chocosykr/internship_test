@@ -6,9 +6,26 @@ FastAPI + SQLite service with a bounded (max 8 steps) read-only agent loop and a
 ```bash
 pip install -r requirements.txt
 cd backend
-python gen_data.py            # writes data/logs.json, metrics.json, deploys.json
+python gen_data.py            # writes data/logs.txt, logs.json, metrics.json, deploys.json
+python ingest_logs.py         # ingests plain-text logs (.txt/.log) into structured JSON
 uvicorn main:app --reload     # open http://localhost:8000
 python evaluate.py            # scores every scenario vs a naive baseline
+```
+
+### Ingesting Plain-Text Log Files (.txt / .log)
+Production logs are typically raw text files rather than JSON. Use `ingest_logs.py` to convert any plain-text log files into structured JSON for the agent:
+```bash
+# Ingest default data/logs.txt -> data/logs.json
+python ingest_logs.py
+
+# Ingest custom plain-text log file
+python ingest_logs.py /path/to/production.log
+
+# Merge into existing logs
+python ingest_logs.py --merge /path/to/new_logs.txt
+
+# Ingest via API
+curl -X POST "http://localhost:8000/api/logs/ingest" -H "Content-Type: text/plain" --data-binary @app.log
 ```
 `STEP_DELAY=0` removes the per-step pause used to make the UI timeline visibly stream.
 

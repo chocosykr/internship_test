@@ -32,7 +32,7 @@ def create_alert(payload: AlertIn, bg: BackgroundTasks):
     return {"id": incident_id, "status": "OPEN"}
 
 
-@app.post("/api/alerts/text", status_code=202, response_class=PlainTextResponse)
+@app.post("/api/alerts/text", status_code=202)
 def create_alert_from_text(bg: BackgroundTasks, alert_text: str = Body(..., media_type="text/plain")):
     parsed = text_io.parse_alert_text(alert_text)
     service = parsed["service"]
@@ -43,7 +43,7 @@ def create_alert_from_text(bg: BackgroundTasks, alert_text: str = Body(..., medi
         )
     incident_id = db.create_incident(service, parsed["summary"], parsed["severity"])
     bg.add_task(agent.investigate, incident_id)
-    return PlainTextResponse(f"Queued incident #{incident_id} for {service} (status=OPEN)", status_code=202)
+    return {"id": incident_id, "status": "OPEN", "service": service}
 
 
 @app.get("/api/incidents")
@@ -109,6 +109,42 @@ def parse_logs_text(
         "entries": entries,
         "logs": text_io.format_log_entries_text(entries),
     }
+
+
+@app.post("/api/logs/ingest")
+def ingest_logs_endpoint(
+    raw_text: str = Body(..., media_type="text/plain"),
+    service: str = Query(default=""),
+    merge: bool = Query(default=False),
+):
+    entries = text_io.parse_log_text(raw_text, default_service=service)
+    json_path = os.path.join(agent._D, "logs.json")
+    all_entries = []
+    if merge and os.path.exists(json_path):
+        try:
+            import json
+            with open(json_path, "r", encoding="utf-8") as f:
+                all_entries = json.load(f)
+        except Exception:
+            all_entries = []
+    all_entries.extend(entries)
+    all_entries.sort(key=lambda x: str(x.get("ts") or ""))
+    import json
+    with open(json_path, "w", encoding="utf-8") as f:
+        json.dump(all_entries, f, indent=1)
+    agent.reload_data()
+    return {
+        "status": "INGESTED",
+        "added": len(entries),
+        "total": len(all_entries),
+        "services": sorted({e.get("service") for e in all_entries if e.get("service")}),
+    }
+
+
+@app.post("/api/logs/reload")
+def reload_logs_endpoint():
+    count = agent.reload_data()
+    return {"status": "RELOADED", "total_logs": count}
 
 
 @app.get("/api/tools")
